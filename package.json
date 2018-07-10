@@ -1,0 +1,17 @@
+{
+  "name": "pelag.io",
+  "version": "1.0.0",
+  "description": "Website for pelag.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --experimental-modules index.mjs",
+    "production": "node index.mjs",
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.16.3",
+    "ejs": "2.6.1"
+  }
+}
