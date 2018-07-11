@@ -35,16 +35,11 @@ body {
   justify-content: center;
   display: flex;
 }
-
-.header-menu-center-link {
-  padding-top: 6px;
-  padding-left: 6px;
-}
 .header-menu-center::before {
   content: "";
   background-image: url("/img/logo.png");
-  height: 46px;
-  width: 40px;
+  height: 115px;
+  width: 103px;
   background-repeat: no-repeat;
   background-size: cover;
 }
