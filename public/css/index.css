@@ -15,7 +15,7 @@ html {
 }
 
 #main {
-  width:100%;
+  width: 100%;
 }
 
 .content1 {
@@ -71,7 +71,7 @@ html {
 
 .section-content {
   padding: 80px;
-  flex:1;
+  flex: 1;
 }
 
 .title-header {
@@ -89,20 +89,24 @@ html {
 .who-container {
   flex-direction: row;
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   height: 180px;
 }
 
 .who-person {
   display: flex;
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 .contact-info {
   padding: 0px 10px;
-  align-items:center;
-  display:flex;
+  align-items: center;
+  display: flex;
   flex-direction: column;
+}
+.contact-name {
+  text-align: center;
+  font-weight: normal;
 }
 
 .head-shot {
@@ -110,7 +114,7 @@ html {
   background-image: url(/img/lukas.jpg);
   background-size: cover;
   background-position: center;
-  filter:saturate(70%);
+  filter: saturate(70%);
 }
 
 @media only screen and (max-width: 420px) {
@@ -126,13 +130,12 @@ html {
     flex-direction: column;
     height: 400px;
   }
-  
+
   .who-person {
     margin: 20px 0px;
   }
 
   .contact-name {
-    text-align: center;
     margin: 10px 0px;
   }
 }
