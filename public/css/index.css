@@ -6,6 +6,16 @@ a {
 body {
   display: flex;
   font-family: "Dosis", sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+#main {
+  width:100%;
 }
 
 .content1 {
@@ -56,10 +66,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .section-content {
   padding: 80px;
+  flex:1;
 }
 
 .title-header {
@@ -71,6 +83,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.who-container {
+  flex-direction: row;
+  display: flex;
+  justify-content:space-between;
+  height: 180px;
+}
+
+.contact-info {
+  padding: 0px 10px;
+  align-items:center;
+  display:flex;
+  flex-direction: column;
+}
+
+.head-shot {
+  width: 120px;
+  background-image: url(/img/lukas.jpg);
+  background-size: cover;
+  background-position: center;
+  filter:saturate(70%);
 }
 
 @media only screen and (max-width: 420px) {
