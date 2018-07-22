@@ -109,6 +109,10 @@ html {
   font-weight: normal;
 }
 
+.contact-info-text {
+  margin: 10px 0px;
+}
+
 .head-shot {
   width: 120px;
   background-image: url(/img/lukas.jpg);
