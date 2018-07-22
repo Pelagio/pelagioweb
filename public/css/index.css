@@ -16,6 +16,13 @@ html {
   overflow-x: hidden;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: lighter;
+}
+
 #main {
   width: 100%;
 }
