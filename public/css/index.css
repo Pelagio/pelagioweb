@@ -59,7 +59,7 @@ html {
 }
 
 .parallax {
-  height: 400px;
+  height: 300px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -88,7 +88,7 @@ html {
 .who-container {
   flex-direction: row;
   display: flex;
-  justify-content:space-between;
+  justify-content:flex-start;
   height: 180px;
 }
 
@@ -114,5 +114,9 @@ html {
   }
   .section-content {
     padding: 40px;
+  }
+
+  .who-container {
+    flex-direction: column;
   }
 }
