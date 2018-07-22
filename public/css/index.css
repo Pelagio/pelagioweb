@@ -83,6 +83,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .who-container {
@@ -90,6 +91,11 @@ html {
   display: flex;
   justify-content:flex-start;
   height: 180px;
+}
+
+.who-person {
+  display: flex;
+  margin-right: 60px;
 }
 
 .contact-info {
@@ -118,5 +124,15 @@ html {
 
   .who-container {
     flex-direction: column;
+    height: 400px;
+  }
+  
+  .who-person {
+    margin: 20px 0px;
+  }
+
+  .contact-name {
+    text-align: center;
+    margin: 10px 0px;
   }
 }
