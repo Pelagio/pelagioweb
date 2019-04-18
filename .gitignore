@@ -151,5 +151,7 @@ $RECYCLE.BIN/
 tsconfig.json
 jsconfig.json
 
+output
+
 
 # End of https://www.gitignore.io/api/code

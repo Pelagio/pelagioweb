@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node --experimental-modules index.mjs",
     "production": "node index.mjs",
-    "test": "test"
+    "test": "test",
+    "build":"mkdir -p output && cp views/index.ejs output/index.html && cp -r public/* output"
   },
   "author": "",
   "license": "ISC",
