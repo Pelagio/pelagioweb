@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 import styles from './people-section.module.css'
 
 export default ({ people }) => {
-  console.log("ppl", people)
   return (
   <div className={styles.whoContainer} >
       {people.map(({ node }) => {
@@ -27,16 +26,3 @@ const Person = ({person}) => {
     </div>
   )
 }
-
-
-{/* <div className={styles.preview}>
-    <h3 className={styles.previewTitle}>
-      <Link to={`/blog/${section.slug}`}>{section.title}</Link>
-    </h3>
-    <small>{section.publishDate}</small>
-    <p
-      dangerouslySetInnerHTML={{
-        __html: section.content.content,
-      }}
-    />
-  </div> */}

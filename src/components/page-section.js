@@ -7,7 +7,7 @@ export default ({ section, people }) => {
   console.log("sad", section)
   return(
   <section id={section.anchor} className={styles.sectionBlock}>
-    <div className={styles.parallax} style={{backgroundImage: section.anchor == "contact" ? "url(/img/winter-archipelago.jpg)" : section.background}}></div>
+    <div className={styles.parallax} style={{backgroundImage: section.anchor == "contact" ? "url(/img/winter-archipelago.jpg)" : "url(/img/archipelago.jpg)"}}></div>
     <div className={styles.sectionContent}>
         <h2>{section.title}</h2>
         {people ? <PeopleSection people={people}/>: <div
