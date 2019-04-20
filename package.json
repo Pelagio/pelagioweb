@@ -1,18 +1,40 @@
 {
-  "name": "pelag.io",
-  "version": "1.0.0",
-  "description": "Website for pelag.io",
-  "main": "index.js",
-  "scripts": {
-    "start": "node --experimental-modules index.mjs",
-    "production": "node index.mjs",
-    "test": "test",
-    "build":"mkdir -p output && cp views/index.ejs output/index.html && cp -r public/* output"
+  "name": "contentful-starter-gatsby-blog",
+  "description": "Contentful Gatsby Starter Blog",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Contentful <opensource@contentful.com>",
+  "bugs": {
+    "url": "https://github.com/contentful/starter-gatsby-blog/issues"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "4.16.4",
-    "ejs": "2.6.1"
+    "gatsby": "^1.9.277",
+    "gatsby-image": "^1.0.55",
+    "gatsby-link": "^1.6.46",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-sharp": "^1.6.46",
+    "gatsby-source-contentful": "^1.3.54",
+    "gatsby-transformer-remark": "^1.7.44",
+    "lodash": "^4.17.11",
+    "react-icons": "^3.6.1"
+  },
+  "homepage": "https://github.com/contentful/starter-gatsby-blog#readme",
+  "keywords": [
+    "gatsby",
+    "contentful",
+    "starter"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contentful/starter-gatsby-blog.git"
+  },
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "heroku-postbuild": "gatsby build",
+    "serve": "gatsby serve",
+    "setup": "npm install --no-save contentful-import yargs-parser axios chalk && node ./setup.js"
   }
 }

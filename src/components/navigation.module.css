@@ -1,0 +1,45 @@
+
+.headerMenu {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+  flex: 1 1;
+}
+
+.titleHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.headerMenuCenter {
+  flex: 1 1;
+  justify-content: center;
+  display: flex;
+}
+.headerMenuCenter:before {
+  content: "";
+  background-image: url("../../static/img/logo.png");
+  height: 115px;
+  width: 103px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headerMenuSpacer {
+  flex: 1 1;
+}
+
+@media only screen and (max-width: 420px) {
+  .headerMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,8 +1,5 @@
-const anchorlinks = document.querySelectorAll('a[href^="#"]');
-
-for (let item of anchorlinks) {
-  item.addEventListener("click", e => {
-    let hashval = item.getAttribute("href");
+export const anchorScroll = e => {
+    let hashval = e.target.getAttribute("href");
     let target = document.querySelector(hashval);
     target.scrollIntoView({
       behavior: "smooth",
@@ -10,5 +7,4 @@ for (let item of anchorlinks) {
     });
     history.pushState(null, null, hashval);
     e.preventDefault();
-  });
-}
+  };
