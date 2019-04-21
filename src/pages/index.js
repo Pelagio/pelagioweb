@@ -1,6 +1,9 @@
 import React from 'react'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import { graphql } from "gatsby"
+
+import Layout from "../components/layout"
 import PageSection from '../components/page-section';
 import TitleSection from '../components/title-section';
 
@@ -11,6 +14,7 @@ class RootIndex extends React.Component {
 
     const people = get(this, 'props.data.allContentfulPerson.edges')
     return (
+      <Layout location={this.props.location} children={this.props.children}>
       <div style={{ background: '#fff' }}>
         <Helmet title={siteTitle} />
         <div className="wrapper">
@@ -37,6 +41,7 @@ class RootIndex extends React.Component {
           </ul>
         </div>
       </div>
+      </Layout>
     )
   }
 }

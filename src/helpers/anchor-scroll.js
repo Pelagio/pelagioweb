@@ -5,6 +5,6 @@ export const anchorScroll = e => {
       behavior: "smooth",
       block: "start"
     });
-    history.pushState(null, null, hashval);
+    window.history.pushState(null, null, hashval);
     e.preventDefault();
   };

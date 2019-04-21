@@ -7,6 +7,10 @@
   flex: 1 1;
 }
 
+.menuItem {
+  text-transform: uppercase;
+}
+
 .titleHeader {
   position: fixed;
   top: 0;

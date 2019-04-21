@@ -1,4 +1,13 @@
 {
-  "presets": ['react', 'es2015', 'stage-1'],
-  "plugins": ['add-module-exports']
+  "plugins": ["@babel/plugin-proposal-optional-chaining"],
+  "presets": [
+    [
+      "babel-preset-gatsby",
+      {
+        "targets": {
+          "browsers": [">0.25%", "not dead"]
+        }
+      }
+    ]
+  ]
 }
