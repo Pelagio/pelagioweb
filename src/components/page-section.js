@@ -4,7 +4,6 @@ import styles from './page-section.module.css'
 import PeopleSection from './people-section';
 
 export default ({ section, people }) => {
-  console.log("sad", section)
   return(
   <section id={section.anchor} className={styles.sectionBlock}>
     <div className={styles.parallax} style={{backgroundImage: section.anchor == "contact" ? "url(/img/winter-archipelago.jpg)" : "url(/img/archipelago.jpg)"}}></div>

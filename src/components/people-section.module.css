@@ -36,3 +36,17 @@
   background-position: center;
   filter: saturate(70%);
 }
+
+@media only screen and (max-width: 420px) {
+  .whoContainer {
+    height: auto;
+  }
+
+  .whoPerson {
+    margin: 20px 0px;
+  }
+
+  .contactName {
+    margin: 10px 0px;
+  }
+}
