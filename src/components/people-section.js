@@ -21,7 +21,7 @@ const Person = ({ person }) => {
         <Img
           className={styles.headShot}
           alt={person.name}
-          sizes={person.image.sizes}
+          fluid={person.image.fluid}
         />
       )}
       <div className={styles.contactInfo}>

@@ -9,10 +9,7 @@ export default ({ section, people }) => {
       <div
         className={styles.parallax}
         style={{
-          backgroundImage:
-            section.anchor === "contact"
-              ? "url(/img/winter-archipelago.jpg)"
-              : "url(/img/archipelago.jpg)"
+          backgroundImage: `url(${section.background.fluid.src})`
         }}
       />
       <div className={styles.sectionContent}>

@@ -7,7 +7,9 @@ export default ({ section }) => {
     <section id="title" className={sectionStyles.sectionBlock}>
       <div
         className={sectionStyles.parallax}
-        style={{ backgroundImage: section.background }}
+        style={{
+          backgroundImage: `url(${section.background.fluid.src})`
+        }}
       />
       <div className={sectionStyles.sectionContent}>
         <h1 style={{ textAlign: "center" }}>{section.title}</h1>

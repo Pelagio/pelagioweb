@@ -57,13 +57,10 @@ export const pageQuery = graphql`
             content
           }
           background {
-            sizes(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulSizes_withWebp
+            fluid(maxWidth: 1500, quality: 90) {
+              sizes
+              src
+              srcSet
             }
           }
           anchor
@@ -79,13 +76,10 @@ export const pageQuery = graphql`
           email
           phone
           image {
-            sizes(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulSizes_withWebp
+            fluid(maxWidth: 1500) {
+              sizes
+              src
+              srcSet
             }
           }
         }
