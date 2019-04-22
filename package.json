@@ -1,11 +1,11 @@
 {
-  "name": "contentful-starter-gatsby-blog",
-  "description": "Contentful Gatsby Starter Blog",
+  "name": "pelagioweb",
+  "description": "Pelagio website",
   "private": true,
   "version": "0.0.1",
-  "author": "Contentful <opensource@contentful.com>",
+  "author": "Arneson <simon@pelag.io>",
   "bugs": {
-    "url": "https://github.com/contentful/starter-gatsby-blog/issues"
+    "url": "https://github.com/arneson/pelagioweb"
   },
   "dependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
@@ -37,7 +37,7 @@
     "lint-staged": "^8.1.5",
     "prettier": "1.17.0"
   },
-  "homepage": "https://github.com/contentful/starter-gatsby-blog#readme",
+  "homepage": "https://pelag.io",
   "keywords": [
     "gatsby",
     "contentful",
@@ -47,14 +47,13 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/contentful/starter-gatsby-blog.git"
+    "url": "git+https://github.com/arneson/pelagioweb.git"
   },
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
     "heroku-postbuild": "gatsby build",
-    "serve": "gatsby serve",
-    "setup": "npm install --no-save contentful-import yargs-parser axios chalk && node ./setup.js"
+    "serve": "gatsby serve"
   },
   "husky": {
     "hooks": {
