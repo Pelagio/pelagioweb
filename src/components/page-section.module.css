@@ -10,13 +10,13 @@
 }
 
 .sectionContent {
-  padding: 36px;
+  padding: 36px 36px 10px 36px;
   flex: 1;
 }
 
 @media only screen and (max-width: 420px) {
   .sectionContent {
-    padding: 40px;
+    padding: 40px 40px 10px 40px;
   }
   .parallax {
     background-attachment: initial;

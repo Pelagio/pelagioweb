@@ -1,5 +1,4 @@
 import React from "react";
-import get from "lodash/get";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
@@ -9,16 +8,16 @@ import TitleSection from "../components/title-section";
 
 class RootIndex extends React.Component {
   render() {
-    const siteTitle = get(this, "props.data.site.siteMetadata.title");
-    const sections = get(this, "props.data.allContentfulPageSection.edges");
+    const { site, data, location, children } = this.props;
+    const siteTitle = site && site.siteMetadata.title;
+    const sections = data.allContentfulPageSection.edges;
 
-    const people = get(this, "props.data.allContentfulPerson.edges");
+    const people = data.allContentfulPerson.edges;
     return (
-      <Layout location={this.props.location} children={this.props.children}>
+      <Layout location={location} children={children}>
         <div style={{ background: "#fff" }}>
           <Helmet title={siteTitle} />
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
             <ul className="section-list">
               {sections.map(({ node }) => {
                 let component = null;
