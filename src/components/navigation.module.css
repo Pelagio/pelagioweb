@@ -1,5 +1,12 @@
-
 .headerMenu {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+  flex: 1 1;
+}
+
+.headerMenuSmall {
   padding: 0;
   display: flex;
   justify-content: space-evenly;
@@ -21,6 +28,20 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
+  transition: height 0.2s;
+}
+
+.titleHeaderSmall {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: height 0.2s;
 }
 
 .headerMenuCenter {
@@ -33,6 +54,20 @@
   background-image: url("../../static/img/logo.png");
   height: 115px;
   width: 103px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headerMenuCenterSmall {
+  justify-content: flex-start;
+  padding-left: 20px;
+  display: flex;
+}
+.headerMenuCenterSmall:before {
+  content: "";
+  background-image: url("../../static/img/logo.png");
+  height: 40px;
+  width: 36px;
   background-repeat: no-repeat;
   background-size: cover;
 }
