@@ -27,6 +27,7 @@ export const ContactSection = ({ section }) => {
           ...state
         })
       });
+      e.target.reset();
       // PROB DO THINGS
     } catch (error) {
       alert(error);
