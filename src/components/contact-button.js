@@ -94,7 +94,9 @@ export const ContactButton = ({}) => {
           onClick={toggleFullscreen}
           className={[styles.button].join(" ")}
         >
-          {formSubmitted ? "THANKS" : "FREE"}
+          <span className={styles.ctaText}>
+            {formSubmitted ? "thanks" : "free"}
+          </span>
           <div className={styles.emoji}>
             {formSubmitted ? "💌" : thingForFree.emoji}
           </div>

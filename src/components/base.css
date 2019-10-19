@@ -119,8 +119,13 @@ button {
   border: none;
   background-color: accent;
   height: 50px;
-  padding: 0 20px;
+  padding: 0 30px;
   min-width: 50px;
+  outline-color: white;
+}
+
+button:active {
+  opacity: 0.7;
 }
 
 input[type="email"] {
