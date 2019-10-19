@@ -2,15 +2,30 @@ import React from "react";
 
 import styles from "./page-section.module.css";
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export const ContactSection = ({ section }) => {
+  const [state, setState] = React.useState({});
+
+  const handleChange = e => {
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
+
   const handleSubmit = async e => {
     e.preventDefault();
     const form = e.target;
     try {
-      await fetch("/contact", {
+      await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: form
+        body: encode({
+          "form-name": form.getAttribute("name"),
+          ...state
+        })
       });
       // PROB DO THINGS
     } catch (error) {
@@ -37,7 +52,12 @@ export const ContactSection = ({ section }) => {
         >
           {/* You still need to add the hidden input with the form name to your JSX form */}
           <input type="hidden" name="form-name" value="contact" />
-          <input type="email" name="email" placeholder="enter your email" />
+          <input
+            type="email"
+            name="email"
+            placeholder="enter your email"
+            handleChange={handleChange}
+          />
           <button type="submit" />
         </form>
         <div
