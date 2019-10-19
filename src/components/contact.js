@@ -56,7 +56,7 @@ export const ContactSection = ({ section }) => {
             type="email"
             name="email"
             placeholder="enter your email"
-            handleChange={handleChange}
+            onChange={handleChange}
           />
           <button type="submit" />
         </form>
