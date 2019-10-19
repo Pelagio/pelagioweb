@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import PageSection from "../components/page-section";
 import TitleSection from "../components/title-section";
+import SpiderChart from "../components/spider-chart";
 
 class RootIndex extends React.Component {
   render() {
@@ -34,6 +35,7 @@ class RootIndex extends React.Component {
                 return <li key={node.id}>{component}</li>;
               })}
             </ul>
+            <SpiderChart />
           </div>
         </div>
       </Layout>
