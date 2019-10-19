@@ -16,7 +16,15 @@ class RootIndex extends React.Component {
     return (
       <Layout location={location} children={children}>
         <div style={{ background: "#fff" }}>
-          <Helmet title={siteTitle} />
+          <Helmet title={siteTitle}>
+            <meta property="og:title" content={siteTitle} />
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content="https://pelag.io/" />
+            <meta
+              property="og:image"
+              content="https://pelag.io/static/logo-abde3a7d574f63a35fa2e51ab328a6ea.png"
+            />
+          </Helmet>
           <div className="wrapper">
             <ul className="section-list">
               {sections.map(({ node }) => {
