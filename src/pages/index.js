@@ -30,6 +30,15 @@ class RootIndex extends React.Component {
             <meta property="og:url" content={metaUrl} />
             <meta property="og:title" content={metaTitle} />
             <meta property="og:description" content={metaDescription} />
+            <meta
+              property="og:image:url"
+              content={"../../static/img/logo.png"}
+            />
+            <meta
+              property="og:image:secure_url"
+              content={"../../static/img/logo.png"}
+            />
+            <meta property="og:image:type" content={"image/png"} />
             <meta property="og:image" content={"../../static/img/logo.png"} />
 
             <meta property="twitter:card" content="summary_large_image" />
