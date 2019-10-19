@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import PageSection from "../components/page-section";
 import TitleSection from "../components/title-section";
+import { ContactSection } from "../components/contact";
 
 class RootIndex extends React.Component {
   render() {
@@ -27,6 +28,9 @@ class RootIndex extends React.Component {
                     break;
                   case "people":
                     component = <PageSection section={node} people={people} />;
+                    break;
+                  case "contact":
+                    component = <ContactSection section={node} />;
                     break;
                   default:
                     component = <PageSection section={node} />;
