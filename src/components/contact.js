@@ -33,7 +33,7 @@ export const ContactSection = ({ section }) => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          handleSubmit={handleSubmit}
+          onSubmit={handleSubmit}
         >
           {/* You still need to add the hidden input with the form name to your JSX form */}
           <input type="hidden" name="form-name" value="contact" />
