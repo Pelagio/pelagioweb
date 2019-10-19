@@ -1,3 +1,6 @@
+@value colors: "../theme/colors.css";
+@value accent from colors;
+
 /* devanagari */
 @font-face {
   font-family: "Martel Sans";
@@ -109,4 +112,33 @@ a {
 
 .list-inline li {
   display: inline-block;
+}
+
+button {
+  font-size: 24px;
+  border: none;
+  background-color: accent;
+  height: 50px;
+  padding: 0 20px;
+  min-width: 50px;
+}
+
+input[type="email"] {
+  border: none;
+  border-bottom: 2px white solid;
+  height: 50px;
+  width: 200;
+  color: white;
+  background-color: transparent;
+  font-size: 20px;
+  outline: none;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+input[type="email"]:focus {
+  border: 2px white solid;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
