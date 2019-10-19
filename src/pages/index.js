@@ -14,17 +14,25 @@ class RootIndex extends React.Component {
     const sections = data.allContentfulPageSection.edges;
 
     const people = data.allContentfulPerson.edges;
+
+    const metaTitle = "Pelagio";
+    const metaDescription = "Pelagios description";
+    const metaImageUrl =
+      "https://cdn3.f-cdn.com/contestentries/1182286/24794204/5a0e16376c153_thumb900.jpg";
+    const metaUrl = "https://pelag.io/";
     return (
       <Layout location={location} children={children}>
         <div style={{ background: "#fff" }}>
           <Helmet title={siteTitle}>
-            <meta property="og:title" content={siteTitle} />
-            <meta property="og:type" content="article" />
-            <meta property="og:url" content="https://pelag.io/" />
-            <meta
-              property="og:image"
-              content="https://pelag.io/static/logo-abde3a7d574f63a35fa2e51ab328a6ea.png"
-            />
+            <meta property="og:title" content={metaTitle} />
+            <meta property="og:description" content={metaDescription} />
+            <meta property="og:image" content={metaImageUrl} />
+            <meta property="og:url" content={metaUrl} />
+            <meta property="og:site_name" content="Pelagio Development AB" />
+            <meta name="twitter:title" content={metaTitle} />
+            <meta name="twitter:description" content={metaDescription} />
+            <meta name="twitter:image" content={metaImageUrl} />
+            <meta name="twitter:card" content={metaImageUrl} />
           </Helmet>
           <div className="wrapper">
             <ul className="section-list">
