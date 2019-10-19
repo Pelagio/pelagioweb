@@ -3,6 +3,21 @@ import React from "react";
 import styles from "./page-section.module.css";
 
 export const ContactSection = ({ section }) => {
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const form = e.target;
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: form
+      });
+      // PROB DO THINGS
+    } catch (error) {
+      alert(error);
+    }
+  };
+
   return (
     <section id={section.anchor} className={styles.sectionBlock}>
       <div
@@ -18,6 +33,7 @@ export const ContactSection = ({ section }) => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          handleSubmit={handleSubmit}
         >
           {/* You still need to add the hidden input with the form name to your JSX form */}
           <input type="hidden" name="form-name" value="contact" />
