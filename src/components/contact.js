@@ -7,7 +7,7 @@ export const ContactSection = ({ section }) => {
     e.preventDefault();
     const form = e.target;
     try {
-      await fetch("/", {
+      await fetch("/contact", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: form
