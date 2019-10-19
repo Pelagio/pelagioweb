@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import PageSection from "../components/page-section";
 import TitleSection from "../components/title-section";
 import { ContactSection } from "../components/contact";
+import { url } from "inspector";
 
 class RootIndex extends React.Component {
   render() {
@@ -16,23 +17,30 @@ class RootIndex extends React.Component {
     const people = data.allContentfulPerson.edges;
 
     const metaTitle = "Pelagio";
-    const metaDescription = "Pelagios description";
-    const metaImageUrl =
-      "https://cdn3.f-cdn.com/contestentries/1182286/24794204/5a0e16376c153_thumb900.jpg";
+    const metaDescription = "A transparent developer and freelancer agency";
     const metaUrl = "https://pelag.io/";
     return (
       <Layout location={location} children={children}>
         <div style={{ background: "#fff" }}>
           <Helmet title={siteTitle}>
+            <title>{metaTitle}</title>
+            <meta name="title" content={metaTitle} />
+            <meta name="description" content={metaDescription} />
+
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={metaUrl} />
             <meta property="og:title" content={metaTitle} />
             <meta property="og:description" content={metaDescription} />
-            <meta property="og:image" content={metaImageUrl} />
-            <meta property="og:url" content={metaUrl} />
-            <meta property="og:site_name" content="Pelagio Development AB" />
-            <meta name="twitter:title" content={metaTitle} />
-            <meta name="twitter:description" content={metaDescription} />
-            <meta name="twitter:image" content={metaImageUrl} />
-            <meta name="twitter:card" content={metaImageUrl} />
+            <meta property="og:image" content={"../../static/img/logo.png"} />
+
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:url" content={metaUrl} />
+            <meta property="twitter:title" content={metaTitle} />
+            <meta property="twitter:description" content={metaDescription} />
+            <meta
+              property="twitter:image"
+              content={"../../static/img/logo.png"}
+            />
           </Helmet>
           <div className="wrapper">
             <ul className="section-list">
