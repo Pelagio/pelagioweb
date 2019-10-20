@@ -18,8 +18,9 @@ class RootIndex extends React.Component {
     const metaTitle = "Pelagio";
     const metaDescription = "A transparent developer and freelancer agency";
     const metaUrl = "https://pelag.io/";
-    const imageUrl = "/static/img/logo-no-text.png";
-    const favicoUrl = "/static/img/favicon.png";
+    const imageUrl =
+      "https://pelag.io/static/logo-abde3a7d574f63a35fa2e51ab328a6ea.png";
+    const favicoUrl = "../../static/img/favicon.png";
     return (
       <Layout location={location} children={children}>
         <div style={{ background: "#fff" }}>
