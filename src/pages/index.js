@@ -25,6 +25,11 @@ class RootIndex extends React.Component {
             <title>{metaTitle}</title>
             <meta name="title" content={metaTitle} />
             <meta name="description" content={metaDescription} />
+            <link
+              rel="shortcut icon"
+              href="./static/img/logo-no-text.png"
+              type="image/x-icon"
+            />
 
             <meta property="og:type" content="website" />
             <meta property="og:url" content={metaUrl} />
@@ -32,14 +37,17 @@ class RootIndex extends React.Component {
             <meta property="og:description" content={metaDescription} />
             <meta
               property="og:image:url"
-              content={"../../static/img/logo.png"}
+              content={"./static/img/logo-no-text.png"}
             />
             <meta
               property="og:image:secure_url"
-              content={"../../static/img/logo.png"}
+              content={"./static/img/logo-no-text.png"}
             />
             <meta property="og:image:type" content={"image/png"} />
-            <meta property="og:image" content={"../../static/img/logo.png"} />
+            <meta
+              property="og:image"
+              content={"./static/img/logo-no-text.png"}
+            />
 
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content={metaUrl} />
