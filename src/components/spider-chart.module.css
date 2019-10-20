@@ -39,9 +39,9 @@
   background: #537ca0;
   clip-path: polygon(50% 10%, 80% 25%, 90% 70%, 50% 80%, 10% 75%, 5% 25%);
   margin: auto;
+  transition: 1s;
   align-self: center;
   justify-self: center;
-  animation: magic 4s infinite;
 }
 
 @keyframes magic {
