@@ -48,6 +48,8 @@ class RootIndex extends React.Component {
               property="og:image"
               content={"./static/img/logo-no-text.png"}
             />
+            <meta property="og:image:width" content="400" />
+            <meta property="og:image:height" content="400" />
 
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content={metaUrl} />
