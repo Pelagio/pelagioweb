@@ -2,22 +2,59 @@ import React from "react";
 import styles from "./spider-chart.module.css";
 
 class SpiderChartComponent extends React.Component {
-  state = {
-    expanded: true,
-    data: [
-      { name: "Test1", value: 50 },
-      { name: "Test2", value: 40 },
-      { name: "Test3", value: 30 },
-      { name: "Test4", value: 20 },
-      { name: "Test5", value: 80 },
-      { name: "Test7", value: 80 }
-    ],
-    animate: false
+  constructor(props) {
+    super(props);
+    this.state = {
+      expanded: true,
+      data: [
+        { name: "Test1", value: 50 },
+        { name: "Test2", value: 40 },
+        { name: "Test3", value: 30 },
+        { name: "Test4", value: 20 },
+        { name: "Test5", value: 80 },
+        { name: "Test7", value: 80 }
+      ],
+      polygon: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+      rotate: false
+    };
+  }
+
+  updateValues = () => {
+    this.setState(() => {
+      return {
+        data: [
+          { name: "Test8", value: 0 },
+          { name: "Test9", value: 0 },
+          { name: "Test10", value: 0 },
+          { name: "Test11", value: 0 },
+          { name: "Test12", value: 0 },
+          { name: "Test13", value: 0 }
+        ],
+        rotate: !this.state.rotate
+      };
+    });
+
+    console.log(this.state);
+
+    this.updatePolygon();
   };
 
-  componentDidMount() {
-    // this.props.data ? this.setState({ data: this.props.data }) : null;
-  }
+  updatePolygon = () => {
+    console.log("Update ploygon");
+    this.setState({
+      polygon:
+        "polygon(" +
+        this.translatePolygonToClipPath(
+          this.translateValuesToDataPoints(this.state.data)
+        ) +
+        ")"
+    });
+    // setTimeout(() => {
+    //   this.setState({
+    //     rotate : false
+    //   })}
+    //   , 1000);
+  };
 
   translateValuesToDataPoints = data => {
     let polygon = [];
@@ -69,7 +106,7 @@ class SpiderChartComponent extends React.Component {
   };
 
   translatePolygonToClipPath = polygon => {
-    polygon.map(value => value.x + "% " + value.y + "%").join(",");
+    return polygon.map(value => value.x + "% " + value.y + "%").join(",");
   };
 
   getLabelPositions = (index, polygonMax) => {
@@ -124,22 +161,11 @@ class SpiderChartComponent extends React.Component {
       { x: 0, y: 25 }
     ];
 
-    let a = "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)";
-    let b = this.translatePolygonToClipPath(
-      this.translateValuesToDataPoints(this.state.data)
-    );
-    /*if (this.props.data.length !== 6) {
-      return (
-        <div>
-          <p>The data from contentful has to be exactly 6 items</p>
-        </div>
-      );
-    }*/
     return (
       <div className={styles.spiderChart}>
         <div className={styles.hexagonBorder}>
           {this.state.data.map((item, index) => (
-            <div>
+            <div onClick={() => this.updateValues()}>
               <span
                 className={styles.spiderLabel}
                 style={this.getLabelPositions(index, polygonMax)}
@@ -148,16 +174,19 @@ class SpiderChartComponent extends React.Component {
               </span>
             </div>
           ))}
-          <div className={styles.hexagon}>
+          <div
+            className={styles.hexagon}
+            style={{
+              transform: this.state.rotate ? "rotate3d(1, 1, 0, 360deg)" : ""
+            }}
+          >
             <div
               className={styles.chart}
-              style={{ clipPath: this.state.animate ? b : a }}
+              style={{ clipPath: this.state.polygon }}
             />
           </div>
         </div>
-        <button onClick={() => this.setState({ animate: !this.state.animate })}>
-          Change class
-        </button>
+        <button onClick={() => this.updatePolygon()}>Change class</button>
       </div>
     );
   }
