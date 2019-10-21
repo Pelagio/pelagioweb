@@ -5,18 +5,18 @@ class SpiderChartComponent extends React.Component {
   state = {
     expanded: true,
     data: [
-      { name: "A", value: 50 },
-      { name: "B", value: 40 },
-      { name: "C", value: 30 },
-      { name: "D", value: 20 },
-      { name: "E", value: 80 },
-      { name: "F", value: 80 }
+      { name: "Test1", value: 50 },
+      { name: "Test2", value: 40 },
+      { name: "Test3", value: 30 },
+      { name: "Test4", value: 20 },
+      { name: "Test5", value: 80 },
+      { name: "Test7", value: 80 }
     ],
     animate: false
   };
 
   componentDidMount() {
-    this.props.data ? this.setState({ data: this.props.data }) : null;
+    // this.props.data ? this.setState({ data: this.props.data }) : null;
   }
 
   translateValuesToDataPoints = data => {
@@ -72,7 +72,58 @@ class SpiderChartComponent extends React.Component {
     polygon.map(value => value.x + "% " + value.y + "%").join(",");
   };
 
+  getLabelPositions = (index, polygonMax) => {
+    let yPos = 0;
+    let xPos = 0;
+    let width = 16;
+    let height = 6;
+
+    switch (index) {
+      case 0:
+        yPos = polygonMax[index].y - height;
+        xPos = polygonMax[index].x - width / 2;
+        break;
+      case 1:
+        yPos = polygonMax[index].y - height / 2;
+        xPos = polygonMax[index].x;
+        break;
+      case 2:
+        yPos = polygonMax[index].y - height / 4;
+        xPos = polygonMax[index].x;
+        break;
+      case 3:
+        yPos = polygonMax[index].y + height / 4;
+        xPos = polygonMax[index].x - width / 2;
+        break;
+      case 4:
+        yPos = polygonMax[index].y - height / 4;
+        xPos = polygonMax[index].x - width;
+        break;
+      case 5:
+        yPos = polygonMax[index].y - height / 2;
+        xPos = polygonMax[index].x - width;
+        break;
+      default:
+        console.error("Something went wrong");
+    }
+
+    return {
+      width: width + "%",
+      top: yPos + "%",
+      left: xPos + "%"
+    };
+  };
+
   render() {
+    let polygonMax = [
+      { x: 50, y: 0 },
+      { x: 100, y: 25 },
+      { x: 100, y: 75 },
+      { x: 50, y: 100 },
+      { x: 0, y: 75 },
+      { x: 0, y: 25 }
+    ];
+
     let a = "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)";
     let b = this.translatePolygonToClipPath(
       this.translateValuesToDataPoints(this.state.data)
@@ -87,19 +138,16 @@ class SpiderChartComponent extends React.Component {
     return (
       <div className={styles.spiderChart}>
         <div className={styles.hexagonBorder}>
-          {/*{this.state.data.map(item => (
+          {this.state.data.map((item, index) => (
             <div>
               <span
-                style={{
-                  position: "absolute",
-                  top: `${item.y}%`,
-                  left: `${item.x}%`
-                }}
+                className={styles.spiderLabel}
+                style={this.getLabelPositions(index, polygonMax)}
               >
                 {item.name}
               </span>
             </div>
-              ))}*/}
+          ))}
           <div className={styles.hexagon}>
             <div
               className={styles.chart}
