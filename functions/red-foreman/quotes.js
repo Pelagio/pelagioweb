@@ -1,4 +1,4 @@
-module.exports.default = [
+module.exports = [
   [
     {
       character: "Red Forman",
