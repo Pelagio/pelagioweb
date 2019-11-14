@@ -18,6 +18,8 @@ class RootIndex extends React.Component {
     const metaTitle = "Pelagio";
     const metaDescription = "A transparent developer and freelancer agency";
     const metaUrl = "https://pelag.io/";
+    const imageUrl = "/img/logo-no-text.png";
+    const favicoUrl = "/img/favicon.png";
     return (
       <Layout location={location} children={children}>
         <div style={{ background: "#fff" }}>
@@ -25,30 +27,24 @@ class RootIndex extends React.Component {
             <title>{metaTitle}</title>
             <meta name="title" content={metaTitle} />
             <meta name="description" content={metaDescription} />
-
+            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+            <link rel="shortcut icon" href={favicoUrl} type="image/x-icon" />
             <meta property="og:type" content="website" />
             <meta property="og:url" content={metaUrl} />
             <meta property="og:title" content={metaTitle} />
             <meta property="og:description" content={metaDescription} />
-            <meta
-              property="og:image:url"
-              content={"../../static/img/logo.png"}
-            />
-            <meta
-              property="og:image:secure_url"
-              content={"../../static/img/logo.png"}
-            />
+            <meta property="og:image:url" content={imageUrl} />
+            <meta property="og:image:secure_url" content={imageUrl} />
             <meta property="og:image:type" content={"image/png"} />
-            <meta property="og:image" content={"../../static/img/logo.png"} />
+            <meta property="og:image" content={imageUrl} />
+            <meta property="og:image:width" content="400" />
+            <meta property="og:image:height" content="400" />
 
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content={metaUrl} />
             <meta property="twitter:title" content={metaTitle} />
             <meta property="twitter:description" content={metaDescription} />
-            <meta
-              property="twitter:image"
-              content={"../../static/img/logo.png"}
-            />
+            <meta property="twitter:image" content={imageUrl} />
           </Helmet>
           <div className="wrapper">
             <ul className="section-list">
