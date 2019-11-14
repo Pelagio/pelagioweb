@@ -14,7 +14,10 @@ exports.handler = function(event, context, callback) {
       c.some(q => q.quote.includes("dumbass"))
     );
   }
-  const randomIndex = Math.floor(Math.random() * quotesToUse.length - 1);
+  const randomIndex = Math.max(
+    Math.floor(Math.random() * quotesToUse.length) - 1,
+    0
+  );
   const data = justOneLiners
     ? quotesToUse[randomIndex][0].quote
     : quotesToUse[randomIndex];
