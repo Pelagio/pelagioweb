@@ -1,4 +1,4 @@
-import { quotes } from "./quotes";
+const quotes = require("./quotes");
 
 exports.handler = function(event, context, callback) {
   const randomIndex = Math.floor(Math.random() * quotes.length - 1);

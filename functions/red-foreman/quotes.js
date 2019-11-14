@@ -1,4 +1,4 @@
-export const quotes = [
+module.exports = [
   [
     {
       character: "Red Forman",
