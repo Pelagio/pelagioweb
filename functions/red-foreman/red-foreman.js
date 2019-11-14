@@ -2,7 +2,11 @@ const quotes = require("./quotes");
 
 exports.handler = function(event, context, callback) {
   const randomIndex = Math.floor(Math.random() * quotes.length - 1);
-  console.log({ randomIndex, quote: quotes[randomIndex] });
+  console.log({
+    randomIndex,
+    quote: quotes[randomIndex],
+    length: quotes.length
+  });
 
   callback(null, {
     statusCode: 200,
