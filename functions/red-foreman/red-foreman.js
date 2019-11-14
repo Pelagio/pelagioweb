@@ -4,7 +4,7 @@ exports.handler = function(event, context, callback) {
   const { oneLiner, requireDumbass } = event.queryStringParameters;
   const justOneLiners = oneLiner === "true";
   const shouldRequireDumbass = requireDumbass === "true";
-  const quotesToUse = quotes;
+  let quotesToUse = quotes;
 
   if (justOneLiners) {
     quotesToUse = quotesToUse.filter(q => q.length === 1);
