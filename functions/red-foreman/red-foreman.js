@@ -2,13 +2,17 @@ const quotes = require("./quotes");
 
 exports.handler = function(event, context, callback) {
   const { oneLiner } = event.queryStringParameters;
-  const quotesToUse =
-    oneLiner === "true" ? quotes.filter(q => q.length === 1) : quotes;
+  const justOneLiners = oneLiner === "true";
+  const quotesToUse = justOneLiners
+    ? quotes.filter(q => q.length === 1)
+    : quotes;
   const randomIndex = Math.floor(Math.random() * quotesToUse.length - 1);
-  console.log({ quotesToUse, randomIndex });
+  const data = justOneLiners
+    ? quotesToUse[randomIndex][0].quote
+    : quotesToUse[randomIndex];
   callback(null, {
     statusCode: 200,
-    body: JSON.stringify(quotesToUse[randomIndex]),
+    body: JSON.stringify(data),
     headers: { "Content-Type": "application/json" }
   });
 };
