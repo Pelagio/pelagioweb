@@ -1,11 +1,19 @@
 const quotes = require("./quotes");
 
 exports.handler = function(event, context, callback) {
-  const { oneLiner } = event.queryStringParameters;
+  const { oneLiner, requireDumbass } = event.queryStringParameters;
   const justOneLiners = oneLiner === "true";
-  const quotesToUse = justOneLiners
-    ? quotes.filter(q => q.length === 1)
-    : quotes;
+  const shouldRequireDumbass = requireDumbass === "true";
+  const quotesToUse = quotes;
+
+  if (justOneLiners) {
+    quotesToUse = quotesToUse.filter(q => q.length === 1);
+  }
+  if (shouldRequireDumbass) {
+    quotesToUse = quotesToUse.filter(c =>
+      c.some(q => q.quote.includes("dumbass"))
+    );
+  }
   const randomIndex = Math.floor(Math.random() * quotesToUse.length - 1);
   const data = justOneLiners
     ? quotesToUse[randomIndex][0].quote
