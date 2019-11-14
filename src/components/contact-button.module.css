@@ -91,4 +91,12 @@
     bottom: 25px;
     right: 25px;
   }
+
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    outline: none;
+  }
 }
