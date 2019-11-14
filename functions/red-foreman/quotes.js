@@ -47,7 +47,7 @@ module.exports = [
       character: "Red Forman",
       quote: "[Red and Eric are in the car almost late for work at Pricemart]"
     },
-    { character: "", quote: "[to Eric]" },
+    { character: null, quote: "[to Eric]" },
     {
       character: "Red Forman",
       quote: "You need to grow up and learn some responsibility."
@@ -114,7 +114,7 @@ module.exports = [
     { character: "Eric", quote: "I said no." },
     { character: "Red", quote: "What the Hell is wrong with you?" },
     { character: "Kitty Forman", quote: "Dumbass!" },
-    { character: "", quote: "[Red looks at Kitty in surprise]" },
+    { character: null, quote: "[Red looks at Kitty in surprise]" },
     { character: "Eric", quote: "Look, I have my reasons, okay?" },
     { character: "Red", quote: "What the Hell could they possibly be?" },
     {
@@ -130,7 +130,7 @@ module.exports = [
   ],
   [
     {
-      character: "",
+      character: null,
       quote: "[Eric catches his parents having sex, and they find out]"
     },
     { character: "Kitty Forman", quote: "Red, say something." },
@@ -164,7 +164,7 @@ module.exports = [
     { character: "Red Forman", quote: "That's right." }
   ],
   [
-    { character: "", quote: "[repeated line]" },
+    { character: null, quote: "[repeated line]" },
     { character: "Red Forman", quote: "That kid's on dope!" }
   ],
   [
@@ -176,14 +176,14 @@ module.exports = [
         "[reading the note]  Dear Red, we would like for you to give Michael thirty dollars for the game you threw out the window and broke. Signed, my parents."
     },
     {
-      character: "",
+      character: null,
       quote: "[Kitty laughs hysterically, and leaves the room]"
     },
     {
       character: "Red Forman",
       quote: "Well, you made her laugh, that's worth at least thirty bucks."
     },
-    { character: "", quote: "[Gives Kelso the money]" }
+    { character: null, quote: "[Gives Kelso the money]" }
   ],
   [
     { character: "Red Forman", quote: "What the hell happened?" },
@@ -192,7 +192,7 @@ module.exports = [
     { character: "Fez", quote: "Your son is a whore." }
   ],
   [
-    { character: "", quote: "[about Bob's hair]" },
+    { character: null, quote: "[about Bob's hair]" },
     { character: "Red Forman", quote: "His head looks like a poodle's ass." }
   ],
   [
@@ -225,17 +225,17 @@ module.exports = [
     { character: "Michael Kelso", quote: '"Thank you"? Einstein was ugly.' }
   ],
   [
-    { character: "", quote: "[repeated line]" },
+    { character: null, quote: "[repeated line]" },
     { character: "Red Forman", quote: "Dumbass!" }
   ],
   [
-    { character: "", quote: "[referring to that Thanksgiving's events]" },
+    { character: null, quote: "[referring to that Thanksgiving's events]" },
     {
       character: "Red Forman",
       quote:
         "You mean with that ungrateful daughter, our dumbass son, and that drunk foreign kid"
     },
-    { character: "", quote: "[pause]" },
+    { character: null, quote: "[pause]" },
     { character: "Red Forman", quote: "it was better than last year." }
   ],
   [
@@ -249,7 +249,7 @@ module.exports = [
       quote:
         "[Red's acting nice]  I thought I never say this. I'm glad you're my friend."
     },
-    { character: "", quote: "[hugs Bob]" },
+    { character: null, quote: "[hugs Bob]" },
     {
       character: "Bob Pinciotti",
       quote: "Red, I thought I'd never say this, you smell nice."
@@ -257,7 +257,7 @@ module.exports = [
   ],
   [
     {
-      character: "",
+      character: null,
       quote: "[on buying an economy car during the oil crisis]"
     },
     {
@@ -267,7 +267,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[seeing a square dance]" },
+    { character: null, quote: "[seeing a square dance]" },
     { character: "Red Forman", quote: "It looks like 'Hee Haw' puked in here." }
   ],
   [
@@ -284,10 +284,10 @@ module.exports = [
       character: "Kitty Forman",
       quote: "Oh, can it, Laurie. Eric you look pale. Let me see your eyes."
     },
-    { character: "", quote: "[Eric just looks down]" },
+    { character: null, quote: "[Eric just looks down]" },
     { character: "Kitty Forman", quote: "Look at me." },
     {
-      character: "",
+      character: null,
       quote:
         "[Eric looks at Kitty, imagining her she was naked after seeing his parents having sex]"
     },
@@ -307,7 +307,7 @@ module.exports = [
       quote:
         "[looking at Kitty and Red a couple more times]  God, make it stop!"
     },
-    { character: "", quote: "[leaves the table]" }
+    { character: null, quote: "[leaves the table]" }
   ],
   [
     { character: "Red Forman", quote: "Threats aren't going to work, Kitty." },
@@ -318,18 +318,18 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[on Valentine's day]" },
+    { character: null, quote: "[on Valentine's day]" },
     {
       character: "Kitty Forman",
       quote:
         "Oooh, look how cute you are. This is just like when you were 5, and played make believe dinner. Only this time, it won't end by Donna sitting on Eric's face."
     },
-    { character: "", quote: "[Awkward pause]" },
+    { character: null, quote: "[Awkward pause]" },
     { character: "Kitty Forman", quote: "OK." },
-    { character: "", quote: "[Kitty and Red start leaving]" },
+    { character: null, quote: "[Kitty and Red start leaving]" },
     { character: "Red Forman", quote: "Kitty, that was bad." },
     { character: "Kitty Forman", quote: "I know, keep walking." },
-    { character: "", quote: "[Kitt and Red finally leave]" },
+    { character: null, quote: "[Kitt and Red finally leave]" },
     {
       character: "Eric",
       quote: "Oh, good, and I thought this was going to be awkward."
@@ -380,7 +380,7 @@ module.exports = [
   ],
   [
     { character: "Red Forman", quote: "Penny, you're cold. Go get a sweater." },
-    { character: "", quote: "[Cousin Penny leaves]" },
+    { character: null, quote: "[Cousin Penny leaves]" },
     {
       character: "Red Forman",
       quote: "Eric, do I have to tell you to stop staring at your cousin?"
@@ -438,7 +438,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[Red on Laurie and Michael]" },
+    { character: null, quote: "[Red on Laurie and Michael]" },
     {
       character: "Red Forman",
       quote:
@@ -466,7 +466,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[Kitty wants to redecorate the basement]" },
+    { character: null, quote: "[Kitty wants to redecorate the basement]" },
     {
       character: "Red Forman",
       quote: "This is going to be expensive, isn't it?"
@@ -655,7 +655,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[Red on young people]" },
+    { character: null, quote: "[Red on young people]" },
     {
       character: "Red Forman",
       quote:
@@ -663,7 +663,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[Red groans]" },
+    { character: null, quote: "[Red groans]" },
     {
       character: "Eric",
       quote:
@@ -694,7 +694,7 @@ module.exports = [
     { character: "Steven Hyde", quote: "Because I wouldn't wear shorts?" },
     { character: "Red Forman", quote: "Why not?" },
     { character: "Steven Hyde", quote: "Would you wear shorts?" },
-    { character: "", quote: "[Red signs the card]" }
+    { character: null, quote: "[Red signs the card]" }
   ],
   [
     { character: "Kitty Forman", quote: "I want to have a baby." },
@@ -711,7 +711,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[about Bob and Midge]" },
+    { character: null, quote: "[about Bob and Midge]" },
     {
       character: "Red Forman",
       quote:
@@ -725,14 +725,14 @@ module.exports = [
       quote:
         "Oh, sure. Right after my cup of joe. I'm useless without my coffee."
     },
-    { character: "", quote: "[Earl runs out]" },
+    { character: null, quote: "[Earl runs out]" },
     {
       character: "Eric",
       quote: "Then, I guess he hasn't had coffee in years, huh?"
     }
   ],
   [
-    { character: "", quote: "[Eric just announced his plans to move away]" },
+    { character: null, quote: "[Eric just announced his plans to move away]" },
     { character: "Red Forman", quote: "I'm proud of you." },
     {
       character: "Kitty Forman",
@@ -792,7 +792,7 @@ module.exports = [
   ],
   [
     {
-      character: "",
+      character: null,
       quote: "[Eric puts boxes on a dolly. He whistles. Red works at his desk]"
     },
     {
@@ -802,7 +802,7 @@ module.exports = [
     },
     { character: "Eric", quote: "Oh. Sorry." },
     {
-      character: "",
+      character: null,
       quote: "[not whistling, he puts another box on the dolly]"
     },
     { character: "Red", quote: "Hey, bend at the knees or else I'll..." },
@@ -834,7 +834,7 @@ module.exports = [
       character: "Red Forman",
       quote: "[Red and Eric are in the car almost late for work at Pricemart]"
     },
-    { character: "", quote: "[to himself]" },
+    { character: null, quote: "[to himself]" },
     { character: "Red Forman", quote: "I love my job." },
     { character: "Eric", quote: "I love you too, Dad." },
     { character: "Red Forman", quote: "Oh, Eric, stop being weird." },
@@ -868,7 +868,7 @@ module.exports = [
       character: "Eric",
       quote: "Yeah, all the honest ones, like Richard Nixon."
     },
-    { character: "", quote: "[Everybody moves away from Eric]" },
+    { character: null, quote: "[Everybody moves away from Eric]" },
     { character: "Red Forman", quote: "What did you just say?" },
     {
       character: "Eric",
@@ -894,7 +894,7 @@ module.exports = [
     { character: "Red Forman", quote: "Deal." }
   ],
   [
-    { character: "", quote: "[Jackie's dad got arrested]" },
+    { character: null, quote: "[Jackie's dad got arrested]" },
     {
       character: "Red Forman",
       quote:
@@ -911,7 +911,7 @@ module.exports = [
         "Oh, my god. That's such a good idea. I'll do that. You know, it's true. In this country, the rich get treated better than most people."
     },
     { character: "Red Forman", quote: "Yeah." },
-    { character: "", quote: "[sarcastically]" },
+    { character: null, quote: "[sarcastically]" },
     {
       character: "Red Forman",
       quote: "I'm so glad I took some shrapnel to make that possible..."
@@ -926,7 +926,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[Red watches Tv]" },
+    { character: null, quote: "[Red watches Tv]" },
     {
       character: "Red Forman",
       quote: "Aw, Gilligan screwed it up. Why don't they just kill him?"
@@ -971,7 +971,7 @@ module.exports = [
       quote: "You're so Jughead, its not even debatable."
     },
     { character: "Michael Kelso", quote: "You are so..." },
-    { character: "", quote: "[Steven punches Michael]" },
+    { character: null, quote: "[Steven punches Michael]" },
     { character: "Red Forman", quote: "Steven, stop hitting Jughead." }
   ],
   [
@@ -998,7 +998,7 @@ module.exports = [
       quote:
         "I wouldn't know anything about that. Never been to war. I was a conscientious."
     },
-    { character: "", quote: "[Red looks at him menacingly]" },
+    { character: null, quote: "[Red looks at him menacingly]" },
     { character: "Bud Hyde", quote: "Uhh... Canadian." }
   ],
   [
@@ -1006,15 +1006,15 @@ module.exports = [
       character: "Leo",
       quote: "Hi, Red. Would you give these to Kitty, please?"
     },
-    { character: "", quote: "[hands Red flowers]" },
+    { character: null, quote: "[hands Red flowers]" },
     { character: "Leo", quote: "Oh, and tell her I love her. Thanks." },
-    { character: "", quote: "[leaves]" },
+    { character: null, quote: "[leaves]" },
     {
       character: "Red Forman",
       quote:
         "Oh, Kitty. These are for you. Looks like you got a date with a stoner."
     },
-    { character: "", quote: "[Red and Kitty laugh]" },
+    { character: null, quote: "[Red and Kitty laugh]" },
     {
       character: "Kitty Forman",
       quote:
@@ -1022,12 +1022,12 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[Kitty has menopause]" },
+    { character: null, quote: "[Kitty has menopause]" },
     {
       character: "Red Forman",
       quote: "[to Eric]  Quick, I need a wet towel and a Bloody Mary."
     },
-    { character: "", quote: "[Eric stares at him]" },
+    { character: null, quote: "[Eric stares at him]" },
     {
       character: "Red Forman",
       quote:
@@ -1057,11 +1057,11 @@ module.exports = [
       quote:
         "Ditto... Aww, come here. I can't stay mad at you with that cute face."
     },
-    { character: "", quote: "[hugs her; Eric looks at Red with open arms]" },
+    { character: null, quote: "[hugs her; Eric looks at Red with open arms]" },
     { character: "Red Forman", quote: "Get your ugly ass in the car." }
   ],
   [
-    { character: "", quote: "[the kids want to throw a party]" },
+    { character: null, quote: "[the kids want to throw a party]" },
     { character: "Red Forman", quote: "Why here? Why is it always here?" },
     {
       character: "Kitty Forman",
@@ -1108,7 +1108,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[Laurie moves out]" },
+    { character: null, quote: "[Laurie moves out]" },
     {
       character: "Red Forman",
       quote:
@@ -1125,7 +1125,7 @@ module.exports = [
   ],
   [
     {
-      character: "",
+      character: null,
       quote: "[Eric likes Stacey at Price Mart, but Stacey likes Red]"
     },
     { character: "Eric", quote: "Did Stacey actually use the word 'freak'?" },
@@ -1140,7 +1140,7 @@ module.exports = [
     { character: "Red", quote: "No I'm not!" }
   ],
   [
-    { character: "", quote: "[Eric and Red are hunting]" },
+    { character: null, quote: "[Eric and Red are hunting]" },
     {
       character: "Red Forman",
       quote:
@@ -1180,7 +1180,7 @@ module.exports = [
       character: "Bob Pinciotti",
       quote: "David Milbank? He's got scoliosis and asthma."
     },
-    { character: "", quote: "[pause]" },
+    { character: null, quote: "[pause]" },
     { character: "Bob Pinciotti", quote: "You could take him." },
     {
       character: "Red",
@@ -1211,7 +1211,7 @@ module.exports = [
       quote:
         "[pauses and stares at Bob again]  Hitting a guy with a banjo, is dirty."
     },
-    { character: "", quote: "[to Eric]" },
+    { character: null, quote: "[to Eric]" },
     { character: "Red", quote: "You wanna knee him in the groin." },
     {
       character: "Bob Pinciotti",
@@ -1219,7 +1219,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[At Breakfast]" },
+    { character: null, quote: "[At Breakfast]" },
     { character: "Eric", quote: "Hey, leggo my Eggo." },
     { character: "Red Forman", quote: "Hey, leggo my foot in your ass." }
   ],
@@ -1228,7 +1228,7 @@ module.exports = [
     { character: "Red Forman", quote: "Korea." }
   ],
   [
-    { character: "", quote: "[Kitty has just come home from work]" },
+    { character: null, quote: "[Kitty has just come home from work]" },
     {
       character: "Kitty Forman",
       quote: "Here, honey. I brought you a lollipop."
@@ -1245,7 +1245,7 @@ module.exports = [
         "You need to protect yourself. Today I saw a 16-year-old give birth, and I don't want that type of thing to happen to you."
     },
     { character: "Eric", quote: "Well, this couldn't be more uncomfortable." },
-    { character: "", quote: "[gets up and leaves]" },
+    { character: null, quote: "[gets up and leaves]" },
     {
       character: "Kitty Forman",
       quote: "Oh, honey. Don't forget your condoms."
@@ -1272,7 +1272,7 @@ module.exports = [
     { character: "Red Forman", quote: "Nothing." }
   ],
   [
-    { character: "", quote: "[Red on Kitty's parents]" },
+    { character: null, quote: "[Red on Kitty's parents]" },
     {
       character: "Red Forman",
       quote:
@@ -1285,11 +1285,11 @@ module.exports = [
       quote:
         "You know, maybe instead of finding another idiot to hang out with, you might think about unloading a few."
     },
-    { character: "", quote: "[to Hyde]" },
+    { character: null, quote: "[to Hyde]" },
     { character: "Red Forman", quote: "Like you." },
-    { character: "", quote: "[to Kelso]" },
+    { character: null, quote: "[to Kelso]" },
     { character: "Red Forman", quote: "And you." },
-    { character: "", quote: "[to Eric]" },
+    { character: null, quote: "[to Eric]" },
     { character: "Red Forman", quote: "And you." },
     { character: "Eric", quote: "I'm your son." },
     { character: "Red Forman", quote: "Hey, I treat everyone as equals." }
@@ -1328,7 +1328,7 @@ module.exports = [
       character: "Laurie Forman",
       quote: "Yeah, right. Like he even knows who his father is."
     },
-    { character: "", quote: "[gets up and leaves]" },
+    { character: null, quote: "[gets up and leaves]" },
     { character: "Red Forman", quote: "Do you know anything about this?" },
     { character: "Eric", quote: "Yeah. She's a bitch." }
   ],
@@ -1337,11 +1337,11 @@ module.exports = [
       character: "Red Forman",
       quote: "A bond between a father and son is subtle and complex-"
     },
-    { character: "", quote: "[to Eric]" },
+    { character: null, quote: "[to Eric]" },
     { character: "Red Forman", quote: "You wipe that smirk off your face." }
   ],
   [
-    { character: "", quote: "[on taking care of Red's parking ticket]" },
+    { character: null, quote: "[on taking care of Red's parking ticket]" },
     {
       character: "Nina",
       quote: "I can't take care of this. You were parked in a fire zone."
@@ -1358,7 +1358,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[on Bob's barbecue]" },
+    { character: null, quote: "[on Bob's barbecue]" },
     {
       character: "Red Forman",
       quote:
@@ -1366,7 +1366,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[on Bob]" },
+    { character: null, quote: "[on Bob]" },
     {
       character: "Red Forman",
       quote: "I didn't want to insult him by offering him some nothing job."
@@ -1378,7 +1378,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[Red has just won at craps]" },
+    { character: null, quote: "[Red has just won at craps]" },
     { character: "Red Forman", quote: "I'm the richest man in Church." }
   ],
   [
@@ -1402,7 +1402,7 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[after Red insults Fez, Eric, and Kelso]" },
+    { character: null, quote: "[after Red insults Fez, Eric, and Kelso]" },
     {
       character: "Kelso",
       quote: "Hey, hold on a second. Am I the pretty boy moron?"
@@ -1424,7 +1424,7 @@ module.exports = [
     { character: "Red", quote: "Of course I know." }
   ],
   [
-    { character: "", quote: "[Kitty wants Hyde to move in with them]" },
+    { character: null, quote: "[Kitty wants Hyde to move in with them]" },
     { character: "Red", quote: "For God's sake, Kitty, I'm not Santa Claus." },
     {
       character: "Kitty Forman",
@@ -1455,7 +1455,7 @@ module.exports = [
     { character: "Steven Hyde", quote: "Duck season." }
   ],
   [
-    { character: "", quote: "[Red complains about the neighbors' dog]" },
+    { character: null, quote: "[Red complains about the neighbors' dog]" },
     {
       character: "Red",
       quote:
@@ -1485,13 +1485,13 @@ module.exports = [
     }
   ],
   [
-    { character: "", quote: "[flashback to twenty years earlier]" },
+    { character: null, quote: "[flashback to twenty years earlier]" },
     {
       character: "Red Forman",
       quote:
         "It's just that Frank is getting on my nerves. He's just... he's an ass. And he's dumb. He's a..."
     },
-    { character: "", quote: "[spotlight on Red; celestial chorus plays]" },
+    { character: null, quote: "[spotlight on Red; celestial chorus plays]" },
     { character: "Red Forman", quote: "... dumbass." }
   ],
   [
@@ -1523,7 +1523,7 @@ module.exports = [
       character: "Eric",
       quote: "Dad is gonna freak. I don't know how to tell him."
     },
-    { character: "", quote: "[Red enters the house]" },
+    { character: null, quote: "[Red enters the house]" },
     { character: "Red Foreman", quote: "Tell me what?" },
     { character: "Eric", quote: "Oh, mom said the ass word." },
     { character: "Kitty Forman", quote: "Give me that." },
@@ -1544,7 +1544,7 @@ module.exports = [
     { character: "Red Foreman", quote: "Come on let's make fun of mum's hair." }
   ],
   [
-    { character: "", quote: "[about Hyde's house]" },
+    { character: null, quote: "[about Hyde's house]" },
     { character: "Kitty Forman", quote: "He really shouldn't be here." },
     {
       character: "Red",
@@ -1554,7 +1554,7 @@ module.exports = [
   ],
   [
     {
-      character: "",
+      character: null,
       quote: "[seeing Donna and Eric cavorting on the kitchen table]"
     },
     { character: "Red", quote: "Damn it. That's where I eat dinner." }
@@ -1643,7 +1643,7 @@ module.exports = [
   ],
   [
     {
-      character: "",
+      character: null,
       quote:
         "[Red has a heart attack when he learns that Fez and Laurie got married]"
     },
@@ -1680,9 +1680,9 @@ module.exports = [
       quote:
         "[holding a can of whipped cream]  I'm telling you, this stuff's just isn't for cakes. It's great all by itself."
     },
-    { character: "", quote: "[sprays some in his mouth]" },
+    { character: null, quote: "[sprays some in his mouth]" },
     { character: "Red Forman", quote: "Wait, wait, wait." },
-    { character: "", quote: "[sprays some on top of his head]" },
+    { character: null, quote: "[sprays some on top of his head]" },
     {
       character: "Red Forman",
       quote:
@@ -1763,7 +1763,7 @@ module.exports = [
         "[to Red and Eric]  Now stop fighting and help me do this crossword. I need a 4-letter word for disappointment"
     },
     { character: "Red Forman", quote: "Eric." },
-    { character: "", quote: "[glares at Eric]" },
+    { character: null, quote: "[glares at Eric]" },
     { character: "Kitty Forman", quote: "[looks up nervously]  It fits..." }
   ],
   [
