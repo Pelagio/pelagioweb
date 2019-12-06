@@ -1,5 +1,5 @@
 .parallax {
-  height: 300px;
+  height: 700px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -12,6 +12,11 @@
 .sectionContent {
   padding: 36px 36px 10px 36px;
   flex: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 420px) {

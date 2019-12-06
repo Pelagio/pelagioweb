@@ -15,14 +15,14 @@
 
 .contactInfo {
   padding: 0px 10px;
-  align-items: center;
+  align-items: left;
   display: flex;
   flex-direction: column;
   min-width: 165px;
+  text-align: left;
 }
 
 .contactName {
-  text-align: center;
   font-weight: normal;
 }
 
@@ -31,8 +31,8 @@
 }
 
 .headShot {
-  width: 120px;
-  height: 180px;
+  width: 220px;
+  height: 250px;
   background-size: cover;
   background-position: center;
   filter: saturate(70%);

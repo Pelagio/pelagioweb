@@ -16,6 +16,7 @@
 
 .menuItem {
   text-transform: lowercase;
+  font-size: 18px;
 }
 
 .titleHeader {

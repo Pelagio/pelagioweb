@@ -29,12 +29,12 @@ const Person = ({ person }) => {
           {person.name} <br />
           {person.title}
         </h4>
-        <p className={styles.contactInfoText}>
+        <h4 className={styles.contactInfoText}>
           <FaPhone /> {person.phone}
-        </p>
-        <p className={styles.contactInfoText}>
+        </h4>
+        <h4 className={styles.contactInfoText}>
           <FaEnvelope /> {person.email}
-        </p>
+        </h4>
       </div>
     </div>
   );

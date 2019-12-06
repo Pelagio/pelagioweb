@@ -3,7 +3,7 @@ export const anchorScroll = e => {
   let target = document.querySelector(hashval);
   target.scrollIntoView({
     behavior: "smooth",
-    block: "start"
+    block: "center"
   });
   window.history.pushState(null, null, hashval);
   e.preventDefault();

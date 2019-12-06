@@ -63,8 +63,34 @@ h4 {
   font-weight: lighter;
 }
 
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+p {
+  font-size: 25px;
+}
+
 a {
   color: currentColor;
+  font-size: 30px;
+}
+
+a:hover {
+  color: accent;
 }
 
 .wrapper {
