@@ -12,18 +12,22 @@ export default ({ section, people }) => {
           backgroundImage: `url(${section.background.fluid.src})`
         }}
       />
-      <div className={styles.sectionContent}>
-        <h2>{section.title}</h2>
-        {people ? (
+
+      {people ? (
+        <div>
+          <h2>{section.title}</h2>
           <PeopleSection people={people} />
-        ) : (
+        </div>
+      ) : (
+        <div className={styles.sectionContent}>
+          <h2>{section.title}</h2>
           <div
             dangerouslySetInnerHTML={{
               __html: section.content.content
             }}
           />
-        )}
-      </div>
+        </div>
+      )}
     </section>
   );
 };

@@ -1,21 +1,27 @@
 .whoContainer {
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
   justify-content: flex-start;
   height: auto;
   letter-spacing: normal;
-  flex-wrap: wrap;
+}
+
+.whoPerson:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .whoPerson {
   display: flex;
-  margin-right: 24px;
-  margin-bottom: 24px;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+  color: rgba(0, 0, 0, 1);
 }
 
 .contactInfo {
-  padding: 0px 10px;
-  align-items: center;
+  padding: 10px 20px;
+  align-items: flex-start;
+  justify-content: flex-end;
   display: flex;
   flex-direction: column;
   min-width: 165px;
@@ -23,19 +29,32 @@
 
 .contactName {
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
+  margin: 0;
 }
 
 .contactInfoText {
-  margin: 5px 0px;
+  margin: 0px 0px;
 }
 
 .headShot {
-  width: 120px;
-  height: 180px;
+  flex: 1;
   background-size: cover;
   background-position: center;
   filter: saturate(70%);
+}
+
+.distanceShot {
+  flex: 1;
+}
+.distanceShotOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(190, 190, 190, 0.5);
+  display: flex;
 }
 
 @media only screen and (max-width: 420px) {

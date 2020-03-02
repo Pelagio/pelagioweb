@@ -27,6 +27,10 @@ class RootIndex extends React.Component {
             <title>{metaTitle}</title>
             <meta name="title" content={metaTitle} />
             <meta name="description" content={metaDescription} />
+            <link
+              href="https://fonts.googleapis.com/css?family=Martel+Sans:200,300,700&display=swap"
+              rel="stylesheet"
+            />
             <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
             <link rel="shortcut icon" href={favicoUrl} type="image/x-icon" />
             <meta property="og:type" content="website" />
@@ -109,6 +113,15 @@ export const pageQuery = graphql`
               sizes
               src
               srcSet
+              aspectRatio
+            }
+          }
+          distanceImage {
+            fluid(maxWidth: 1500) {
+              sizes
+              src
+              srcSet
+              aspectRatio
             }
           }
         }
