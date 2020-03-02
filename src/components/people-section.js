@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPhone, FaEnvelope } from "react-icons/fa";
 import Img from "gatsby-image";
+import { window } from "browser-monads";
 
 import styles from "./people-section.module.css";
 

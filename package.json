@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "browser-monads": "1.0.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "gatsby": "2.3.25",
