@@ -27,6 +27,10 @@
   min-width: 165px;
 }
 
+.contactInfoMobile {
+  display: none;
+}
+
 .contactName {
   text-align: center;
   font-weight: bold;
@@ -39,12 +43,22 @@
 
 .headShot {
   flex: 1;
+  position: relative;
+}
+
+.headShotImage {
+  flex: 1;
   background-size: cover;
   background-position: center;
   filter: saturate(70%);
 }
 
 .distanceShot {
+  position: relative;
+  flex: 2;
+}
+
+.distanceShotImage {
   flex: 1;
 }
 .distanceShotOverlay {
@@ -58,11 +72,19 @@
 }
 
 @media only screen and (max-width: 420px) {
-  .whoPerson {
-    margin: 20px 0px;
+  .distanceShot {
+    display: none;
   }
 
-  .contactName {
-    margin: 10px 0px;
+  .contactInfoMobile {
+    display: block;
+  }
+  .contactInfo {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }

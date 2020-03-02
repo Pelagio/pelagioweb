@@ -18,32 +18,48 @@ const Person = ({ person, index }) => {
   return (
     <div className={styles.whoPerson}>
       {person.image && (
-        <Img
-          className={styles.headShot}
-          alt={person.name}
-          fluid={{ ...person.image.fluid, aspectRatio: 1 }}
-        />
+        <div className={styles.headShot}>
+          <Img
+            className={styles.headShotImage}
+            alt={person.name}
+            fluid={{
+              ...person.image.fluid,
+              aspectRatio: matchMedia(
+                "@media only screen and (max-width: 700px)"
+              )
+                ? 0.815
+                : 1
+            }}
+          />
+          <ContactInfo person={person} />
+        </div>
       )}
       {person.distanceImage && (
-        <div style={{ position: "relative", flex: 2 }}>
+        <div className={styles.distanceShot}>
           <Img
-            className={styles.distanceShot}
+            className={styles.distanceShotImage}
             alt={person.name}
             fluid={{ ...person.distanceImage.fluid, aspectRatio: 2 }}
           />
           <div className={styles.distanceShotOverlay}>
-            <div className={styles.contactInfo}>
-              <h4 className={styles.contactName}>{person.name}</h4>
-              <p className={styles.contactInfoText}>
-                <FaPhone /> {person.phone}
-              </p>
-              <p className={styles.contactInfoText}>
-                <FaEnvelope /> {person.email}
-              </p>
-            </div>
+            <ContactInfo person={person} />
           </div>
         </div>
       )}
+    </div>
+  );
+};
+
+const ContactInfo = ({ person }) => {
+  return (
+    <div className={styles.contactInfo}>
+      <h4 className={styles.contactName}>{person.name}</h4>
+      <p className={styles.contactInfoText}>
+        <FaPhone /> {person.phone}
+      </p>
+      <p className={styles.contactInfoText}>
+        <FaEnvelope /> {person.email}
+      </p>
     </div>
   );
 };
