@@ -24,7 +24,7 @@ const Person = ({ person, index }) => {
             alt={person.name}
             fluid={{
               ...person.image.fluid,
-              aspectRatio: matchMedia(
+              aspectRatio: window.matchMedia(
                 "@media only screen and (max-width: 700px)"
               )
                 ? 0.815
