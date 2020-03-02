@@ -77,14 +77,20 @@
   }
 
   .contactInfoMobile {
-    display: block;
-  }
-  .contactInfo {
+    display: flex;
     color: white;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    padding: 10px 20px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    min-width: 165px;
+  }
+  .contactInfo {
+    display: none;
   }
 }

@@ -15,6 +15,10 @@ export default ({ people }) => {
   );
 };
 
+const { matches: isMobile } = window.matchMedia(
+  "only screen and (max-width: 700px)"
+);
+
 const Person = ({ person, index }) => {
   return (
     <div className={styles.whoPerson}>
@@ -25,14 +29,10 @@ const Person = ({ person, index }) => {
             alt={person.name}
             fluid={{
               ...person.image.fluid,
-              aspectRatio: window.matchMedia(
-                "@media only screen and (max-width: 700px)"
-              )
-                ? 0.815
-                : 1
+              aspectRatio: isMobile ? 0.815 : 1
             }}
           />
-          <ContactInfo person={person} />
+          <ContactInfo person={person} mobileUI />
         </div>
       )}
       {person.distanceImage && (
@@ -51,9 +51,9 @@ const Person = ({ person, index }) => {
   );
 };
 
-const ContactInfo = ({ person }) => {
+const ContactInfo = ({ person, mobileUI }) => {
   return (
-    <div className={styles.contactInfo}>
+    <div className={mobileUI ? styles.contactInfoMobile : styles.contactInfo}>
       <h4 className={styles.contactName}>{person.name}</h4>
       <p className={styles.contactInfoText}>
         <FaPhone /> {person.phone}
