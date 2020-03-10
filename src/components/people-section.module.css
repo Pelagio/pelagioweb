@@ -1,5 +1,6 @@
 @value colors: "../theme/colors.css";
 @value offText from colors;
+@value distanceShowBackground from colors;
 
 .whoContainer {
   flex-direction: column;
@@ -81,7 +82,7 @@
 .distanceShot {
   position: relative;
   flex: 2;
-  background-color: #dbe3e9;
+  background-color: distanceShotBackground;
 }
 
 .distanceShotImage {
