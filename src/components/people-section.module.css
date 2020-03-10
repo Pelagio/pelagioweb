@@ -62,7 +62,7 @@
   background-size: cover;
   background-position: center;
   filter: saturate(70%);
-  display: inline;
+  display: block;
 }
 
 .distanceShot {
@@ -104,7 +104,7 @@
     background-size: cover;
     background-position: center;
     filter: saturate(70%);
-    display: inline;
+    display: block;
   }
 
   .contactInfo {
