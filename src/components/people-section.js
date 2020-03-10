@@ -10,6 +10,8 @@ export default ({ people }) => {
     "only screen and (max-width: 420px)"
   );
 
+  console.log({ isMobile });
+
   return (
     <div className={styles.whoContainer}>
       {people.map(({ node }, index) => {
