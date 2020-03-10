@@ -28,7 +28,7 @@ class RootIndex extends React.Component {
             <meta name="title" content={metaTitle} />
             <meta name="description" content={metaDescription} />
             <link
-              href="https://fonts.googleapis.com/css?family=Martel+Sans:200,300,700&display=swap"
+              href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:300,400,700,900&display=swap"
               rel="stylesheet"
             />
             <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />

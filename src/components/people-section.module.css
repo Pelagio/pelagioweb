@@ -1,3 +1,6 @@
+@value colors: "../theme/colors.css";
+@value offText from colors;
+
 .whoContainer {
   flex-direction: column;
   display: flex;
@@ -26,6 +29,11 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  font-family: "Lato", sans-serif;
+  color: offText;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .whoPerson:nth-child(even) .contactInfo {
@@ -45,7 +53,8 @@
 .contactName {
   text-align: center;
   font-weight: bold;
-  margin: 0;
+  margin: 0 0 4px 0;
+  font-size: 18px;
 }
 
 .contactInfoText {
@@ -123,6 +132,7 @@
   .contactInfo {
     color: white;
     padding: 15px;
+    font-size: 18px;
   }
 
   .contactInfoSpacer {
