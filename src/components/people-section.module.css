@@ -20,7 +20,7 @@
 }
 
 .contactInfo {
-  padding: 10px 20px;
+  padding: 20px 36px;
   align-items: flex-start;
   justify-content: flex-end;
   display: flex;
@@ -109,6 +109,7 @@
 
   .contactInfo {
     color: white;
+    padding: 15px;
   }
 
   .contactInfoSpacer {
