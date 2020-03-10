@@ -6,20 +6,27 @@ import { window } from "browser-monads";
 import styles from "./people-section.module.css";
 
 export default ({ people }) => {
+  const { matches: isMobile } = window.matchMedia(
+    "only screen and (max-width: 700px)"
+  );
+
   return (
     <div className={styles.whoContainer}>
       {people.map(({ node }, index) => {
-        return <Person person={node} key={node.id} index={index} />;
+        return (
+          <Person
+            person={node}
+            key={node.id}
+            index={index}
+            isMobile={isMobile}
+          />
+        );
       })}
     </div>
   );
 };
 
-const { matches: isMobile } = window.matchMedia(
-  "only screen and (max-width: 700px)"
-);
-
-const Person = ({ person, index }) => {
+const Person = ({ person, index, isMobile }) => {
   return (
     <div className={styles.whoPerson}>
       {person.image && (
