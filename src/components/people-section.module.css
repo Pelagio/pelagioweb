@@ -28,6 +28,10 @@
   flex: 1;
 }
 
+.whoPerson:nth-child(even) .contactInfo {
+  align-items: flex-end;
+}
+
 .contactInfoContainer {
   min-width: 165px;
   flex: 2;
@@ -92,6 +96,10 @@
   display: flex;
 }
 
+.whoPerson:nth-child(even) .contactInfoWrapper {
+  flex-direction: row-reverse;
+}
+
 @media only screen and (max-width: 420px) {
   .distanceShot {
     display: none;
@@ -99,6 +107,11 @@
   .headShotImage {
     display: none;
   }
+
+  .whoPerson:nth-child(even) .contactInfo {
+    align-items: flex-start;
+  }
+
   .mobileHeadShotImage {
     flex: 1;
     background-size: cover;

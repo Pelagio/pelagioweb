@@ -1,7 +1,5 @@
 import React from "react";
-import { FaPhone, FaEnvelope } from "react-icons/fa";
 import Img from "gatsby-image";
-import { window } from "browser-monads";
 
 import styles from "./people-section.module.css";
 
@@ -61,12 +59,8 @@ const ContactInfo = ({ person }) => {
     <div className={styles.contactInfoContainer}>
       <div className={styles.contactInfo}>
         <h4 className={styles.contactName}>{person.name}</h4>
-        <p className={styles.contactInfoText}>
-          <FaPhone /> {person.phone}
-        </p>
-        <p className={styles.contactInfoText}>
-          <FaEnvelope /> {person.email}
-        </p>
+        <p className={styles.contactInfoText}>{person.phone}</p>
+        <p className={styles.contactInfoText}>{person.email}</p>
       </div>
     </div>
   );
