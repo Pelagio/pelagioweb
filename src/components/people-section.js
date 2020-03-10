@@ -43,7 +43,6 @@ const Person = ({ person, index }) => {
             alt={person.name}
             fluid={{ ...person.distanceImage.fluid, aspectRatio: 2 }}
           />
-          <div className={styles.distanceShotOverlay} />
         </div>
       )}
       <div className={styles.contactInfoWrapper}>
