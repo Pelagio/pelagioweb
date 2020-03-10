@@ -16,6 +16,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   color: rgba(0, 0, 0, 1);
+  position: relative;
 }
 
 .contactInfo {
@@ -24,11 +25,17 @@
   justify-content: flex-end;
   display: flex;
   flex-direction: column;
-  min-width: 165px;
+  flex: 1;
 }
 
-.contactInfoMobile {
-  display: none;
+.contactInfoContainer {
+  min-width: 165px;
+  flex: 2;
+  display: flex;
+}
+
+.contactInfoSpacer {
+  flex: 1;
 }
 
 .contactName {
@@ -71,26 +78,25 @@
   display: flex;
 }
 
+.contactInfoWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
 @media only screen and (max-width: 420px) {
   .distanceShot {
     display: none;
   }
 
-  .contactInfoMobile {
-    display: flex;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 10px 20px;
-    align-items: flex-start;
-    justify-content: flex-end;
-    flex-direction: column;
-    min-width: 165px;
-  }
   .contactInfo {
-    display: none;
+    color: white;
+  }
+
+  .contactInfoSpacer {
+    flex: 0;
   }
 }

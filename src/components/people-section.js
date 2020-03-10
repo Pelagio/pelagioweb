@@ -7,7 +7,7 @@ import styles from "./people-section.module.css";
 
 export default ({ people }) => {
   const { matches: isMobile } = window.matchMedia(
-    "only screen and (max-width: 700px)"
+    "only screen and (max-width: 420px)"
   );
 
   return (
@@ -34,12 +34,21 @@ const Person = ({ person, index, isMobile }) => {
           <Img
             className={styles.headShotImage}
             alt={person.name}
+            style={isMobile ? null : { display: "none" }}
             fluid={{
               ...person.image.fluid,
-              aspectRatio: isMobile ? 0.815 : 1
+              aspectRatio: 0.815
             }}
           />
-          <ContactInfo person={person} mobileUI />
+          <Img
+            className={styles.headShotImage}
+            alt={person.name}
+            style={isMobile ? { display: "none" } : null}
+            fluid={{
+              ...person.image.fluid,
+              aspectRatio: 1
+            }}
+          />
         </div>
       )}
       {person.distanceImage && (
@@ -49,25 +58,29 @@ const Person = ({ person, index, isMobile }) => {
             alt={person.name}
             fluid={{ ...person.distanceImage.fluid, aspectRatio: 2 }}
           />
-          <div className={styles.distanceShotOverlay}>
-            <ContactInfo person={person} />
-          </div>
+          <div className={styles.distanceShotOverlay} />
         </div>
       )}
+      <div className={styles.contactInfoWrapper}>
+        <div className={styles.contactInfoSpacer} />
+        <ContactInfo person={person} />
+      </div>
     </div>
   );
 };
 
-const ContactInfo = ({ person, mobileUI }) => {
+const ContactInfo = ({ person }) => {
   return (
-    <div className={mobileUI ? styles.contactInfoMobile : styles.contactInfo}>
-      <h4 className={styles.contactName}>{person.name}</h4>
-      <p className={styles.contactInfoText}>
-        <FaPhone /> {person.phone}
-      </p>
-      <p className={styles.contactInfoText}>
-        <FaEnvelope /> {person.email}
-      </p>
+    <div className={styles.contactInfoContainer}>
+      <div className={styles.contactInfo}>
+        <h4 className={styles.contactName}>{person.name}</h4>
+        <p className={styles.contactInfoText}>
+          <FaPhone /> {person.phone}
+        </p>
+        <p className={styles.contactInfoText}>
+          <FaEnvelope /> {person.email}
+        </p>
+      </div>
     </div>
   );
 };
