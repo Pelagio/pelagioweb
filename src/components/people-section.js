@@ -6,37 +6,23 @@ import { window } from "browser-monads";
 import styles from "./people-section.module.css";
 
 export default ({ people }) => {
-  const { matches: isMobile } = window.matchMedia(
-    "only screen and (max-width: 420px)"
-  );
-
-  console.log({ isMobile });
-
   return (
     <div className={styles.whoContainer}>
       {people.map(({ node }, index) => {
-        return (
-          <Person
-            person={node}
-            key={node.id}
-            index={index}
-            isMobile={isMobile}
-          />
-        );
+        return <Person person={node} key={node.id} index={index} />;
       })}
     </div>
   );
 };
 
-const Person = ({ person, index, isMobile }) => {
+const Person = ({ person, index }) => {
   return (
     <div className={styles.whoPerson}>
       {person.image && (
         <div className={styles.headShot}>
           <Img
-            className={styles.headShotImage}
+            className={styles.mobileHeadShotImage}
             alt={person.name}
-            style={isMobile ? null : { display: "none" }}
             fluid={{
               ...person.image.fluid,
               aspectRatio: 0.815
@@ -45,7 +31,6 @@ const Person = ({ person, index, isMobile }) => {
           <Img
             className={styles.headShotImage}
             alt={person.name}
-            style={isMobile ? { display: "none" } : null}
             fluid={{
               ...person.image.fluid,
               aspectRatio: 1

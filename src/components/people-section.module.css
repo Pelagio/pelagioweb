@@ -53,6 +53,10 @@
   position: relative;
 }
 
+.mobileHeadShotImage {
+  display: none;
+}
+
 .headShotImage {
   flex: 1;
   background-size: cover;
@@ -90,6 +94,15 @@
 @media only screen and (max-width: 420px) {
   .distanceShot {
     display: none;
+  }
+  .headShotImage {
+    display: none;
+  }
+  .mobileHeadShotImage {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    filter: saturate(70%);
   }
 
   .contactInfo {
