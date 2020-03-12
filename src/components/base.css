@@ -1,5 +1,6 @@
 @value colors: "../theme/colors.css";
 @value accent from colors;
+@value primary from colors;
 @value text from colors;
 
 a {
@@ -25,6 +26,10 @@ body {
   }
 }
 
+strong {
+  color: accent;
+}
+
 img {
   display: block;
   width: 100%;
@@ -32,6 +37,23 @@ img {
 
 h1,
 h2,
+h3,
+h4 {
+  font-family: "Lato", "sans-serif";
+  font-weight: 300;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-weight: lighter;
+  font-size: 42px;
+  font-weight: 100;
+}
+
 h3,
 h4 {
   font-weight: lighter;
@@ -64,6 +86,7 @@ a {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 5vmin;
+  padding-top: 300px;
 }
 
 /**
@@ -120,4 +143,24 @@ input[type="email"]:focus {
 
 ::placeholder {
   color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-mail-link {
+  font-size: 22px;
+  font-weight: 900;
+  color: primary;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 420px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+  .section-list {
+    padding-top: 150px;
+  }
 }

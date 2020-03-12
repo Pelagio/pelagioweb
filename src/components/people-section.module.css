@@ -8,6 +8,7 @@
   justify-content: flex-start;
   height: auto;
   letter-spacing: normal;
+  width: 100%;
 }
 
 .whoPerson:nth-child(even) {

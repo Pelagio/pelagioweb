@@ -6,15 +6,8 @@ import PeopleSection from "./people-section";
 export default ({ section, people }) => {
   return (
     <section id={section.anchor} className={styles.sectionBlock}>
-      <div
-        className={styles.parallax}
-        style={{
-          backgroundImage: `url(${section.background.fluid.src})`
-        }}
-      />
-
       {people ? (
-        <div>
+        <div className={styles.sectionContent} style={{ padding: 0 }}>
           <h2>{section.title}</h2>
           <PeopleSection people={people} />
         </div>
@@ -22,6 +15,7 @@ export default ({ section, people }) => {
         <div className={styles.sectionContent}>
           <h2>{section.title}</h2>
           <div
+            className={styles.innerContent}
             dangerouslySetInnerHTML={{
               __html: section.content.content
             }}

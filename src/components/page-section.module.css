@@ -1,24 +1,32 @@
-.parallax {
-  height: 300px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow-x: hidden;
+.sectionContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
 }
 
-.sectionContent {
-  padding: 36px 36px 10px 36px;
+.sectionContent p {
+  font-size: 22px;
+  line-height: 44px;
+  text-align: start;
+}
+
+.innerContent {
   flex: 1;
+  max-width: 646px;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 420px) {
   .sectionContent {
-    padding: 40px 40px 10px 40px;
+    padding: 40px 15px 10px 15px;
   }
-  .parallax {
-    background-attachment: initial;
+
+  .sectionContent p {
+    font-size: 18px;
+    line-height: 28px;
   }
 }
