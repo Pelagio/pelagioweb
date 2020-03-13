@@ -7,7 +7,7 @@ import PageSection from "../components/page-section";
 import TitleSection from "../components/title-section";
 import LogoSection from "../components/logo-section";
 import { Footer } from "../components/footer";
-import { Waves } from "../components/Waves";
+import { Waves } from "../components/waves";
 
 class RootIndex extends React.Component {
   render() {
