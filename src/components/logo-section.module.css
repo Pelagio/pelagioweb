@@ -1,0 +1,23 @@
+.sectionContent {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+  position: relative;
+}
+
+.headerMenuCenter {
+  content: "";
+  background-image: url("../../static/img/logo.svg");
+  height: 270px;
+  width: 260px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.spacer {
+  height: 6vh;
+  width: 100%;
+}

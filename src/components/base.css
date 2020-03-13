@@ -86,7 +86,6 @@ a {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 5vmin;
-  padding-top: 300px;
 }
 
 /**
@@ -159,8 +158,5 @@ input[type="email"]:focus {
 
   h2 {
     font-size: 32px;
-  }
-  .section-list {
-    padding-top: 150px;
   }
 }

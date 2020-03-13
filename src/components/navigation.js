@@ -32,35 +32,13 @@ class NavigationComponent extends React.Component {
   state = {
     expanded: true
   };
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleScroll = event => {
-    this.setState({
-      expanded: !!(window.scrollY < 100)
-    });
-  };
 
   render() {
-    const { expanded } = this.state;
     return (
-      <nav
-        role="navigation"
-        className={expanded ? styles.titleHeader : styles.titleHeaderSmall}
-      >
-        {expanded && <div className={styles.headerMenuSpacer} />}
-        <a
-          className={
-            expanded ? styles.headerMenuCenter : styles.headerMenuCenterSmall
-          }
-          href="/"
-        />
-        <menu className={expanded ? styles.headerMenu : styles.headerMenuSmall}>
+      <nav role="navigation" className={styles.titleHeader}>
+        {<div className={styles.headerMenuSpacer} />}
+        <a className={styles.headerMenuCenter} href="/" />
+        <menu className={styles.headerMenu}>
           {this.props.items.map(item => (
             <a
               key={item.anchor}
