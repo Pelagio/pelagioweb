@@ -63,6 +63,10 @@ a {
   color: currentColor;
 }
 
+strong {
+  font-weight: 300;
+}
+
 .wrapper {
   width: 100%;
 }
