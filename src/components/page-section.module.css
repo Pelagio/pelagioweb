@@ -6,12 +6,6 @@
   min-height: 300px;
 }
 
-.sectionContent p {
-  font-size: 22px;
-  line-height: 44px;
-  text-align: start;
-}
-
 .innerContent {
   flex: 1;
   max-width: 646px;
