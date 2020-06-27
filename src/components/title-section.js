@@ -1,12 +1,14 @@
 import React from "react";
 
-import sectionStyles from "./page-section.module.css";
+import styles from "./page-section.module.css";
 
 export default ({ section }) => {
   return (
-    <section id="title" className={sectionStyles.sectionBlock}>
-      <div className={sectionStyles.sectionContent}>
-        <h1 style={{ textAlign: "center" }}>{section.title}</h1>
+    <section id="title" className={styles.sectionBlock}>
+      <div className={styles.sectionContent}>
+        <h1 style={{ textAlign: "center", maxWidth: "600px" }}>
+          {section.title}
+        </h1>
       </div>
     </section>
   );
