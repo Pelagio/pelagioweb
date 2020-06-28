@@ -33,11 +33,43 @@ class NavigationComponent extends React.Component {
     const { open, items } = this.props;
     console.log(open);
     return (
-      <nav role="navigation" className={styles.titleHeader} aria-hidden={!open}>
-        {<div className={styles.headerMenuSpacer} />}
+      <nav
+        role="navigation"
+        className={styles.navigationMenu}
+        style={!open ? { display: "none" } : { display: "flex" }}
+        aria-hidden="false"
+      >
+        <a
+          href="/"
+          className={styles.navigationItem}
+          style={!open ? { display: "none" } : { display: "flex" }}
+          tabIndex={1}
+        >
+          <span aria-hidden="true">💁🏻‍♂️</span>
+          About us
+        </a>
+        <a
+          href="/"
+          className={styles.navigationItem}
+          style={!open ? { display: "none" } : { display: "flex" }}
+          tabIndex={2}
+        >
+          <span aria-hidden="true">💸</span>
+          Pricing
+        </a>
+        <a
+          href="/"
+          className={styles.navigationItem}
+          style={!open ? { display: "none" } : { display: "flex" }}
+          tabIndex={3}
+        >
+          <span aria-hidden="true">📩</span>
+          Contact
+        </a>
+        {/* <div className={styles.headerMenuSpacer} />
         <a className={styles.headerMenuCenter} href="/" />
         <menu className={styles.headerMenu}>
-          {items.map(item => (
+          {items.map((item) => (
             <a
               key={item.anchor}
               className={styles.menuItem}
@@ -47,7 +79,7 @@ class NavigationComponent extends React.Component {
               {item.anchor}
             </a>
           ))}
-        </menu>
+        </menu> */}
       </nav>
     );
   }
