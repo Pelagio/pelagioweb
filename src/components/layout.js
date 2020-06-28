@@ -7,12 +7,7 @@ class Template extends React.Component {
   render() {
     const { location, children } = this.props;
 
-    return (
-      <Container>
-        <Navigation />
-        {children}
-      </Container>
-    );
+    return <Container>{children}</Container>;
   }
 }
 
