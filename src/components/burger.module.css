@@ -23,10 +23,6 @@
   }
 }
 
-.styledBurger:focus {
-  outline: none;
-}
-
 .styledBurger div {
   width: 2rem;
   height: 0.25rem;
@@ -35,4 +31,24 @@
   transition: all 0.3s linear;
   position: relative;
   transform-origin: 1px;
+}
+
+.upperLine {
+  transform: rotate(0deg);
+}
+
+.openedUpperLine {
+  transform: rotate(45deg);
+}
+
+.lowerLine {
+  transform: rotate(0deg);
+}
+
+.openedLowerLine {
+  transform: rotate(-45deg);
+}
+
+.styledBurger:focus {
+  outline: none;
 }
