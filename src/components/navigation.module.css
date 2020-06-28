@@ -62,6 +62,7 @@
   /*color: ${({ theme }) => theme.primaryDark};*/
   text-decoration: none;
   transition: color 0.3s linear;
+  text-transform: lowercase;
 }
 .navigationMenu:hover {
   /* color: ${({ theme }) => theme.primaryHover}; */
