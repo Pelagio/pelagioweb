@@ -30,7 +30,7 @@
   border-radius: 10px;
   transition: all 0.3s linear;
   position: relative;
-  transform-origin: 1px;
+  transform-origin: right;
 }
 
 .upperLine {
@@ -38,7 +38,7 @@
 }
 
 .openedUpperLine {
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
 
 .lowerLine {
@@ -46,7 +46,7 @@
 }
 
 .openedLowerLine {
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 }
 
 .styledBurger:focus {
