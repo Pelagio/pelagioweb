@@ -9,6 +9,8 @@ import LogoSection from "../components/logo-section";
 import ContactSection from "../components/contact-section";
 import { Footer } from "../components/footer";
 import { Waves } from "../components/waves";
+import Menu from "../components/menu";
+import Burger from "../components/burger";
 
 class RootIndex extends React.Component {
   render() {
@@ -54,6 +56,8 @@ class RootIndex extends React.Component {
             <meta property="twitter:image" content={imageUrl} />
           </Helmet>
           <div className="wrapper">
+            <Menu />
+            <Burger />
             <ul className="section-list">
               <div className="wave-wrapper">
                 <LogoSection />
