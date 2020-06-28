@@ -1,23 +1,21 @@
+@value colors: "../theme/colors.css";
+@value accent from colors;
+
 .sectionContent {
-  height: 100vh;
+  height: 60vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 1;
-  position: relative;
+  background-color: accent;
 }
 
-.headerMenuCenter {
-  content: "";
-  background-image: url("../../static/img/logo.svg");
-  height: 270px;
+.sectionContent > a {
   width: 260px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: auto;
 }
 
-.spacer {
-  height: 6vh;
-  width: 100%;
+.sectionContent > img {
+  background-size: cover;
 }

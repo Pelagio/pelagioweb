@@ -72,7 +72,7 @@ class RootIndex extends React.Component {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                position: "absolute",
+                position: "ab solute",
                 top: 0,
                 left: 0,
                 right: 0
@@ -81,7 +81,10 @@ class RootIndex extends React.Component {
               <Waves />
             </div>
             <ul className="section-list">
-              <LogoSection />
+              <div>
+                <LogoSection />
+                <Waves />
+              </div>
               {sections.map(({ node }) => {
                 let component = null;
                 switch (node.sectionType) {
