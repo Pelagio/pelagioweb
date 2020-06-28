@@ -13,6 +13,11 @@ import Menu from "../components/menu";
 import Burger from "../components/burger";
 
 class RootIndex extends React.Component {
+  constructor() {
+    super();
+    this.state = { open: false };
+  }
+
   render() {
     const { site, data, location, children } = this.props;
     const siteTitle = site && site.siteMetadata.title;
@@ -56,8 +61,20 @@ class RootIndex extends React.Component {
             <meta property="twitter:image" content={imageUrl} />
           </Helmet>
           <div className="wrapper">
-            <Menu />
-            <Burger />
+            <Menu
+              open={this.state.open}
+              setOpen={() => {
+                console.log(this.state.open);
+                this.setState({ open: !this.state.open });
+              }}
+            />
+            <Burger
+              open={this.state.open}
+              setOpen={() => {
+                console.log(this.state.open);
+                this.setState({ open: !this.state.open });
+              }}
+            />
             <ul className="section-list">
               <div className="wave-wrapper">
                 <LogoSection />
