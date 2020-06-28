@@ -54,20 +54,11 @@ class RootIndex extends React.Component {
             <meta property="twitter:image" content={imageUrl} />
           </Helmet>
           <div className="wrapper">
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0
-              }}
-            >
-              <Waves />
-            </div>
             <ul className="section-list">
-              <LogoSection />
+              <div>
+                <LogoSection />
+                <Waves />
+              </div>
               {sections.map(({ node }) => {
                 let component = null;
                 switch (node.sectionType) {
