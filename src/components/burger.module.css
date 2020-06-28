@@ -3,8 +3,8 @@
 
 .styledBurger {
   position: absolute;
-  top: 72px;
-  right: 6rem;
+  top: 40px;
+  right: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -19,7 +19,7 @@
 
 @media (max-width: 767px) {
   .styledBurger {
-    right: 5rem;
+    right: 3rem;
   }
 }
 
