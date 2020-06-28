@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1024 235" preserveAspectRatio="xMidYMax slice" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>leShape</title>
+    <defs>
+        <path d="M0,183.540485 C147.856771,239.290485 277.910156,239.290485 390.160156,183.540485 C564.029957,97.1864415 668.457561,-27.5637196 863.988281,5.42329743 C1059.519,38.4103144 1132.62891,74.5065728 1280,153.407672 C1280,153.407672 1280,180.33085 1280,234.177204 L0,234.177204 L0,183.540485 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="leShape" fill="#F67771" transform="translate(640.000000, 117.088602) scale(1, -1) translate(-640.000000, -117.088602) " xlink:href="#path-1"></use>
+    </g>
+</svg>
