@@ -9,8 +9,8 @@ import LogoSection from "../components/logo-section";
 import ContactSection from "../components/contact-section";
 import { Footer } from "../components/footer";
 import { Waves } from "../components/waves";
-import Menu from "../components/menu";
 import Burger from "../components/burger";
+import Navigation from "../components/navigation";
 
 class RootIndex extends React.Component {
   constructor() {
@@ -61,17 +61,10 @@ class RootIndex extends React.Component {
             <meta property="twitter:image" content={imageUrl} />
           </Helmet>
           <div className="wrapper">
-            <Menu
-              open={this.state.open}
-              setOpen={() => {
-                console.log(this.state.open);
-                this.setState({ open: !this.state.open });
-              }}
-            />
+            <Navigation open={this.state.open} />
             <Burger
               open={this.state.open}
               setOpen={() => {
-                console.log(this.state.open);
                 this.setState({ open: !this.state.open });
               }}
             />
