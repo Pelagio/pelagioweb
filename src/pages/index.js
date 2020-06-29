@@ -51,7 +51,7 @@ class RootIndex extends React.Component {
     const people = data.allContentfulPerson.edges;
 
     const metaTitle = "Pelagio";
-    const metaDescription = "A transparent developer and freelancer agency";
+    const metaDescription = "A transparent developer & freelancer agency.";
     const metaUrl = "https://pelag.io/";
     const imageUrl = "/img/logo-no-text.png";
     const favicoUrl = "/img/favicon.png";
