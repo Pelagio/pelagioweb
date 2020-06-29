@@ -3,7 +3,7 @@ import styles from "./navigation.module.css";
 import { StaticQuery, graphql } from "gatsby";
 import { anchorScroll } from "../helpers/anchor-scroll";
 
-export default ({ open, setOpen }) => (
+export default ({ open, setOpen, closeMenu }) => (
   <StaticQuery
     query={graphql`
       query NavigationQuery {
@@ -23,20 +23,28 @@ export default ({ open, setOpen }) => (
       const data = allContentfulPageSection.edges
         .map(edge => edge.node)
         .filter(item => item.showInMenu);
-      return <NavigationComponent items={data} open={open} setOpen={setOpen} />;
+      return (
+        <NavigationComponent
+          items={data}
+          open={open}
+          setOpen={setOpen}
+          closeMenu={closeMenu}
+        />
+      );
     }}
   />
 );
 
 class NavigationComponent extends React.Component {
   render() {
-    const { open, setOpen, items } = this.props;
+    const { open, setOpen, items, closeMenu } = this.props;
     return (
       <nav
         role="navigation"
         className={styles.navigationMenu}
         style={open ? { opacity: 0.8 } : { opacity: 0 }}
         aria-hidden={!open}
+        onClick={closeMenu}
       >
         {items.map(item => (
           <a
