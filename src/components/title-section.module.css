@@ -3,7 +3,7 @@
 @value waveBlue from colors;
 
 .root {
-  height: 65vh;
+  height: 45vh;
   display: flex;
   flex-direction: column;
 }
@@ -17,7 +17,7 @@
   background-color: waveBlue;
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-self: start;
   height: 100%;
   width: 100%;
 }
@@ -40,4 +40,5 @@
   align-items: center;
   flex: 1;
   box-sizing: content-box;
+  margin-bottom: -15%;
 }
