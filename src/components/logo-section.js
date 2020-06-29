@@ -3,7 +3,7 @@ import React from "react";
 import sectionStyles from "./page-section.module.css";
 import styles from "./logo-section.module.css";
 
-import logo from "../../static/img/logo.svg";
+import logo from "../../static/img/logo-outset-white.svg";
 
 export default ({ section }) => {
   return (
