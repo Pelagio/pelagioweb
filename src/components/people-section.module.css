@@ -55,12 +55,15 @@
 .contactName {
   text-align: center;
   font-weight: bold;
-  margin: 0 0 4px 0;
+  margin: 0px;
   font-size: 18px;
+  color: offText;
 }
 
 .contactInfoText {
-  margin: 0px 0px;
+  margin: 4px 0px 0px 0px;
+  font-size: 14px;
+  color: offText;
 }
 
 .headShot {
