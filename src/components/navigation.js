@@ -31,7 +31,6 @@ export default ({ open, setOpen }) => (
 class NavigationComponent extends React.Component {
   render() {
     const { open, setOpen, items } = this.props;
-    console.log(open);
     return (
       <nav
         role="navigation"
@@ -44,7 +43,6 @@ class NavigationComponent extends React.Component {
             key={item.anchor}
             className={styles.navigationItem}
             onClick={e => {
-              console.log({ setOpen });
               setOpen();
               anchorScroll(e);
             }}
