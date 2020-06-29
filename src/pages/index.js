@@ -66,6 +66,9 @@ class RootIndex extends React.Component {
               setOpen={() => {
                 this.setState({ open: !this.state.open });
               }}
+              closeMenu={() => {
+                this.setState({ open: false });
+              }}
             />
             <Burger
               open={this.state.open}
