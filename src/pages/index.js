@@ -61,7 +61,12 @@ class RootIndex extends React.Component {
             <meta property="twitter:image" content={imageUrl} />
           </Helmet>
           <div className="wrapper">
-            <Navigation open={this.state.open} />
+            <Navigation
+              open={this.state.open}
+              setOpen={() => {
+                this.setState({ open: !this.state.open });
+              }}
+            />
             <Burger
               open={this.state.open}
               setOpen={() => {
