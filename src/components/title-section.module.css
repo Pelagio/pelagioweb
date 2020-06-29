@@ -17,9 +17,8 @@
   background-color: waveBlue;
   display: flex;
   justify-content: center;
-  align-self: start;
   height: 100%;
-  width: 100%;
+  min-height: 250px;
 }
 
 .h1 {
@@ -34,11 +33,12 @@
   background-size: cover;
   height: 0;
   padding: 0; /* reset */
-  padding-bottom: 25%;
+  padding-bottom: 21%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
   box-sizing: content-box;
   margin-bottom: -15%;
+  margin-top: -1px;
 }
