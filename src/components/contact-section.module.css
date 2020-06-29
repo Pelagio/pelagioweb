@@ -6,16 +6,19 @@
   min-height: 300px;
 }
 
-.sectionContent h2 {
-  max-width: 600px;
+.sectionContent p {
+  font-size: 22px;
+  line-height: 44px;
+  text-align: start;
 }
 
 .innerContent {
   flex: 1;
-  max-width: 646px;
+  max-width: 996px;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
+  margin: 0 24px;
 }
 
 @media only screen and (max-width: 420px) {

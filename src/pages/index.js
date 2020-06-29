@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import PageSection from "../components/page-section";
 import TitleSection from "../components/title-section";
 import LogoSection from "../components/logo-section";
+import ContactSection from "../components/contact-section";
 import { Footer } from "../components/footer";
 import { Waves } from "../components/waves";
 
@@ -30,7 +31,7 @@ class RootIndex extends React.Component {
             <meta name="title" content={metaTitle} />
             <meta name="description" content={metaDescription} />
             <link
-              href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:300,400,700,900&display=swap"
+              href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Montserrat:300,400,700,900&display=swap"
               rel="stylesheet"
             />
             <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -53,20 +54,11 @@ class RootIndex extends React.Component {
             <meta property="twitter:image" content={imageUrl} />
           </Helmet>
           <div className="wrapper">
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0
-              }}
-            >
-              <Waves />
-            </div>
             <ul className="section-list">
-              <LogoSection />
+              <div>
+                <LogoSection />
+                <Waves />
+              </div>
               {sections.map(({ node }) => {
                 let component = null;
                 switch (node.sectionType) {
@@ -75,6 +67,9 @@ class RootIndex extends React.Component {
                     break;
                   case "people":
                     component = <PageSection section={node} people={people} />;
+                    break;
+                  case "contact":
+                    component = <ContactSection section={node} />;
                     break;
                   default:
                     component = <PageSection section={node} />;
