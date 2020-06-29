@@ -78,7 +78,7 @@ class RootIndex extends React.Component {
             />
 
             <ul className="section-list">
-              <div>
+              <div className="wave-wrapper">
                 <LogoSection />
                 <Waves />
               </div>

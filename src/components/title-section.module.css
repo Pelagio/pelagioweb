@@ -1,0 +1,44 @@
+@value colors: "../theme/colors.css";
+@value naturalWhite from colors;
+@value waveBlue from colors;
+
+.root {
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  background-color: waveBlue;
+  display: flex;
+  justify-content: center;
+  align-self: start;
+  height: 100%;
+  width: 100%;
+}
+
+.h1 {
+  text-align: center;
+  max-width: 600px;
+  color: naturalWhite;
+}
+
+.pitch-wave {
+  background-image: url("../../static/img/pitch-wave.svg");
+  width: 100vw;
+  background-size: cover;
+  height: 0;
+  padding: 0; /* reset */
+  padding-bottom: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  box-sizing: content-box;
+  margin-bottom: -15%;
+}

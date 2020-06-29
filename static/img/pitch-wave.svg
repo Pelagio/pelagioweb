@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="270px"  viewBox="0 0 1280 270" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,0 C90.3628158,73.8154696 186.649274,135.97823 288.859375,186.488281 C358.533874,220.919932 460.257812,264.015625 594.925781,258.132812 C729.59375,252.25 844.731071,179.391643 928.183594,128.300781 C1089.23438,29.703125 1208.08984,87.2773437 1280,115.542969 C1280,115.542969 1280,167.028646 1280,270 L0,270 L0,0 Z" id="leShape-Copy" fill="#B3C5D4" transform="translate(640.000000, 135.000000) scale(1, -1) translate(-640.000000, -135.000000) "></path>
+    </g>
+</svg>

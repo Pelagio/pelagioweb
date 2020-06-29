@@ -2,6 +2,7 @@
 @value accent from colors;
 @value primary from colors;
 @value text from colors;
+@value waveBlue from colors;
 
 a {
   color: inherit;
@@ -70,6 +71,10 @@ strong {
   width: 100%;
 }
 
+.wave-wrapper {
+  background-color: waveBlue;
+}
+
 /**
  * article grid
  */
@@ -89,6 +94,10 @@ strong {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 5vmin;
+}
+
+.section-list:nth-child(1) {
+  grid-gap: 0;
 }
 
 /**

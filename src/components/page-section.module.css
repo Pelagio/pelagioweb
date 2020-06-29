@@ -10,6 +10,12 @@
   max-width: 600px;
 }
 
+.innerContent p {
+  font-size: 22px;
+  line-height: 44px;
+  text-align: start;
+}
+
 .innerContent {
   flex: 1;
   max-width: 646px;
