@@ -36,7 +36,7 @@ class NavigationComponent extends React.Component {
       <nav
         role="navigation"
         className={styles.navigationMenu}
-        style={!open ? { display: "none" } : { display: "flex" }}
+        style={open ? { opacity: 0.8 } : { opacity: 0 }}
         aria-hidden={!open}
       >
         {items.map(item => (
