@@ -55,7 +55,7 @@ class RootIndex extends React.Component {
           </Helmet>
           <div className="wrapper">
             <ul className="section-list">
-              <div>
+              <div className="wave-wrapper">
                 <LogoSection />
                 <Waves />
               </div>
