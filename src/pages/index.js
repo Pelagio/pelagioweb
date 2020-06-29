@@ -2,6 +2,12 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks
+} from "body-scroll-lock";
+
 import Layout from "../components/layout";
 import PageSection from "../components/page-section";
 import TitleSection from "../components/title-section";
@@ -16,6 +22,25 @@ class RootIndex extends React.Component {
   constructor() {
     super();
     this.state = { open: false };
+    this.setMenuState = this.setMenuState.bind(this);
+  }
+
+  scrollRef = React.createRef();
+  scrollElement = null;
+
+  componentDidMount() {
+    this.scrollElement = this.scrollRef.current;
+  }
+
+  componentWillUnmount() {
+    clearAllBodyScrollLocks();
+  }
+
+  setMenuState(open) {
+    open
+      ? disableBodyScroll(this.scrollElement)
+      : enableBodyScroll(this.scrollElement);
+    this.setState({ open });
   }
 
   render() {
@@ -60,22 +85,14 @@ class RootIndex extends React.Component {
             <meta property="twitter:description" content={metaDescription} />
             <meta property="twitter:image" content={imageUrl} />
           </Helmet>
-          <div className="wrapper">
+          <div className="wrapper" ref={this.scrollRef}>
             <Navigation
               open={this.state.open}
-              setOpen={() => {
-                this.setState({ open: !this.state.open });
-              }}
               closeMenu={() => {
-                this.setState({ open: false });
+                this.setMenuState(false);
               }}
             />
-            <Burger
-              open={this.state.open}
-              setOpen={() => {
-                this.setState({ open: !this.state.open });
-              }}
-            />
+            <Burger open={this.state.open} setOpen={this.setMenuState} />
 
             <ul className="section-list">
               <div className="wave-wrapper">
