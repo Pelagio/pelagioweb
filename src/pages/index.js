@@ -32,7 +32,7 @@ class RootIndex extends React.Component {
     const favicoUrl = "/img/favicon.png";
     return (
       <Layout location={location} children={children}>
-        <div style={{ background: "#fff" }}>
+        <div>
           <Helmet title={siteTitle}>
             <title>{metaTitle}</title>
             <meta name="title" content={metaTitle} />
