@@ -54,20 +54,6 @@ class NavigationComponent extends React.Component {
             {item.anchor}
           </a>
         ))}
-        {/* <div className={styles.headerMenuSpacer} />
-        <a className={styles.headerMenuCenter} href="/" />
-        <menu className={styles.headerMenu}>
-          {items.map((item) => (
-            <a
-              key={item.anchor}
-              className={styles.menuItem}
-              onClick={anchorScroll}
-              href={`#${item.anchor}`}
-            >
-              {item.anchor}
-            </a>
-          ))}
-        </menu> */}
       </nav>
     );
   }
