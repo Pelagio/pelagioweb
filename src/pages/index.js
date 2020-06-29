@@ -73,18 +73,7 @@ class RootIndex extends React.Component {
                 this.setState({ open: !this.state.open });
               }}
             />
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                position: "ab solute",
-                top: 0,
-                left: 0,
-                right: 0
-              }}
-            >
-              <Waves />
-            </div>
+
             <ul className="section-list">
               <div>
                 <LogoSection />
