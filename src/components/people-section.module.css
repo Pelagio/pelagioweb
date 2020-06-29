@@ -1,49 +1,147 @@
+@value colors: "../theme/colors.css";
+@value offText from colors;
+@value distanceShowBackground from colors;
+
 .whoContainer {
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
   justify-content: flex-start;
   height: auto;
   letter-spacing: normal;
-  flex-wrap: wrap;
+  width: 100%;
+}
+
+.whoPerson:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .whoPerson {
   display: flex;
-  margin-right: 24px;
-  margin-bottom: 24px;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
 }
 
 .contactInfo {
-  padding: 0px 10px;
-  align-items: center;
+  padding: 20px 36px;
+  align-items: flex-start;
+  justify-content: flex-end;
   display: flex;
   flex-direction: column;
+  flex: 1;
+  font-family: "Lato", sans-serif;
+  color: offText;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.whoPerson:nth-child(even) .contactInfo {
+  align-items: flex-end;
+}
+
+.contactInfoContainer {
   min-width: 165px;
+  flex: 2;
+  display: flex;
+}
+
+.contactInfoSpacer {
+  flex: 1;
 }
 
 .contactName {
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
+  margin: 0px;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .contactInfoText {
-  margin: 5px 0px;
+  margin: 4px 0px 0px 0px;
+  line-height: 17px;
 }
 
 .headShot {
-  width: 120px;
-  height: 180px;
+  flex: 1;
+  position: relative;
+}
+
+.mobileHeadShotImage {
+  display: none;
+}
+
+.headShotImage {
+  flex: 1;
   background-size: cover;
   background-position: center;
   filter: saturate(70%);
+  display: block;
+}
+
+.distanceShot {
+  position: relative;
+  flex: 2;
+  background-color: distanceShotBackground;
+}
+
+.distanceShotImage {
+  flex: 1;
+  opacity: 0.3;
+}
+
+.contactInfoWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.whoPerson:nth-child(even) .contactInfoWrapper {
+  flex-direction: row-reverse;
 }
 
 @media only screen and (max-width: 420px) {
-  .whoPerson {
-    margin: 20px 0px;
+  .distanceShot {
+    display: none;
+  }
+  .headShotImage {
+    display: none;
+  }
+
+  .whoPerson:nth-child(even) .contactInfo {
+    align-items: flex-start;
+  }
+
+  .mobileHeadShotImage {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    filter: saturate(70%);
+    display: block;
+  }
+
+  .contactInfo {
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    line-height: 29px;
   }
 
   .contactName {
-    margin: 10px 0px;
+    line-height: 29px;
+  }
+
+  .contactInfoText {
+    margin: 0;
+  }
+
+  .contactInfoSpacer {
+    flex: 0;
   }
 }

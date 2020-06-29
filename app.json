@@ -1,12 +1,7 @@
 {
   "name": "Pelagio web",
   "description": "Pelagio Development AB website",
-  "keywords": [
-    "contentful",
-    "gatsby",
-    "static",
-    "ssg"
-  ],
+  "keywords": ["contentful", "gatsby", "static", "ssg"],
   "repository": "https://github.com/arneson/pelagioweb",
   "success_url": "/",
   "buildpacks": [

@@ -1,0 +1,54 @@
+@value colors: "../theme/colors.css";
+@value white from colors;
+
+.styledBurger {
+  position: fixed;
+  top: 40px;
+  right: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  .styledBurger {
+    right: 3rem;
+  }
+}
+
+.styledBurger div {
+  width: 2rem;
+  height: 0.25rem;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: right;
+}
+
+.upperLine {
+  transform: rotate(0deg);
+}
+
+.openedUpperLine {
+  transform: rotate(-45deg);
+}
+
+.lowerLine {
+  transform: rotate(0deg);
+}
+
+.openedLowerLine {
+  transform: rotate(45deg);
+}
+
+.styledBurger:focus {
+  outline: none;
+}
