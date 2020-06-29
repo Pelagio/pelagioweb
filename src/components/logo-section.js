@@ -9,9 +9,9 @@ export default ({ section }) => {
   return (
     <section id="title" className={sectionStyles.sectionBlock}>
       <div className={styles.sectionContent}>
-        <a href="/">
+        <div>
           <img src={logo} alt="Logo" />
-        </a>
+        </div>
       </div>
     </section>
   );

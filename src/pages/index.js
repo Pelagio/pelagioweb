@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import {
   disableBodyScroll,
   enableBodyScroll,
-  clearAllBodyScrollLocks,
+  clearAllBodyScrollLocks
 } from "body-scroll-lock";
 
 import Layout from "../components/layout";

@@ -11,7 +11,7 @@
   background-color: accent;
 }
 
-.sectionContent > a {
+.sectionContent > div {
   width: 260px;
   height: auto;
 }
