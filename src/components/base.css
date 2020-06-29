@@ -75,29 +75,13 @@ strong {
   background-color: waveBlue;
 }
 
-/**
- * article grid
- */
-.article-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5vmin;
-}
-
 .section-list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 5vmin;
-}
-
-.section-list:nth-child(1) {
-  grid-gap: 0;
+  gap: 5vmin;
 }
 
 /**
