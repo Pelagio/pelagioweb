@@ -57,9 +57,10 @@
   font-weight: bold;
   letter-spacing: 0.5rem;
   /*color: ${({ theme }) => theme.primaryDark};*/
+  color: white;
   text-decoration: none;
   transition: color 0.3s linear;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 .navigationMenu:hover {
   /* color: ${({ theme }) => theme.primaryHover}; */
