@@ -2,7 +2,7 @@ import React, { createContext, useState, useMemo } from "react";
 
 export const IntersectContext = createContext({});
 
-export const DokumentConsumer = IntersectContext.Consumer;
+export const IntersectConsumer = IntersectContext.Consumer;
 
 export const IntersectProvider = ({ children }) => {
   const [intersect, setIntersect] = useState();
