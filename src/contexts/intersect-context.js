@@ -8,14 +8,13 @@ export const IntersectProvider = ({ children }) => {
   const [intersect, setIntersect] = useState();
 
   const handleIntersect = entry => {
-    if (
-      entry.boundingClientRect?.top < 0 &&
-      entry.target?.id === "what" &&
-      !entry.isIntersecting
-    ) {
-      setIntersect(true);
-    } else {
-      setIntersect(false);
+    if (entry.boundingClientRect && entry.rootBounds) {
+      const isUnder = entry.boundingClientRect.y < entry.rootBounds.y;
+      if (isUnder) {
+        setIntersect(true);
+      } else {
+        setIntersect(false);
+      }
     }
   };
 
