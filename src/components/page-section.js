@@ -1,8 +1,6 @@
 import React, { useEffect, useContext } from "react";
-
 import styles from "./page-section.module.css";
 import PeopleSection from "./people-section";
-
 import { useIntersect } from "../helpers/use-intersect";
 import { IntersectContext } from "../contexts/intersect-context";
 
@@ -10,7 +8,7 @@ export default ({ section, people }) => {
   const { handleIntersect } = useContext(IntersectContext);
 
   const [ref, entry] = useIntersect({
-    threshold: 1
+    threshold: 0.9
   });
 
   useEffect(() => {
