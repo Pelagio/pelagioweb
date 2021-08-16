@@ -10,7 +10,7 @@ export const IntersectProvider = ({ children }) => {
   const handleIntersect = entry => {
     if (entry.boundingClientRect && entry.rootBounds) {
       const isUnder = entry.boundingClientRect.y < entry.rootBounds.y;
-      if (isUnder) {
+      if (isUnder && !entry.isIntersecting) {
         setIntersect(true);
       } else {
         setIntersect(false);

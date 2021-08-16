@@ -4,7 +4,7 @@
 .styledBurger {
   position: fixed;
   top: 40px;
-  right: 4rem;
+  left: calc(100vw - 5rem);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
