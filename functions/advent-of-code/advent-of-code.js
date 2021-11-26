@@ -21,6 +21,7 @@ exports.handler = async function(event, context, callback) {
       )).json();
       cachedAt = new Date();
       cachedResponse = newData;
+      data = { ...newData };
     }
     return callback(null, {
       statusCode: 200,
