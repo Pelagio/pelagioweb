@@ -1,16 +1,27 @@
 const fetch = require("node-fetch");
 
+let cachedResponse = null;
+let cachedAt = null;
+
 exports.handler = async function(event, context, callback) {
   return new Promise(async (resolve, reject) => {
-    const data = await (await fetch(
-      "https://adventofcode.com/2021/leaderboard/private/view/1065422.json",
-      {
-        headers: {
-          cookie: `session=${process.env.AOC_SESSION};`
+    let data = null;
+    if (cachedResponse && cachedAt && Date.now() - cachedAt < 1000 * 60 * 60) {
+      console.log("RETURNING CACHED DATA");
+      data = { ...cachedResponse };
+    } else {
+      console.log("CALLING API");
+      const newData = await (await fetch(
+        "https://adventofcode.com/2021/leaderboard/private/view/1065422.json",
+        {
+          headers: {
+            cookie: `session=${process.env.AOC_SESSION};`
+          }
         }
-      }
-    )).text();
-    console.log({ data });
+      )).json();
+      cachedAt = new Date();
+      cachedResponse = newData;
+    }
     return callback(null, {
       statusCode: 200,
       body: JSON.stringify(data),
