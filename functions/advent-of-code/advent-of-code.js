@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+const { parseAOCData } = require("./parse");
 
 let cachedResponse = null;
 let cachedAt = null;
@@ -12,7 +13,7 @@ exports.handler = async function(event, context, callback) {
     } else {
       console.log("CALLING API");
       const newData = await (await fetch(
-        "https://adventofcode.com/2021/leaderboard/private/view/1065422.json",
+        "https://adventofcode.com/2020/leaderboard/private/view/1065422.json",
         {
           headers: {
             cookie: `session=${process.env.AOC_SESSION};`
@@ -21,7 +22,7 @@ exports.handler = async function(event, context, callback) {
       )).json();
       cachedAt = new Date();
       cachedResponse = newData;
-      data = { ...newData };
+      data = parseAOCData({ ...newData });
     }
     return callback(null, {
       statusCode: 200,
