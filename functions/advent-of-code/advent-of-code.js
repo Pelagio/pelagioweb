@@ -20,9 +20,9 @@ exports.handler = async function(event, context, callback) {
           }
         }
       )).json();
-      cachedAt = new Date();
-      cachedResponse = newData;
       data = parseAOCData({ ...newData });
+      cachedAt = new Date();
+      cachedResponse = data;
     }
     return callback(null, {
       statusCode: 200,
