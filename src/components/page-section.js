@@ -3,6 +3,7 @@ import styles from "./page-section.module.css";
 import PeopleSection from "./people-section";
 import { useIntersect } from "../helpers/use-intersect";
 import { IntersectContext } from "../contexts/intersect-context";
+import PageSectionHeader from "./page-section-header";
 
 export default ({ section, people }) => {
   const { handleIntersect } = useContext(IntersectContext);
@@ -19,12 +20,12 @@ export default ({ section, people }) => {
     <section ref={ref} id={section.anchor} className={styles.sectionBlock}>
       {people ? (
         <div className={styles.sectionContent} style={{ padding: 0 }}>
-          <h2>{section.title}</h2>
+          <PageSectionHeader>{section.title}</PageSectionHeader>
           <PeopleSection people={people} />
         </div>
       ) : (
         <div className={styles.sectionContent}>
-          <h2>{section.title}</h2>
+          <PageSectionHeader>{section.title}</PageSectionHeader>
           <div
             className={styles.innerContent}
             dangerouslySetInnerHTML={{

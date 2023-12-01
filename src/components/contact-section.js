@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./contact-section.module.css";
+import PageSectionHeader from "./page-section-header";
 
 export default ({ section }) => {
   return (
     <section id={section.anchor} className={styles.sectionBlock}>
       <div className={styles.sectionContent}>
-        <h2>{section.title}</h2>
+        <PageSectionHeader>{section.title}</PageSectionHeader>
         <div
           className={styles.innerContent}
           dangerouslySetInnerHTML={{
