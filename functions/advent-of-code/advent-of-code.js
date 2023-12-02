@@ -13,7 +13,7 @@ exports.handler = async function(event, context, callback) {
     } else {
       console.log("CALLING API");
       const newData = await (await fetch(
-        "https://adventofcode.com/2022/leaderboard/private/view/1065422.json",
+        "https://adventofcode.com/2023/leaderboard/private/view/1065422.json",
         {
           headers: {
             cookie: `session=${process.env.AOC_SESSION};`
