@@ -1,3 +1,5 @@
 .root {
-  height: 5vmin;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 3em;
 }
