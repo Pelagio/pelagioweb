@@ -36,7 +36,17 @@ const Person = ({ person, index }) => {
           />
         </div>
       )}
+      {person.distanceImage && (
+        <div className={styles.distanceShot}>
+          <Img
+            className={styles.distanceShotImage}
+            alt={person.name}
+            fluid={{ ...person.distanceImage.fluid, aspectRatio: 2 }}
+          />
+        </div>
+      )}
       <div className={styles.contactInfoWrapper}>
+        <div className={styles.contactInfoSpacer} />
         <ContactInfo person={person} />
       </div>
     </div>
