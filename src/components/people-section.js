@@ -36,17 +36,7 @@ const Person = ({ person, index }) => {
           />
         </div>
       )}
-      {person.distanceImage && (
-        <div className={styles.distanceShot}>
-          <Img
-            className={styles.distanceShotImage}
-            alt={person.name}
-            fluid={{ ...person.distanceImage.fluid, aspectRatio: 2 }}
-          />
-        </div>
-      )}
       <div className={styles.contactInfoWrapper}>
-        <div className={styles.contactInfoSpacer} />
         <ContactInfo person={person} />
       </div>
     </div>
@@ -58,6 +48,9 @@ const ContactInfo = ({ person }) => {
     <div className={styles.contactInfoContainer}>
       <div className={styles.contactInfo}>
         <h4 className={styles.contactName}>{person.name}</h4>
+        {person.title && (
+          <p className={styles.contactInfoText}>{person.title}</p>
+        )}
         <p className={styles.contactInfoText}>{person.phone}</p>
         <p className={styles.contactInfoText}>{person.email}</p>
       </div>

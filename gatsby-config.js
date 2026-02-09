@@ -21,6 +21,12 @@ if (!spaceId || !accessToken) {
 }
 
 module.exports = {
+  siteMetadata: {
+    title: "Pelagio | Software Development Agency",
+    description:
+      "Pelagio is a senior software development agency in Stockholm. We build web apps, mobile solutions, and cloud architecture.",
+    siteUrl: "https://pelag.io"
+  },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
     "gatsby-transformer-sharp",
@@ -31,6 +37,12 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        output: "/sitemap.xml"
+      }
     }
   ]
 };

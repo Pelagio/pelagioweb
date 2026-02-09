@@ -2,33 +2,47 @@
 @value accent from colors;
 @value primary from colors;
 @value text from colors;
+@value textLight from colors;
 @value waveBlue from colors;
+@value sectionAlt from colors;
+
+* {
+  box-sizing: border-box;
+}
 
 a {
   color: inherit;
   text-decoration: inherit;
 }
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Lato', sans-serif; */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", "Montserrat", -apple-system, BlinkMacSystemFont,
+    sans-serif;
   overflow-x: hidden;
   margin: 0;
-  font-size: 14px;
-  letter-spacing: 0.2px;
+  font-size: 16px;
+  letter-spacing: -0.01em;
   text-align: center;
   color: text;
-  font-weight: 300;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 @media only screen and (max-width: 420px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 strong {
   color: accent;
+  font-weight: 600;
 }
 
 img {
@@ -40,31 +54,35 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Lato", "sans-serif";
-  font-weight: 300;
+  font-family: "Inter", "Lato", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 54px;
+  font-size: 56px;
+  font-weight: 700;
 }
 
 h2 {
-  font-weight: lighter;
-  font-size: 42px;
-  font-weight: 100;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 1em;
 }
 
-h3,
+h3 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
 h4 {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 a {
   color: currentColor;
-}
-
-strong {
-  font-weight: 300;
+  transition: color 0.2s ease;
 }
 
 .wrapper {
@@ -81,21 +99,15 @@ strong {
   list-style: none;
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 5vmin;
+  gap: 0;
 }
 
-/**
- *
- */
 .section-headline {
   padding: 0 0 0.4em 0;
   margin: 0 0 5vmin 0;
   border-bottom: 1px solid #ddd;
 }
 
-/**
- *
- */
 .list-inline {
   margin: 0;
   padding: 0;
@@ -107,17 +119,29 @@ strong {
 }
 
 button {
-  font-size: 24px;
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
   border: none;
   background-color: accent;
   height: 50px;
   padding: 0 30px;
   min-width: 50px;
   outline-color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 button:active {
-  opacity: 0.7;
+  transform: translateY(0);
+  opacity: 0.9;
 }
 
 input[type="email"] {
@@ -127,11 +151,14 @@ input[type="email"] {
   width: 200;
   color: white;
   background-color: transparent;
-  font-size: 20px;
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-size: 18px;
   outline: none;
   box-sizing: border-box;
   padding: 0 5px;
+  transition: border-color 0.2s ease;
 }
+
 input[type="email"]:focus {
   border: 2px white solid;
 }
@@ -141,10 +168,16 @@ input[type="email"]:focus {
 }
 
 .contact-mail-link {
-  font-size: 22px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 700;
+  color: accent;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.contact-mail-link:hover {
   color: primary;
-  text-decoration: underline;
 }
 
 @media only screen and (max-width: 420px) {
@@ -153,6 +186,35 @@ input[type="email"]:focus {
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
+}
+
+/* Scroll reveal animation classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.4s;
 }

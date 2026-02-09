@@ -1,73 +1,38 @@
 @value colors: "../theme/colors.css";
 @value offText from colors;
-@value distanceShowBackground from colors;
+@value distanceShotBackground from colors;
+@value accent from colors;
 
 .whoContainer {
-  flex-direction: column;
-  display: flex;
-  justify-content: flex-start;
-  height: auto;
-  letter-spacing: normal;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding: 20px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
-}
-
-.whoPerson:nth-child(even) {
-  flex-direction: row-reverse;
 }
 
 .whoPerson {
   display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  flex-direction: row;
-  color: rgba(0, 0, 0, 1);
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
 }
 
-.contactInfo {
-  padding: 20px 36px;
-  align-items: flex-start;
-  justify-content: flex-end;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  font-family: "Lato", sans-serif;
-  color: offText;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.whoPerson:nth-child(even) .contactInfo {
-  align-items: flex-end;
-}
-
-.contactInfoContainer {
-  min-width: 165px;
-  flex: 2;
-  display: flex;
-}
-
-.contactInfoSpacer {
-  flex: 1;
-}
-
-.contactName {
-  text-align: center;
-  font-weight: bold;
-  margin: 0px;
-  font-size: 18px;
-  line-height: 22px;
-}
-
-.contactInfoText {
-  margin: 4px 0px 0px 0px;
-  line-height: 17px;
+.whoPerson:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
 .headShot {
-  flex: 1;
   position: relative;
+  overflow: hidden;
 }
 
 .mobileHeadShotImage {
@@ -78,14 +43,18 @@
   flex: 1;
   background-size: cover;
   background-position: center;
-  filter: saturate(70%);
+  filter: saturate(85%);
   display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.whoPerson:hover .headShotImage {
+  transform: scale(1.05);
+  filter: saturate(100%);
 }
 
 .distanceShot {
-  position: relative;
-  flex: 2;
-  background-color: distanceShotBackground;
+  display: none;
 }
 
 .distanceShotImage {
@@ -94,54 +63,82 @@
 }
 
 .contactInfoWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+}
+
+.contactInfoContainer {
   display: flex;
 }
 
-.whoPerson:nth-child(even) .contactInfoWrapper {
-  flex-direction: row-reverse;
+.contactInfoSpacer {
+  display: none;
 }
 
-@media only screen and (max-width: 420px) {
-  .distanceShot {
-    display: none;
-  }
-  .headShotImage {
-    display: none;
+.contactInfo {
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-family: "Inter", "Lato", sans-serif;
+  color: offText;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  width: 100%;
+}
+
+.contactName {
+  text-align: center;
+  font-weight: 700;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #2c3e50;
+}
+
+.contactInfoText {
+  margin: 4px 0 0 0;
+  line-height: 1.5;
+  color: #5a6c7d;
+  transition: color 0.2s ease;
+}
+
+.contactInfoText:hover {
+  color: accent;
+}
+
+@media only screen and (max-width: 768px) {
+  .whoContainer {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    padding: 20px 16px;
   }
 
-  .whoPerson:nth-child(even) .contactInfo {
-    align-items: flex-start;
+  .headShotImage {
+    display: none;
   }
 
   .mobileHeadShotImage {
     flex: 1;
     background-size: cover;
     background-position: center;
-    filter: saturate(70%);
+    filter: saturate(85%);
     display: block;
   }
 
   .contactInfo {
-    color: white;
-    padding: 15px;
-    font-size: 18px;
-    line-height: 29px;
+    padding: 20px 16px;
+    font-size: 15px;
   }
 
   .contactName {
-    line-height: 29px;
-  }
-
-  .contactInfoText {
-    margin: 0;
-  }
-
-  .contactInfoSpacer {
-    flex: 0;
+    font-size: 17px;
   }
 }

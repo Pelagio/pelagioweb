@@ -16,12 +16,18 @@
 }
 
 .small {
-  height: 55px;
+  height: 52px;
   position: fixed;
-  bottom: 100px;
-  right: 50px;
-  /* box-shadow: 6px 9px 5px -8px rgba(0, 0, 0, 0.75); */
-  border: 4px solid white;
+  bottom: 32px;
+  right: 32px;
+  border-radius: 26px;
+  box-shadow: 0 4px 20px rgba(232, 93, 86, 0.4);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.small:hover {
+  box-shadow: 0 8px 30px rgba(232, 93, 86, 0.5);
+  transform: scale(1.05);
 }
 
 .fullscreen {
@@ -30,6 +36,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  border-radius: 0;
 }
 
 .button {
@@ -38,7 +45,11 @@
   align-items: center;
   justify-content: center;
   color: white;
-  height: 55px;
+  height: 52px;
+  border-radius: 26px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .closeButton {
@@ -47,7 +58,17 @@
   right: 20px;
   color: white;
   outline: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
+
 .closeButton:hover {
   transform: rotate(90deg);
 }
@@ -57,12 +78,17 @@
   color: accent;
   margin-left: 20px;
   padding-bottom: 5px;
+  border-radius: 8px;
 }
 
 .emoji {
-  margin-left: 5px;
-  font-size: 30px;
-  min-width: 50px;
+  margin-left: 8px;
+  font-size: 22px;
+  min-width: 30px;
+}
+
+.ctaText {
+  white-space: nowrap;
 }
 
 .formSent {
@@ -79,7 +105,7 @@
   }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 768px) {
   .ctaText {
     display: none;
   }
@@ -87,9 +113,10 @@
   .button {
     padding: 0 3px 0 0;
   }
+
   .small {
-    bottom: 25px;
-    right: 25px;
+    bottom: 24px;
+    right: 24px;
   }
 
   .closeButton {

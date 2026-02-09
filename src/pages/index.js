@@ -19,6 +19,82 @@ import Burger from "../components/burger";
 import Navigation from "../components/navigation";
 import { IntersectProvider } from "../contexts/intersect-context";
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Pelagio",
+  legalName: "Pelagio Development AB",
+  url: "https://pelag.io",
+  logo: "https://pelag.io/img/logo-no-text.png",
+  description:
+    "Pelagio is a Stockholm-based software development agency specializing in web development, mobile apps, cloud solutions, and technical consulting. We deliver high-quality digital products through experienced senior developers.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Stockholm",
+    addressCountry: "SE"
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hello@pelag.io",
+    contactType: "sales"
+  },
+  knowsAbout: [
+    "Software Development",
+    "Web Development",
+    "React",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Cloud Architecture",
+    "Mobile App Development",
+    "UX Design",
+    "Technical Consulting",
+    "Agile Development",
+    "DevOps"
+  ],
+  slogan: "Senior developers. Real ownership. Quality delivery.",
+  foundingLocation: "Stockholm, Sweden",
+  areaServed: ["Sweden", "Europe", "Worldwide"]
+};
+
+const servicesData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Pelagio Services",
+  itemListElement: [
+    {
+      "@type": "Service",
+      name: "Web Application Development",
+      description:
+        "Custom web applications built with modern frameworks like React, Next.js, and Node.js."
+    },
+    {
+      "@type": "Service",
+      name: "Mobile App Development",
+      description:
+        "Cross-platform and native mobile applications for iOS and Android."
+    },
+    {
+      "@type": "Service",
+      name: "Cloud & DevOps",
+      description:
+        "Cloud architecture, infrastructure setup, CI/CD pipelines, and scalable deployments."
+    },
+    {
+      "@type": "Service",
+      name: "Technical Consulting",
+      description:
+        "Expert technical advisory, architecture reviews, and technology strategy."
+    },
+    {
+      "@type": "Service",
+      name: "UX & Product Design",
+      description:
+        "User experience design, prototyping, and product strategy for digital products."
+    }
+  ]
+};
+
 class RootIndex extends React.Component {
   constructor() {
     super();
@@ -51,22 +127,32 @@ class RootIndex extends React.Component {
 
     const people = data.allContentfulPerson.edges;
 
-    const metaTitle = "Pelagio";
-    const metaDescription = "A transparent developer & freelancer agency.";
+    const metaTitle =
+      "Pelagio | Software Development Agency - Stockholm, Sweden";
+    const metaDescription =
+      "Pelagio is a senior software development agency in Stockholm. We build web apps, mobile solutions, and cloud architecture. Experienced developers available for project work and consulting.";
     const metaUrl = "https://pelag.io/";
-    const imageUrl = "/img/logo-no-text.png";
+    const imageUrl = "https://pelag.io/img/logo-no-text.png";
     const favicoUrl = "/img/favicon.png";
     return (
       <Layout location={location} children={children}>
         <IntersectProvider>
           <div>
-            <Helmet title={siteTitle}>
+            <Helmet title={metaTitle}>
+              <html lang="en" />
               <title>{metaTitle}</title>
               <meta name="title" content={metaTitle} />
               <meta name="description" content={metaDescription} />
+              <link rel="canonical" href={metaUrl} />
               <link
-                href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Montserrat:300,400,700,900&display=swap"
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&display=swap"
                 rel="stylesheet"
+              />
+              <link rel="preconnect" href="https://fonts.googleapis.com" />
+              <link
+                rel="preconnect"
+                href="https://fonts.gstatic.com"
+                crossOrigin="anonymous"
               />
               <link
                 rel="shortcut icon"
@@ -74,22 +160,38 @@ class RootIndex extends React.Component {
                 type="image/x-icon"
               />
               <link rel="shortcut icon" href={favicoUrl} type="image/x-icon" />
+
               <meta property="og:type" content="website" />
               <meta property="og:url" content={metaUrl} />
               <meta property="og:title" content={metaTitle} />
               <meta property="og:description" content={metaDescription} />
-              <meta property="og:image:url" content={imageUrl} />
-              <meta property="og:image:secure_url" content={imageUrl} />
-              <meta property="og:image:type" content={"image/png"} />
               <meta property="og:image" content={imageUrl} />
               <meta property="og:image:width" content="400" />
               <meta property="og:image:height" content="400" />
+              <meta property="og:site_name" content="Pelagio" />
+              <meta property="og:locale" content="en_US" />
 
-              <meta property="twitter:card" content="summary_large_image" />
-              <meta property="twitter:url" content={metaUrl} />
-              <meta property="twitter:title" content={metaTitle} />
-              <meta property="twitter:description" content={metaDescription} />
-              <meta property="twitter:image" content={imageUrl} />
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta name="twitter:url" content={metaUrl} />
+              <meta name="twitter:title" content={metaTitle} />
+              <meta name="twitter:description" content={metaDescription} />
+              <meta name="twitter:image" content={imageUrl} />
+
+              <meta
+                name="keywords"
+                content="software development agency, web development Stockholm, React developers, freelance developers Sweden, mobile app development, cloud architecture, technical consulting, senior developers, project-based development"
+              />
+              <meta name="robots" content="index, follow" />
+              <meta name="author" content="Pelagio Development AB" />
+              <meta name="geo.region" content="SE-AB" />
+              <meta name="geo.placename" content="Stockholm" />
+
+              <script type="application/ld+json">
+                {JSON.stringify(structuredData)}
+              </script>
+              <script type="application/ld+json">
+                {JSON.stringify(servicesData)}
+              </script>
             </Helmet>
             <div className="wrapper" ref={this.scrollRef}>
               <Navigation

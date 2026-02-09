@@ -10,7 +10,11 @@ export default ({ section }) => {
     <section id="title" className={sectionStyles.sectionBlock}>
       <div className={styles.sectionContent}>
         <div>
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Pelagio - Software Development Agency" />
+        </div>
+        <div className={styles.scrollIndicator}>
+          <span>Scroll</span>
+          <div className={styles.scrollArrow} />
         </div>
       </div>
     </section>

@@ -3,11 +3,12 @@
   background-image: url("../../static/img/hero-wave.svg");
   background-size: cover;
   height: 0;
-  padding: 0; /* reset */
+  padding: 0;
   padding-bottom: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
   box-sizing: content-box;
+  position: relative;
 }
