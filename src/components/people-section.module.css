@@ -1,5 +1,6 @@
 @value colors: "../theme/colors.css";
 @value offText from colors;
+@value accent from colors;
 @value distanceShotBackground from colors;
 
 .whoContainer {
@@ -9,6 +10,7 @@
   height: auto;
   letter-spacing: normal;
   width: 100%;
+  gap: 2px;
 }
 
 .whoPerson:nth-child(even) {
@@ -22,10 +24,20 @@
   flex-direction: row;
   color: rgba(0, 0, 0, 1);
   position: relative;
+  overflow: hidden;
+}
+
+.whoPerson:hover .headShotImage {
+  filter: saturate(90%);
+  transform: scale(1.03);
+}
+
+.whoPerson:hover .distanceShotImage {
+  opacity: 0.4;
 }
 
 .contactInfo {
-  padding: 20px 36px;
+  padding: 24px 40px;
   align-items: flex-start;
   justify-content: flex-end;
   display: flex;
@@ -34,8 +46,8 @@
   font-family: "Inter", "Lato", sans-serif;
   color: offText;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .whoPerson:nth-child(even) .contactInfo {
@@ -54,20 +66,30 @@
 
 .contactName {
   text-align: center;
-  font-weight: bold;
-  margin: 0px;
-  font-size: 18px;
-  line-height: 22px;
+  font-weight: 700;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #2c3e50;
 }
 
 .contactInfoText {
-  margin: 4px 0px 0px 0px;
-  line-height: 17px;
+  margin: 4px 0 0 0;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.contactInfoText:first-of-type {
+  color: accent;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .headShot {
   flex: 1;
   position: relative;
+  overflow: hidden;
 }
 
 .mobileHeadShotImage {
@@ -78,19 +100,23 @@
   flex: 1;
   background-size: cover;
   background-position: center;
-  filter: saturate(70%);
+  filter: saturate(75%);
   display: block;
+  transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .distanceShot {
   position: relative;
   flex: 2;
   background-color: distanceShotBackground;
+  overflow: hidden;
 }
 
 .distanceShotImage {
   flex: 1;
   opacity: 0.3;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .contactInfoWrapper {
@@ -106,10 +132,15 @@
   flex-direction: row-reverse;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 768px) {
+  .whoContainer {
+    gap: 2px;
+  }
+
   .distanceShot {
     display: none;
   }
+
   .headShotImage {
     display: none;
   }
@@ -122,23 +153,29 @@
     flex: 1;
     background-size: cover;
     background-position: center;
-    filter: saturate(70%);
+    filter: saturate(75%);
     display: block;
   }
 
   .contactInfo {
     color: white;
-    padding: 15px;
-    font-size: 18px;
-    line-height: 29px;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   .contactName {
-    line-height: 29px;
+    font-size: 20px;
+    line-height: 1.3;
+    color: white;
   }
 
   .contactInfoText {
-    margin: 0;
+    margin: 2px 0 0;
+  }
+
+  .contactInfoText:first-of-type {
+    color: rgba(255, 255, 255, 0.8);
   }
 
   .contactInfoSpacer {
