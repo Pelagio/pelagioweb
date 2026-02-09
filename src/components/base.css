@@ -87,10 +87,11 @@ a {
 
 .wrapper {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .wave-wrapper {
-  background-color: waveBlue;
+  background-color: transparent;
 }
 
 .section-list {

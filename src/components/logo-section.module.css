@@ -41,16 +41,12 @@
   pointer-events: none;
 }
 
-.sectionContent > div {
+.logoWrapper {
   width: 260px;
   height: auto;
   animation: logoFloat 6s ease-in-out infinite;
   position: relative;
   z-index: 1;
-}
-
-.sectionContent > img {
-  background-size: cover;
 }
 
 .scrollIndicator {
@@ -68,6 +64,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   animation: fadeInUp 1s ease-out 1s both;
+  width: auto;
 }
 
 .scrollArrow {

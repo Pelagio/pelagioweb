@@ -116,7 +116,7 @@
 
 @media only screen and (max-width: 768px) {
   .whoContainer {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr;
     gap: 24px;
     padding: 20px 16px;
   }

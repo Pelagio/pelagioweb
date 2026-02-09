@@ -5,11 +5,13 @@ try {
   contentfulConfig = require("./.contentful");
 } catch (_) {}
 
-// Overwrite the Contentful config with environment variables if they exist
+// Use .contentful.json values, falling back to environment variables
 contentfulConfig = {
-  spaceId: process.env.CONTENTFUL_SPACE_ID || contentfulConfig.spaceId,
+  spaceId: contentfulConfig.spaceId || process.env.CONTENTFUL_SPACE_ID,
   accessToken:
-    process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken
+    contentfulConfig.accessToken ||
+    process.env.CONTENTFUL_DELIVERY_TOKEN ||
+    process.env.CONTENTFUL_ACCESS_TOKEN
 };
 
 const { spaceId, accessToken } = contentfulConfig;
