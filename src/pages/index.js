@@ -13,6 +13,7 @@ import PageSection from "../components/page-section";
 import TitleSection from "../components/title-section";
 import LogoSection from "../components/logo-section";
 import ContactSection from "../components/contact-section";
+import ServicesSection from "../components/services-section";
 import { Footer } from "../components/footer";
 import { Waves } from "../components/waves";
 import Burger from "../components/burger";
@@ -216,7 +217,10 @@ class RootIndex extends React.Component {
                       break;
                     case "people":
                       component = (
-                        <PageSection section={node} people={people} />
+                        <>
+                          <ServicesSection />
+                          <PageSection section={node} people={people} />
+                        </>
                       );
                       break;
                     case "contact":
