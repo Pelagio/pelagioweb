@@ -27,10 +27,11 @@ const structuredData = {
   url: "https://pelag.io",
   logo: "https://pelag.io/img/logo-no-text.png",
   description:
-    "Pelagio is a Stockholm-based software development agency specializing in web development, mobile apps, cloud solutions, and technical consulting. We deliver high-quality digital products through experienced senior developers.",
+    "Pelagio is a Gothenburg-based software development agency specializing in web development, mobile apps, cloud solutions, and technical consulting. We deliver high-quality digital products through experienced senior developers.",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Stockholm",
+    streetAddress: "Skanstorget",
+    addressLocality: "Gothenburg",
     addressCountry: "SE"
   },
   contactPoint: {
@@ -53,7 +54,7 @@ const structuredData = {
     "DevOps"
   ],
   slogan: "Senior developers. Real ownership. Quality delivery.",
-  foundingLocation: "Stockholm, Sweden",
+  foundingLocation: "Gothenburg, Sweden",
   areaServed: ["Sweden", "Europe", "Worldwide"]
 };
 
@@ -128,9 +129,9 @@ class RootIndex extends React.Component {
     const people = data.allContentfulPerson.edges;
 
     const metaTitle =
-      "Pelagio | Software Development Agency - Stockholm, Sweden";
+      "Pelagio | Software Development Agency - Gothenburg, Sweden";
     const metaDescription =
-      "Pelagio is a senior software development agency in Stockholm. We build web apps, mobile solutions, and cloud architecture. Experienced developers available for project work and consulting.";
+      "Pelagio is a senior software development agency in Gothenburg. We build web apps, mobile solutions, and cloud architecture. Experienced developers available for project work and consulting.";
     const metaUrl = "https://pelag.io/";
     const imageUrl = "https://pelag.io/img/logo-no-text.png";
     const favicoUrl = "/img/favicon.png";
@@ -179,12 +180,12 @@ class RootIndex extends React.Component {
 
               <meta
                 name="keywords"
-                content="software development agency, web development Stockholm, React developers, freelance developers Sweden, mobile app development, cloud architecture, technical consulting, senior developers, project-based development"
+                content="software development agency, web development Gothenburg, React developers, freelance developers Sweden, mobile app development, cloud architecture, technical consulting, senior developers, project-based development"
               />
               <meta name="robots" content="index, follow" />
               <meta name="author" content="Pelagio Development AB" />
-              <meta name="geo.region" content="SE-AB" />
-              <meta name="geo.placename" content="Stockholm" />
+              <meta name="geo.region" content="SE-O" />
+              <meta name="geo.placename" content="Gothenburg" />
 
               <script type="application/ld+json">
                 {JSON.stringify(structuredData)}

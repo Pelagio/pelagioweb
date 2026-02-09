@@ -16,7 +16,7 @@ export function Footer() {
             hello@pelag.io
           </a>
           <span className={styles.separator}>|</span>
-          <span>Stockholm, Sweden</span>
+          <span>Gothenburg, Sweden</span>
         </div>
         <div className={styles.copyright}>
           &copy; {new Date().getFullYear()} Pelagio Development AB
