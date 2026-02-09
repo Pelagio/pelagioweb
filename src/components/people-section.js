@@ -14,20 +14,13 @@ export default ({ people }) => {
 };
 
 const Person = ({ person, index }) => {
+  const isEven = index % 2 === 0;
   return (
-    <div className={styles.whoPerson}>
+    <div className={`${styles.whoPerson} ${isEven ? styles.even : styles.odd}`}>
       {person.image && (
-        <div className={styles.headShot}>
+        <div className={styles.photoWrap}>
           <Img
-            className={styles.mobileHeadShotImage}
-            alt={person.name}
-            fluid={{
-              ...person.image.fluid,
-              aspectRatio: 0.815
-            }}
-          />
-          <Img
-            className={styles.headShotImage}
+            className={styles.photo}
             alt={person.name}
             fluid={{
               ...person.image.fluid,
@@ -36,23 +29,13 @@ const Person = ({ person, index }) => {
           />
         </div>
       )}
-      <div className={styles.contactInfoWrapper}>
-        <ContactInfo person={person} />
-      </div>
-    </div>
-  );
-};
-
-const ContactInfo = ({ person }) => {
-  return (
-    <div className={styles.contactInfoContainer}>
-      <div className={styles.contactInfo}>
-        <h4 className={styles.contactName}>{person.name}</h4>
-        {person.title && (
-          <p className={styles.contactInfoText}>{person.title}</p>
-        )}
-        <p className={styles.contactInfoText}>{person.phone}</p>
-        <p className={styles.contactInfoText}>{person.email}</p>
+      <div className={styles.info}>
+        <h4 className={styles.name}>{person.name}</h4>
+        {person.title && <p className={styles.title}>{person.title}</p>}
+        <div className={styles.contact}>
+          <span>{person.phone}</span>
+          <span>{person.email}</span>
+        </div>
       </div>
     </div>
   );
