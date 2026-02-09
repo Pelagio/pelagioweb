@@ -68,7 +68,7 @@ const servicesData = {
       "@type": "Service",
       name: "Web Application Development",
       description:
-        "Custom web applications built with modern frameworks like React, Next.js, and Node.js."
+        "Custom web applications built with modern frameworks and technologies. React and Next.js are our specialty, but we adapt to what each project needs."
     },
     {
       "@type": "Service",
