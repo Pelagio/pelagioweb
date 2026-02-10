@@ -69,6 +69,8 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
   transition: color 0.3s ease;
 }
 
