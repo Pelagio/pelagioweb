@@ -3,8 +3,9 @@
 
 .styledBurger {
   position: fixed;
-  top: 40px;
-  left: calc(100vw - 5rem);
+  top: 32px;
+  right: 32px;
+  left: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -15,20 +16,19 @@
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  transition: transform 0.2s ease;
 }
 
-@media (max-width: 767px) {
-  .styledBurger {
-    right: 3rem;
-  }
+.styledBurger:hover {
+  transform: scale(1.1);
 }
 
 .styledBurger div {
   width: 2rem;
-  height: 0.25rem;
+  height: 0.2rem;
   background: white;
   border-radius: 10px;
-  transition: all 0.3s linear;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   transform-origin: right;
 }

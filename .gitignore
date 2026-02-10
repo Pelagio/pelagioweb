@@ -100,3 +100,10 @@ Temporary Items
 
 # Local Netlify folder
 .netlify
+
+# IDE
+.vscode/
+
+# Playwright
+.playwright-mcp/
+*.png

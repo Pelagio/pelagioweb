@@ -58,6 +58,9 @@ const ContactInfo = ({ person }) => {
     <div className={styles.contactInfoContainer}>
       <div className={styles.contactInfo}>
         <h4 className={styles.contactName}>{person.name}</h4>
+        {person.title && (
+          <p className={styles.contactInfoText}>{person.title}</p>
+        )}
         <p className={styles.contactInfoText}>{person.phone}</p>
         <p className={styles.contactInfoText}>{person.email}</p>
       </div>

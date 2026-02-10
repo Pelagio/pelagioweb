@@ -1,0 +1,106 @@
+@value colors: "../theme/colors.css";
+@value accent from colors;
+@value sectionAlt from colors;
+@value textLight from colors;
+@value text from colors;
+
+.root {
+  background-color: sectionAlt;
+  padding: 80px 0;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.content h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.content h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: accent;
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+.list {
+  list-style: none;
+  margin: 48px 0 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.index {
+  font-size: 14px;
+  font-weight: 600;
+  color: accent;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+  width: 28px;
+}
+
+.itemContent {
+  flex: 1;
+}
+
+.itemTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: text;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.itemDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: textLight;
+  margin: 4px 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .root {
+    padding: 60px 0;
+  }
+
+  .content {
+    padding: 0 20px;
+  }
+
+  .list {
+    margin-top: 32px;
+  }
+
+  .item {
+    gap: 16px;
+    padding: 20px 0;
+  }
+
+  .itemTitle {
+    font-size: 18px;
+  }
+
+  .itemDescription {
+    font-size: 15px;
+  }
+}

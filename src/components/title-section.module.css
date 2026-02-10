@@ -1,12 +1,16 @@
 @value colors: "../theme/colors.css";
 @value naturalWhite from colors;
 @value waveBlue from colors;
+@value sectionAlt from colors;
+@value text from colors;
 
 .root {
-  height: 45vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
-  margin-top: -5vmin;
+  margin-top: 0;
+  background-color: sectionAlt;
+  padding: 80px 24px;
 }
 
 .spacer {
@@ -15,31 +19,45 @@
 
 .content {
   flex: 1;
-  background-color: waveBlue;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100%;
   min-height: 250px;
 }
 
 .h1 {
   text-align: center;
-  max-width: 600px;
-  color: naturalWhite;
+  max-width: 800px;
+  color: text;
+  font-size: 48px;
+  line-height: 1.15;
+  animation: fadeInUp 1s ease-out;
 }
 
-.pitch-wave {
-  background-image: url("../../static/img/pitch-wave.svg");
-  width: 100vw;
-  background-size: cover;
-  height: 0;
-  padding: 0; /* reset */
-  padding-bottom: 21%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  box-sizing: content-box;
-  margin-bottom: -15%;
-  margin-top: -1px;
+.pitchWave {
+  display: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .root {
+    padding: 60px 20px;
+    min-height: 40vh;
+  }
+
+  .h1 {
+    font-size: 28px;
+    max-width: 100%;
+  }
 }

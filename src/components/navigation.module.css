@@ -1,29 +1,54 @@
+@value colors: "../theme/colors.css";
+@value darkBg from colors;
+@value accent from colors;
+
 .navigationMenu {
   display: flex;
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: rgba(26, 35, 50, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   height: 100vh;
   text-align: left;
   position: fixed;
   top: 0;
   left: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 9;
   opacity: 0;
 }
 
 .navigationItem {
   font-size: 2rem;
-  text-transform: uppercase;
-  padding: 2rem 0;
-  font-weight: bold;
-  letter-spacing: 0.5rem;
-
+  padding: 1.5rem 0;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
   color: white;
   text-decoration: none;
-  transition: color 0.3s linear;
+  transition: color 0.3s ease, transform 0.3s ease;
   text-transform: capitalize;
+  position: relative;
+}
+
+.navigationItem:hover {
+  color: accent;
+  transform: translateX(8px);
+}
+
+.navigationItem::after {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: accent;
+  transition: width 0.3s ease;
+}
+
+.navigationItem:hover::after {
+  width: 100%;
 }

@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import styles from "./contact-button.module.css";
 import { useInterval } from "../helpers/use-interval";
 import { encode } from "../helpers/forms";
-import { delay } from "q";
+import { delay } from "../helpers/delay";
 
 const thingsForFree = [
-  { key: "beer", emoji: "🍺" },
-  { key: "coffee", emoji: "☕️" },
-  { key: "taco", emoji: "🌮" },
-  { key: "ideas", emoji: "💡" },
-  { key: "talk", emoji: "🗣" }
+  { key: "coffee", emoji: "\u2615\uFE0F" },
+  { key: "ideas", emoji: "\uD83D\uDCA1" },
+  { key: "talk", emoji: "\uD83D\uDDE3" },
+  { key: "strategy", emoji: "\uD83C\uDFAF" },
+  { key: "advice", emoji: "\uD83E\uDD1D" }
 ];
 
 export const ContactButton = ({}) => {
@@ -21,7 +21,7 @@ export const ContactButton = ({}) => {
   const [thingsForFreeIndex, setThingsForFreeIndex] = useState(0);
   useInterval(() => {
     setThingsForFreeIndex((thingsForFreeIndex + 1) % thingsForFree.length);
-  }, 1000);
+  }, 2000);
 
   const thingForFree = thingsForFree[thingsForFreeIndex];
 
@@ -76,7 +76,6 @@ export const ContactButton = ({}) => {
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
-            {/* You still need to add the hidden input with the form name to your JSX form */}
             <input type="hidden" name="form-name" value="contact" />
             <input
               type="email"
@@ -95,10 +94,10 @@ export const ContactButton = ({}) => {
           className={[styles.button].join(" ")}
         >
           <span className={styles.ctaText}>
-            {formSubmitted ? "thanks" : "free"}
+            {formSubmitted ? "thanks" : "Let's talk"}
           </span>
           <div className={styles.emoji}>
-            {formSubmitted ? "💌" : thingForFree.emoji}
+            {formSubmitted ? "\uD83D\uDC8C" : thingForFree.emoji}
           </div>
         </button>
       )}
