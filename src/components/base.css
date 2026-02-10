@@ -20,8 +20,7 @@ html {
 }
 
 body {
-  font-family: "Inter", "Montserrat", -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
   margin: 0;
   font-size: 16px;
@@ -54,7 +53,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Inter", "Lato", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.2;
@@ -120,7 +119,7 @@ a {
 }
 
 button {
-  font-family: "Inter", "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 600;
   border: none;
@@ -152,7 +151,7 @@ input[type="email"] {
   width: 200;
   color: white;
   background-color: transparent;
-  font-family: "Inter", "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   outline: none;
   box-sizing: border-box;

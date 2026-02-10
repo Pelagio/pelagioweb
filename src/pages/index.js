@@ -147,7 +147,7 @@ class RootIndex extends React.Component {
               <meta name="description" content={metaDescription} />
               <link rel="canonical" href={metaUrl} />
               <link
-                href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&display=swap"
+                href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Montserrat:300,400,700,900&display=swap"
                 rel="stylesheet"
               />
               <link rel="preconnect" href="https://fonts.googleapis.com" />
