@@ -13,7 +13,7 @@
     "body-scroll-lock": "^3.0.3",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "gatsby": "2.32.13",
+    "gatsby": "5.16.1",
     "gatsby-image": "2.11.0",
     "gatsby-plugin-postcss": "2.3.13",
     "gatsby-plugin-react-helmet": "3.10.0",
