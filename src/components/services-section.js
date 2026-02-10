@@ -5,7 +5,7 @@ const services = [
   {
     title: "Web Applications",
     description:
-      "Modern, performant web apps using the right tools for the job. React and Next.js are our go-to, but we work across the stack."
+      "Full-stack web applications from frontend to backend. React and Next.js are our go-to, but we work across the entire stack."
   },
   {
     title: "Mobile Development",
