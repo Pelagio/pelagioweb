@@ -32,22 +32,10 @@
   color: text;
   font-size: 48px;
   line-height: 1.15;
-  animation: fadeInUp 1s ease-out;
 }
 
 .pitchWave {
   display: none;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media only screen and (max-width: 768px) {

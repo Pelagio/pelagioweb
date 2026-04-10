@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import {
   disableBodyScroll,
   enableBodyScroll,
-  clearAllBodyScrollLocks
+  clearAllBodyScrollLocks,
 } from "body-scroll-lock";
 
 import Layout from "../components/layout";
@@ -14,10 +14,12 @@ import TitleSection from "../components/title-section";
 import LogoSection from "../components/logo-section";
 import ContactSection from "../components/contact-section";
 import ServicesSection from "../components/services-section";
+import ClientsSection from "../components/clients-section";
 import { Footer } from "../components/footer";
 import { Waves } from "../components/waves";
 import Burger from "../components/burger";
 import Navigation from "../components/navigation";
+import { SmoothScroll } from "@pelagio/motion";
 import { IntersectProvider } from "../contexts/intersect-context";
 
 const structuredData = {
@@ -33,12 +35,12 @@ const structuredData = {
     "@type": "PostalAddress",
     streetAddress: "Skanstorget",
     addressLocality: "Gothenburg",
-    addressCountry: "SE"
+    addressCountry: "SE",
   },
   contactPoint: {
     "@type": "ContactPoint",
     email: "hello@pelag.io",
-    contactType: "sales"
+    contactType: "sales",
   },
   knowsAbout: [
     "Software Development",
@@ -52,11 +54,11 @@ const structuredData = {
     "UX Design",
     "Technical Consulting",
     "Agile Development",
-    "DevOps"
+    "DevOps",
   ],
   slogan: "Senior developers. Real ownership. Quality delivery.",
   foundingLocation: "Gothenburg, Sweden",
-  areaServed: ["Sweden", "Europe", "Worldwide"]
+  areaServed: ["Sweden", "Europe", "Worldwide"],
 };
 
 const servicesData = {
@@ -68,33 +70,33 @@ const servicesData = {
       "@type": "Service",
       name: "Web Application Development",
       description:
-        "Full-stack web applications from frontend to backend. React and Next.js are our go-to, but we work across the entire stack."
+        "Full-stack web applications from frontend to backend. React and Next.js are our go-to, but we work across the entire stack.",
     },
     {
       "@type": "Service",
       name: "Mobile App Development",
       description:
-        "Cross-platform and native mobile applications for iOS and Android."
+        "Cross-platform and native mobile applications for iOS and Android.",
     },
     {
       "@type": "Service",
       name: "Cloud & DevOps",
       description:
-        "Cloud architecture, infrastructure setup, CI/CD pipelines, and scalable deployments."
+        "Cloud architecture, infrastructure setup, CI/CD pipelines, and scalable deployments.",
     },
     {
       "@type": "Service",
       name: "Technical Consulting",
       description:
-        "Expert technical advisory, architecture reviews, and technology strategy."
+        "Expert technical advisory, architecture reviews, and technology strategy.",
     },
     {
       "@type": "Service",
       name: "UX & Product Design",
       description:
-        "User experience design, prototyping, and product strategy for digital products."
-    }
-  ]
+        "User experience design, prototyping, and product strategy for digital products.",
+    },
+  ],
 };
 
 class RootIndex extends React.Component {
@@ -138,104 +140,111 @@ class RootIndex extends React.Component {
     const favicoUrl = "/img/favicon.png";
     return (
       <Layout location={location} children={children}>
-        <IntersectProvider>
-          <div>
-            <Helmet title={metaTitle}>
-              <html lang="en" />
-              <title>{metaTitle}</title>
-              <meta name="title" content={metaTitle} />
-              <meta name="description" content={metaDescription} />
-              <link rel="canonical" href={metaUrl} />
-              <link
-                href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Montserrat:300,400,700,900&display=swap"
-                rel="stylesheet"
-              />
-              <link rel="preconnect" href="https://fonts.googleapis.com" />
-              <link
-                rel="preconnect"
-                href="https://fonts.gstatic.com"
-                crossOrigin="anonymous"
-              />
-              <link
-                rel="shortcut icon"
-                href="favicon.ico"
-                type="image/x-icon"
-              />
-              <link rel="shortcut icon" href={favicoUrl} type="image/x-icon" />
+        <SmoothScroll>
+          <IntersectProvider>
+            <div>
+              <Helmet title={metaTitle}>
+                <html lang="en" />
+                <title>{metaTitle}</title>
+                <meta name="title" content={metaTitle} />
+                <meta name="description" content={metaDescription} />
+                <link rel="canonical" href={metaUrl} />
+                <link
+                  href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Montserrat:300,400,700,900&display=swap"
+                  rel="stylesheet"
+                />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link
+                  rel="preconnect"
+                  href="https://fonts.gstatic.com"
+                  crossOrigin="anonymous"
+                />
+                <link
+                  rel="shortcut icon"
+                  href="favicon.ico"
+                  type="image/x-icon"
+                />
+                <link
+                  rel="shortcut icon"
+                  href={favicoUrl}
+                  type="image/x-icon"
+                />
 
-              <meta property="og:type" content="website" />
-              <meta property="og:url" content={metaUrl} />
-              <meta property="og:title" content={metaTitle} />
-              <meta property="og:description" content={metaDescription} />
-              <meta property="og:image" content={imageUrl} />
-              <meta property="og:image:width" content="400" />
-              <meta property="og:image:height" content="400" />
-              <meta property="og:site_name" content="Pelagio" />
-              <meta property="og:locale" content="en_US" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={metaUrl} />
+                <meta property="og:title" content={metaTitle} />
+                <meta property="og:description" content={metaDescription} />
+                <meta property="og:image" content={imageUrl} />
+                <meta property="og:image:width" content="400" />
+                <meta property="og:image:height" content="400" />
+                <meta property="og:site_name" content="Pelagio" />
+                <meta property="og:locale" content="en_US" />
 
-              <meta name="twitter:card" content="summary_large_image" />
-              <meta name="twitter:url" content={metaUrl} />
-              <meta name="twitter:title" content={metaTitle} />
-              <meta name="twitter:description" content={metaDescription} />
-              <meta name="twitter:image" content={imageUrl} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content={metaUrl} />
+                <meta name="twitter:title" content={metaTitle} />
+                <meta name="twitter:description" content={metaDescription} />
+                <meta name="twitter:image" content={imageUrl} />
 
-              <meta
-                name="keywords"
-                content="software development agency, web development Gothenburg, React developers, freelance developers Sweden, mobile app development, cloud architecture, technical consulting, senior developers, project-based development"
-              />
-              <meta name="robots" content="index, follow" />
-              <meta name="author" content="Pelagio Development AB" />
-              <meta name="geo.region" content="SE-O" />
-              <meta name="geo.placename" content="Gothenburg" />
+                <meta
+                  name="keywords"
+                  content="software development agency, web development Gothenburg, React developers, freelance developers Sweden, mobile app development, cloud architecture, technical consulting, senior developers, project-based development"
+                />
+                <meta name="robots" content="index, follow" />
+                <meta name="author" content="Pelagio Development AB" />
+                <meta name="geo.region" content="SE-O" />
+                <meta name="geo.placename" content="Gothenburg" />
 
-              <script type="application/ld+json">
-                {JSON.stringify(structuredData)}
-              </script>
-              <script type="application/ld+json">
-                {JSON.stringify(servicesData)}
-              </script>
-            </Helmet>
-            <div className="wrapper" ref={this.scrollRef}>
-              <Navigation
-                open={this.state.open}
-                closeMenu={() => {
-                  this.setMenuState(false);
-                }}
-              />
-              <Burger open={this.state.open} setOpen={this.setMenuState} />
+                <script type="application/ld+json">
+                  {JSON.stringify(structuredData)}
+                </script>
+                <script type="application/ld+json">
+                  {JSON.stringify(servicesData)}
+                </script>
+              </Helmet>
+              <div className="wrapper" ref={this.scrollRef}>
+                <Navigation
+                  open={this.state.open}
+                  closeMenu={() => {
+                    this.setMenuState(false);
+                  }}
+                />
+                <Burger open={this.state.open} setOpen={this.setMenuState} />
 
-              <ul className="section-list">
-                <div className="wave-wrapper">
-                  <LogoSection />
-                  <Waves />
-                </div>
-                {sections.map(({ node }) => {
-                  let component = null;
-                  switch (node.sectionType) {
-                    case "title":
-                      component = <TitleSection section={node} />;
-                      break;
-                    case "people":
-                      component = (
-                        <>
-                          <ServicesSection />
-                          <PageSection section={node} people={people} />
-                        </>
-                      );
-                      break;
-                    case "contact":
-                      component = <ContactSection section={node} />;
-                      break;
-                    default:
-                      component = <PageSection section={node} />;
-                  }
-                  return <li key={node.id}>{component}</li>;
-                })}
-              </ul>
+                <ul className="section-list">
+                  <li className="wave-wrapper">
+                    <LogoSection />
+                    <Waves />
+                  </li>
+                  {sections.map(({ node }) => {
+                    let component = null;
+                    switch (node.sectionType) {
+                      case "title":
+                        component = <TitleSection section={node} />;
+                        break;
+                      case "people":
+                        component = (
+                          <>
+                            <ServicesSection />
+                            <ClientsSection />
+                            <PageSection section={node} people={people} />
+                          </>
+                        );
+                        break;
+                      case "contact":
+                        component = <ContactSection section={node} />;
+                        break;
+                      default:
+                        component = <PageSection section={node} />;
+                    }
+                    return <li key={node.id}>{component}</li>;
+                  })}
+                </ul>
+              </div>
+              <Footer />
             </div>
-            <Footer />
-          </div>
-        </IntersectProvider>
+          </IntersectProvider>
+        </SmoothScroll>
       </Layout>
     );
   }
@@ -245,7 +254,7 @@ export default RootIndex;
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulPageSection(sort: { fields: [sectionIndex], order: ASC }) {
+    allContentfulPageSection(sort: { sectionIndex: ASC }) {
       edges {
         node {
           id
@@ -256,17 +265,18 @@ export const pageQuery = graphql`
             content
           }
           background {
-            fluid(maxWidth: 1500, quality: 90) {
-              sizes
-              src
-              srcSet
-            }
+            gatsbyImageData(
+              width: 1500
+              quality: 90
+              layout: CONSTRAINED
+              placeholder: BLURRED
+            )
           }
           anchor
         }
       }
     }
-    allContentfulPerson(sort: { fields: [name], order: ASC }) {
+    allContentfulPerson(sort: { name: ASC }) {
       edges {
         node {
           id
@@ -275,20 +285,26 @@ export const pageQuery = graphql`
           email
           phone
           image {
-            fluid(maxWidth: 1500) {
-              sizes
-              src
-              srcSet
-              aspectRatio
-            }
+            mobile: gatsbyImageData(
+              aspectRatio: 0.815
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              quality: 85
+            )
+            desktop: gatsbyImageData(
+              aspectRatio: 1
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              quality: 85
+            )
           }
           distanceImage {
-            fluid(maxWidth: 1500) {
-              sizes
-              src
-              srcSet
-              aspectRatio
-            }
+            gatsbyImageData(
+              aspectRatio: 2
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              quality: 85
+            )
           }
         }
       }

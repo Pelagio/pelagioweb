@@ -1,31 +1,91 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import styles from "./logo-section.module.css";
+import * as styles from "./logo-section.module.css";
 
 import logo from "../../static/img/logo-outset-white.svg";
 
 export default ({ section }) => {
-  const handleScrollDown = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth"
-    });
-  };
+  const sectionRef = useRef(null);
+  const logoRef = useRef(null);
+  const bgRef = useRef(null);
+  const indicatorRef = useRef(null);
+
+  useEffect(() => {
+    if (!gsap || !ScrollTrigger) return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=60%",
+          pin: true,
+          scrub: 0.8,
+          anticipatePin: 1,
+        },
+      });
+
+      // Logo: zoom toward viewer + 3D tilt + blur + fade
+      tl.to(
+        logoRef.current,
+        {
+          scale: 3,
+          rotateX: -25,
+          filter: "blur(24px)",
+          opacity: 0,
+          ease: "power3.in",
+          duration: 1,
+        },
+        0,
+      );
+
+      // Gradient: dramatic diagonal shift
+      tl.to(
+        bgRef.current,
+        {
+          backgroundPosition: "100% 0%",
+          ease: "power1.inOut",
+          duration: 1,
+        },
+        0,
+      );
+
+      // Scroll indicator: fade + drop early
+      tl.to(
+        indicatorRef.current,
+        { opacity: 0, y: 30, ease: "power1.in", duration: 0.25 },
+        0,
+      );
+    }, sectionRef.current);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section id="title">
-      <div className={styles.sectionContent}>
-        <div className={styles.logoWrapper}>
-          <img src={logo} alt="Pelagio - Software Development Agency" />
+    <section id="title" ref={sectionRef}>
+      <div
+        className={styles.sectionContent}
+        ref={bgRef}
+        style={{ perspective: "800px" }}
+      >
+        <div className={styles.logoWrapper} ref={logoRef}>
+          <img
+            src={logo}
+            alt="Pelagio - Software Development Agency"
+            className={styles.logoFloat}
+          />
         </div>
-        <button
+        <div
           className={styles.scrollIndicator}
-          onClick={handleScrollDown}
-          aria-label="Scroll to next section"
+          ref={indicatorRef}
+          aria-hidden="true"
         >
           <span>Scroll</span>
           <div className={styles.scrollArrow} />
-        </button>
+        </div>
       </div>
     </section>
   );

@@ -1,0 +1,139 @@
+@value colors: "../theme/colors.css";
+@value accent from colors;
+@value darkBg from colors;
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #1a1a2e;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex-shrink: 0;
+  padding: 4rem 2rem 1rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+.tracker {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition:
+    background 0.4s ease,
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dotActive {
+  background: accent;
+  width: 28px;
+  border-radius: 4px;
+}
+
+.trackWrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.track {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  will-change: transform;
+}
+
+.phase {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+  flex-shrink: 0;
+}
+
+.phaseNumber {
+  font-size: clamp(7rem, 18vw, 14rem);
+  font-weight: 900;
+  line-height: 0.9;
+  color: rgba(232, 93, 86, 0.18);
+  letter-spacing: -0.05em;
+  margin-bottom: -0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.phaseTitle {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: white;
+  letter-spacing: -0.03em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.phaseDescription {
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  font-weight: 300;
+  max-width: 640px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 2.5rem 1.5rem 1rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .phase {
+    padding: 0 1.5rem;
+  }
+
+  .phaseNumber {
+    font-size: clamp(5rem, 22vw, 9rem);
+    margin-bottom: 0;
+  }
+
+  .phaseTitle {
+    font-size: clamp(2rem, 9vw, 3rem);
+    margin-bottom: 1rem;
+  }
+
+  .phaseDescription {
+    font-size: 0.95rem;
+  }
+}

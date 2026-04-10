@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import styles from "./contact-button.module.css";
+import * as styles from "./contact-button.module.css";
 import { useInterval } from "../helpers/use-interval";
 import { encode } from "../helpers/forms";
 import { delay } from "../helpers/delay";
@@ -10,10 +10,10 @@ const thingsForFree = [
   { key: "ideas", emoji: "\uD83D\uDCA1" },
   { key: "talk", emoji: "\uD83D\uDDE3" },
   { key: "strategy", emoji: "\uD83C\uDFAF" },
-  { key: "advice", emoji: "\uD83E\uDD1D" }
+  { key: "advice", emoji: "\uD83E\uDD1D" },
 ];
 
-export const ContactButton = ({}) => {
+export const ContactButton = () => {
   const [formState, setFormState] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [fullscreen, setFullsceen] = useState(false);
@@ -25,11 +25,11 @@ export const ContactButton = ({}) => {
 
   const thingForFree = thingsForFree[thingsForFreeIndex];
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
     try {
@@ -38,8 +38,8 @@ export const ContactButton = ({}) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": form.getAttribute("name"),
-          ...formState
-        })
+          ...formState,
+        }),
       });
       form.reset();
       toggleFullscreen();
@@ -47,7 +47,7 @@ export const ContactButton = ({}) => {
       await delay(1500);
       setFormSent(true);
     } catch (error) {
-      alert(error);
+      alert("Something went wrong. Please try again.");
     }
   };
 
@@ -60,7 +60,7 @@ export const ContactButton = ({}) => {
       className={[
         styles.root,
         fullscreen ? styles.fullscreen : styles.small,
-        formSent && styles.formSent
+        formSent && styles.formSent,
       ].join(" ")}
     >
       {fullscreen ? (
@@ -77,10 +77,12 @@ export const ContactButton = ({}) => {
             onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
             <input
               type="email"
               name="email"
               placeholder="enter your email"
+              required
               onChange={handleChange}
             />
             <button className={styles.submitButton} type="submit">

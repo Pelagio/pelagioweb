@@ -11,14 +11,14 @@ contentfulConfig = {
   accessToken:
     contentfulConfig.accessToken ||
     process.env.CONTENTFUL_DELIVERY_TOKEN ||
-    process.env.CONTENTFUL_ACCESS_TOKEN
+    process.env.CONTENTFUL_ACCESS_TOKEN,
 };
 
 const { spaceId, accessToken } = contentfulConfig;
 
 if (!spaceId || !accessToken) {
   throw new Error(
-    "Contentful spaceId and the delivery token need to be provided."
+    "Contentful spaceId and the delivery token need to be provided.",
   );
 }
 
@@ -27,24 +27,25 @@ module.exports = {
     title: "Pelagio | Software Development Agency",
     description:
       "Pelagio is a senior software development agency in Gothenburg. We build web apps, mobile solutions, and cloud architecture.",
-    siteUrl: "https://pelag.io"
+    siteUrl: "https://pelag.io",
   },
-  pathPrefix: "/gatsby-contentful-starter",
+  pathPrefix: "/",
   plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-source-contentful",
-      options: contentfulConfig
+      options: contentfulConfig,
     },
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        output: "/sitemap.xml"
-      }
-    }
-  ]
+        output: "/sitemap.xml",
+      },
+    },
+  ],
 };

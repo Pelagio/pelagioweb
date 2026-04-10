@@ -1,47 +1,52 @@
 import React from "react";
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Stagger, StaggerItem } from "@pelagio/motion";
 
-import styles from "./people-section.module.css";
+import * as styles from "./people-section.module.css";
 
 export default ({ people }) => {
   return (
-    <div className={styles.whoContainer}>
-      {people.map(({ node }, index) => {
-        return <Person person={node} key={node.id} index={index} />;
-      })}
-    </div>
+    <Stagger from="bottom" className={styles.whoContainer}>
+      {people.map(({ node }) => (
+        <StaggerItem key={node.id} className={styles.whoPerson}>
+          <PersonContent person={node} />
+        </StaggerItem>
+      ))}
+    </Stagger>
   );
 };
 
-const Person = ({ person, index }) => {
+const PersonContent = ({ person }) => {
+  const mobileImage = person.image && getImage(person.image.mobile);
+  const desktopImage = person.image && getImage(person.image.desktop);
+  const distanceImage = person.distanceImage && getImage(person.distanceImage);
+
   return (
-    <div className={styles.whoPerson}>
+    <>
       {person.image && (
         <div className={styles.headShot}>
-          <Img
-            className={styles.mobileHeadShotImage}
-            alt={person.name}
-            fluid={{
-              ...person.image.fluid,
-              aspectRatio: 0.815
-            }}
-          />
-          <Img
-            className={styles.headShotImage}
-            alt={person.name}
-            fluid={{
-              ...person.image.fluid,
-              aspectRatio: 1
-            }}
-          />
+          {mobileImage && (
+            <GatsbyImage
+              className={styles.mobileHeadShotImage}
+              alt={person.name}
+              image={mobileImage}
+            />
+          )}
+          {desktopImage && (
+            <GatsbyImage
+              className={styles.headShotImage}
+              alt={person.name}
+              image={desktopImage}
+            />
+          )}
         </div>
       )}
-      {person.distanceImage && (
+      {person.distanceImage && distanceImage && (
         <div className={styles.distanceShot}>
-          <Img
+          <GatsbyImage
             className={styles.distanceShotImage}
             alt={person.name}
-            fluid={{ ...person.distanceImage.fluid, aspectRatio: 2 }}
+            image={distanceImage}
           />
         </div>
       )}
@@ -49,7 +54,7 @@ const Person = ({ person, index }) => {
         <div className={styles.contactInfoSpacer} />
         <ContactInfo person={person} />
       </div>
-    </div>
+    </>
   );
 };
 
