@@ -311,7 +311,7 @@ class RootIndex extends React.Component {
 
                 <meta
                   name="keywords"
-                  content="software development agency, web development Gothenburg, React developers, freelance developers Sweden, mobile app development, cloud architecture, technical consulting, senior developers, project-based development"
+                  content="software development partner, technical partner Gothenburg, React developers Sweden, mobile app development, cloud architecture, senior developers, embedded development team, long-term technical partner, web development Sweden"
                 />
                 <meta name="robots" content="index, follow" />
                 <meta name="author" content="Pelagio Development AB" />

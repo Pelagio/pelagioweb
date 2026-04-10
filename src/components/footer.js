@@ -10,7 +10,7 @@ export function Footer() {
           <div className={styles.brand}>
             <span className={styles.brandName}>Pelagio</span>
             <span className={styles.brandTagline}>
-              Software Development Agency
+              Software Development Partner
             </span>
           </div>
           <div className={styles.info}>

@@ -24,9 +24,9 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Pelagio | Software Development Agency",
+    title: "Pelagio | Senior Software Development Partner",
     description:
-      "Pelagio is a senior software development agency in Gothenburg. We build web apps, mobile solutions, and cloud architecture.",
+      "Pelagio is a senior software development partner in Gothenburg. We build web apps, mobile solutions, and cloud architecture with real ownership.",
     siteUrl: "https://pelag.io",
   },
   pathPrefix: "/",
