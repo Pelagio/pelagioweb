@@ -62,7 +62,7 @@ const ContactInfo = ({ person }) => {
   return (
     <div className={styles.contactInfoContainer}>
       <div className={styles.contactInfo}>
-        <h4 className={styles.contactName}>{person.name}</h4>
+        <h3 className={styles.contactName}>{person.name}</h3>
         {person.title && (
           <p className={styles.contactInfoText}>{person.title}</p>
         )}

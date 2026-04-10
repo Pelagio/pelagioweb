@@ -52,6 +52,12 @@ const clients = [
     noInvert: true,
   },
   {
+    name: "DEFA",
+    project: "Power App — EV Charging",
+    url: "https://www.defa.com/defapowerapp/",
+    logo: null,
+  },
+  {
     name: "Cloud Charge",
     project: "Charging Portal",
     logo: logoCloudCharge,
@@ -123,7 +129,9 @@ export default function ClientsSection() {
                   <div className={styles.logoWrap}>
                     <img
                       src={client.logo}
-                      alt={client.name}
+                      alt={`${client.name} logo — Pelagio client`}
+                      width="160"
+                      height="56"
                       className={
                         client.logo.endsWith(".svg") && !client.noInvert
                           ? styles.logoSvg

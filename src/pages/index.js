@@ -35,10 +35,10 @@ const structuredData = {
     "Pelagio is a Gothenburg-based senior software development partner. We build web applications, mobile apps, cloud infrastructure, and provide technical consulting. Our team of experienced developers delivers production-quality code with real ownership.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Skanstorget",
+    streetAddress: "Skanstorget 5",
     addressLocality: "Gothenburg",
     addressRegion: "Vastra Gotaland",
-    postalCode: "413 27",
+    postalCode: "411 22",
     addressCountry: "SE",
   },
   geo: {
@@ -79,6 +79,17 @@ const structuredData = {
     "Agile Development",
     "DevOps",
     "CI/CD",
+    "Three.js",
+    "WebGL",
+    "GSAP",
+    "Framer Motion",
+    "Rive",
+    "Motion Design",
+    "Animation Engineering",
+    "Gatsby",
+    "Vite",
+    "PostgreSQL",
+    "GraphQL",
   ],
   slogan: "Senior developers. Real ownership. Quality delivery.",
   foundingLocation: "Gothenburg, Sweden",
@@ -101,6 +112,7 @@ const structuredData = {
       name: "Generasjonsfondet",
       url: "https://www.generasjonsfondet.no",
     },
+    { "@type": "Organization", name: "DEFA", url: "https://www.defa.com" },
     { "@type": "Organization", name: "Cloud Charge" },
     { "@type": "Organization", name: "Ourcal", url: "https://ourcal.com" },
     {
@@ -256,20 +268,30 @@ class RootIndex extends React.Component {
               <Helmet title={metaTitle}>
                 <html lang="en" />
                 <title>{metaTitle}</title>
+                <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1"
+                />
                 <meta name="title" content={metaTitle} />
                 <meta name="description" content={metaDescription} />
                 <link rel="canonical" href={metaUrl} />
-                <link
-                  href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Montserrat:300,400,700,900&display=swap"
-                  rel="stylesheet"
-                />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link
                   rel="preconnect"
                   href="https://fonts.gstatic.com"
                   crossOrigin="anonymous"
                 />
+                <link
+                  href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Montserrat:300,400,700,900&display=swap"
+                  rel="stylesheet"
+                />
                 <link rel="icon" href={favicoUrl} type="image/png" />
+                <link rel="alternate" hreflang="en" href="https://pelag.io/" />
+                <link
+                  rel="alternate"
+                  hreflang="x-default"
+                  href="https://pelag.io/"
+                />
 
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={metaUrl} />

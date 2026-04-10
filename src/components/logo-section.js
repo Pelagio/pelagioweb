@@ -65,7 +65,7 @@ export default ({ section }) => {
   }, []);
 
   return (
-    <section id="title" ref={sectionRef}>
+    <section id="hero" ref={sectionRef}>
       <div
         className={styles.sectionContent}
         ref={bgRef}
@@ -74,7 +74,9 @@ export default ({ section }) => {
         <div className={styles.logoWrapper} ref={logoRef}>
           <img
             src={logo}
-            alt="Pelagio - Software Development Agency"
+            alt="Pelagio - Senior Software Development Partner"
+            width="380"
+            height="380"
             className={styles.logoFloat}
           />
         </div>
