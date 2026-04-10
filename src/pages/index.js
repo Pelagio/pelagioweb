@@ -159,16 +159,8 @@ class RootIndex extends React.Component {
                   href="https://fonts.gstatic.com"
                   crossOrigin="anonymous"
                 />
-                <link
-                  rel="shortcut icon"
-                  href="favicon.ico"
-                  type="image/x-icon"
-                />
-                <link
-                  rel="shortcut icon"
-                  href={favicoUrl}
-                  type="image/x-icon"
-                />
+                <link rel="icon" href="/favicon.ico" sizes="any" />
+                <link rel="icon" href={favicoUrl} type="image/png" />
 
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={metaUrl} />
