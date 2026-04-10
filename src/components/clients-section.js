@@ -11,6 +11,7 @@ import logoSwegon from "../../static/img/clients/swegon.svg";
 import logoCloudCharge from "../../static/img/clients/cloudcharge.png";
 import logoOurcal from "../../static/img/clients/ourcal.svg";
 import logoWiberger from "../../static/img/clients/wiberger.svg";
+import logoDefa from "../../static/img/clients/defa.svg";
 
 const clients = [
   {
@@ -50,6 +51,12 @@ const clients = [
     url: "https://www.wiberger.se/",
     logo: logoWiberger,
     noInvert: true,
+  },
+  {
+    name: "DEFA",
+    project: "Power App — EV Charging",
+    url: "https://www.defa.com/defapowerapp/",
+    logo: logoDefa,
   },
   {
     name: "Cloud Charge",
@@ -123,7 +130,9 @@ export default function ClientsSection() {
                   <div className={styles.logoWrap}>
                     <img
                       src={client.logo}
-                      alt={client.name}
+                      alt={`${client.name} logo — Pelagio client`}
+                      width="160"
+                      height="56"
                       className={
                         client.logo.endsWith(".svg") && !client.noInvert
                           ? styles.logoSvg
