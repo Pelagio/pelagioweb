@@ -15,12 +15,34 @@ a {
   text-decoration: inherit;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Lenis smooth scroll resets.
+ * Lenis requires native `scroll-behavior: smooth` to be disabled and
+ * applies its own classes (.lenis, .lenis-smooth) to the <html> element
+ * when initialized. These rules ensure document height behaves correctly
+ * under Lenis and prevent the native scroll from fighting the JS scroll. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
 }
 
 body {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   overflow-x: hidden;
   margin: 0;
   font-size: 16px;
@@ -53,7 +75,11 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Lato", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Lato",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.2;
@@ -93,6 +119,10 @@ a {
   background-color: transparent;
 }
 
+:root {
+  --section-spacing: 120px;
+}
+
 .section-list {
   margin: 0;
   padding: 0;
@@ -100,6 +130,12 @@ a {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   gap: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    --section-spacing: 80px;
+  }
 }
 
 .section-headline {
@@ -130,7 +166,9 @@ button {
   outline-color: white;
   cursor: pointer;
   border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease,
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
     background-color 0.2s ease;
 }
 
@@ -148,7 +186,7 @@ input[type="email"] {
   border: none;
   border-bottom: 2px white solid;
   height: 50px;
-  width: 200;
+  width: 200px;
   color: white;
   background-color: transparent;
   font-family: "Montserrat", sans-serif;
@@ -194,7 +232,8 @@ input[type="email"]:focus {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 

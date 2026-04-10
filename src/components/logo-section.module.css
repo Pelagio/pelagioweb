@@ -11,7 +11,7 @@
   flex-direction: column;
   background: linear-gradient(135deg, accent 0%, #c94640 40%, darkBg 100%);
   background-size: 200% 200%;
-  animation: gradientShift 8s ease infinite;
+  background-position: 0% 50%;
   position: relative;
   overflow: hidden;
 }
@@ -23,7 +23,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 20% 80%,
       rgba(255, 255, 255, 0.08) 0%,
       transparent 50%
@@ -42,16 +43,28 @@
 }
 
 .logoWrapper {
-  width: 260px;
+  width: 380px;
   height: auto;
-  animation: logoFloat 6s ease-in-out infinite;
   position: relative;
   z-index: 1;
+  will-change: transform, filter;
+}
+
+.logoFloat {
+  display: block;
+  width: 100%;
+  animation: logoFloat 6s ease-in-out infinite;
+}
+
+@media only screen and (max-width: 768px) {
+  .logoWrapper {
+    width: 220px;
+  }
 }
 
 .scrollIndicator {
   position: absolute;
-  bottom: 40px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -68,14 +81,7 @@
   background: none;
   border: none;
   padding: 0;
-  cursor: pointer;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-  transition: color 0.3s ease;
-}
-
-.scrollIndicator:hover {
-  color: rgba(255, 255, 255, 1);
+  pointer-events: none;
 }
 
 .scrollArrow {
@@ -123,9 +129,9 @@
 @keyframes scrollBounce {
   0%,
   100% {
-    transform: rotate(45deg) translateY(0);
+    transform: translateY(0) rotate(45deg);
   }
   50% {
-    transform: rotate(45deg) translateY(6px);
+    transform: translateY(6px) rotate(45deg);
   }
 }

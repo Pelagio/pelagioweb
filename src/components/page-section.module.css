@@ -2,7 +2,7 @@
 @value sectionAlt from colors;
 
 .sectionBlock {
-  padding: 80px 0;
+  padding: var(--section-spacing, 120px) 0;
 }
 
 .sectionBlockAlt {
@@ -21,7 +21,7 @@
 }
 
 .sectionContent h2 {
-  max-width: 700px;
+  max-width: 800px;
   position: relative;
   display: inline-block;
 }
@@ -40,12 +40,12 @@
   font-size: 20px;
   line-height: 1.8;
   text-align: start;
-  color: #5a6c7d;
+  color: #46556a;
 }
 
 .innerContent {
   flex: 1;
-  max-width: 700px;
+  max-width: 800px;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -53,7 +53,7 @@
 
 @media only screen and (max-width: 768px) {
   .sectionBlock {
-    padding: 60px 0;
+    padding: var(--section-spacing, 80px) 0;
   }
 
   .sectionContent {

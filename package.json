@@ -7,39 +7,45 @@
   "bugs": {
     "url": "https://github.com/arneson/pelagioweb"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
-    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
-    "babel-preset-gatsby": "^0.12.3",
-    "body-scroll-lock": "^3.0.3",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "gatsby": "2.32.13",
-    "gatsby-image": "2.11.0",
-    "gatsby-plugin-postcss": "2.3.13",
-    "gatsby-plugin-react-helmet": "3.10.0",
-    "gatsby-plugin-sharp": "2.14.4",
-    "gatsby-plugin-sitemap": "2.12.0",
-    "gatsby-source-contentful": "2.3.56",
-    "gatsby-transformer-remark": "2.16.1",
-    "gatsby-transformer-sharp": "2.12.1",
-    "node-fetch": "2.6.1",
+    "@pelagio/motion": "^0.1.0",
+    "babel-preset-gatsby": "^3.13.1",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "framer-motion": "^12.38.0",
+    "gatsby": "^5.13.7",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-postcss": "^6.13.1",
+    "gatsby-plugin-react-helmet": "^6.13.1",
+    "gatsby-plugin-sharp": "^5.13.4",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-source-contentful": "^8.13.2",
+    "gatsby-transformer-remark": "^6.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "gsap": "^3.14.2",
+    "lenis": "^1.3.21",
+    "node-fetch": "^2.7.0",
     "postcss-browser-reporter": "^0.6.0",
-    "postcss-cssnext": "^3.1.0",
-    "postcss-import": "^12.0.1",
-    "postcss-modules-values": "^3.0.0",
-    "postcss-reporter": "^6.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "5.2.0",
-    "react-icons": "^3.6.1"
+    "postcss-import": "^16.1.0",
+    "postcss-modules-values": "^4.0.0",
+    "postcss-preset-env": "^9.5.14",
+    "postcss-reporter": "^7.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^5.2.1"
   },
   "devDependencies": {
-    "eslint": "5.16.0",
-    "eslint-config-react-app": "^3.0.8",
-    "eslint-plugin-react": "^7.12.4",
-    "husky": "^1.3.1",
-    "lint-staged": "^8.1.5",
-    "prettier": "1.17.0"
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5"
   },
   "homepage": "https://pelag.io",
   "keywords": [
@@ -54,7 +60,7 @@
     "url": "git+https://github.com/arneson/pelagioweb.git"
   },
   "scripts": {
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
+    "dev": "gatsby develop",
     "build": "gatsby build",
     "heroku-postbuild": "gatsby build",
     "serve": "gatsby serve"
