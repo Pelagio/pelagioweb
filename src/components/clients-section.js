@@ -11,6 +11,7 @@ import logoSwegon from "../../static/img/clients/swegon.svg";
 import logoCloudCharge from "../../static/img/clients/cloudcharge.png";
 import logoOurcal from "../../static/img/clients/ourcal.svg";
 import logoWiberger from "../../static/img/clients/wiberger.svg";
+import logoDefa from "../../static/img/clients/defa.svg";
 
 const clients = [
   {
@@ -55,7 +56,7 @@ const clients = [
     name: "DEFA",
     project: "Power App — EV Charging",
     url: "https://www.defa.com/defapowerapp/",
-    logo: null,
+    logo: logoDefa,
   },
   {
     name: "Cloud Charge",

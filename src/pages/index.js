@@ -191,7 +191,7 @@ const faqData = {
       name: "Which companies has Pelagio worked with?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pelagio has delivered projects for Volvo Cars (car configurator), Telia (device shop), Stena Line (iOS travel app), Swegon (product selector), Generasjonsfondet (brand experience), Cloud Charge (charging portal), Ourcal (calendar platform), and Wiberger (e-commerce).",
+        text: "Pelagio has delivered projects for Volvo Cars (car configurator), Telia (device shop), Stena Line (iOS travel app), Swegon (product selector), Generasjonsfondet (brand experience), DEFA (Power App — React Native EV charging app), Cloud Charge (charging portal), Ourcal (calendar platform), and Wiberger (e-commerce).",
       },
     },
     {
@@ -215,7 +215,7 @@ const faqData = {
       name: "Does Pelagio build mobile apps?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We build native and cross-platform mobile applications for iOS and Android using React Native and native technologies. Our mobile work includes the Stena Line My Trips iOS app.",
+        text: "Yes. We build native and cross-platform mobile applications for iOS and Android using React Native and native technologies. Our mobile work includes the Stena Line My Trips iOS app, the DEFA Power App for EV charging, and the Ourcal calendar app.",
       },
     },
   ],
