@@ -21,6 +21,7 @@
 
 .styledBurger:hover {
   transform: scale(1.1);
+  box-shadow: none;
 }
 
 .styledBurger div {

@@ -121,7 +121,7 @@ export default function ClientsSection() {
   return (
     <section id="clients" className={styles.root}>
       <div className={styles.container}>
-        <h2 className={styles.heading}>Selected work</h2>
+        <h2 className={styles.heading}>Teams we've joined</h2>
         <Stagger as="ul" from="bottom" delay={0.08} className={styles.grid}>
           {clients.map((client) => {
             const content = (

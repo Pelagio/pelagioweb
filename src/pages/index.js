@@ -32,7 +32,7 @@ const structuredData = {
   logo: "https://pelag.io/img/logo-no-text.png",
   image: "https://pelag.io/img/logo-no-text.png",
   description:
-    "Pelagio is a Gothenburg-based senior software development partner. We build web applications, mobile apps, cloud infrastructure, and provide technical consulting. Our team of experienced developers delivers production-quality code with real ownership.",
+    "Pelagio is a collective of senior developers in Gothenburg. We join your team, build together, and stay for the long run — web, mobile, cloud, and everything in between.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Skanstorget 5",
@@ -175,7 +175,7 @@ const faqData = {
       name: "What does Pelagio do?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pelagio is a senior software development partner based in Gothenburg, Sweden. We build web applications, mobile apps, cloud infrastructure, and provide technical consulting. Our team works with React, React Native, Next.js, Node.js, C#/.NET, and modern cloud platforms.",
+        text: "We're a collective of senior developers in Gothenburg, Sweden. We join your product team and work alongside you on web apps, mobile, and cloud. Think of us as the experienced teammates you wish you could hire — React, React Native, Next.js, Node.js, C#/.NET, and more.",
       },
     },
     {
@@ -183,7 +183,7 @@ const faqData = {
       name: "Where is Pelagio located?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pelagio is based in Gothenburg, Sweden. We work with clients across Sweden, Europe, and worldwide — both on-site and remotely.",
+        text: "We're based in Gothenburg, Sweden, but work with teams across Sweden, Europe, and worldwide. On-site, remote, or a mix — whatever works best for the project.",
       },
     },
     {
@@ -191,7 +191,7 @@ const faqData = {
       name: "Which companies has Pelagio worked with?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Pelagio has delivered projects for Volvo Cars (car configurator), Telia (device shop), Stena Line (iOS travel app), Swegon (product selector), Generasjonsfondet (brand experience), DEFA (Power App — React Native EV charging app), Cloud Charge (charging portal), Ourcal (calendar platform), and Wiberger (e-commerce).",
+        text: "We've been part of teams at Volvo Cars (car configurator), Telia (device shop), Stena Line (iOS travel app), Swegon (product selector), Generasjonsfondet (brand experience), DEFA (EV charging app), Cloud Charge (charging portal), Ourcal (calendar app), and Wiberger (e-commerce). Some of these are ongoing — we don't just deliver and disappear.",
       },
     },
     {
@@ -199,7 +199,7 @@ const faqData = {
       name: "What technologies does Pelagio use?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our primary stack includes React, React Native, Next.js, Node.js (NestJS, Express), and C#/.NET. We work across the full stack — from frontend and mobile to cloud architecture with AWS, Azure, Kubernetes, and CI/CD pipelines.",
+        text: "Our go-to stack is React, React Native, Next.js, and Node.js (NestJS, Express). We also work with C#/.NET, Three.js, and tools like GSAP and Framer Motion for motion-heavy projects. On the infrastructure side: AWS, Azure, Kubernetes, and whatever CI/CD setup makes sense for your team.",
       },
     },
     {
@@ -207,7 +207,7 @@ const faqData = {
       name: "How does Pelagio's engagement model work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We work as an embedded extension of your team. Our senior developers take real ownership of delivery — from architecture and implementation to deployment and handoff. We do iterative development with weekly demos so you see progress, not promises.",
+        text: "We join your team directly — not as outside contractors, but as teammates who care about the outcome. We're there from architecture through launch and beyond. Weekly demos, shared codebase, real accountability. We don't hand things off and move on.",
       },
     },
     {
@@ -215,7 +215,7 @@ const faqData = {
       name: "Does Pelagio build mobile apps?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We build native and cross-platform mobile applications for iOS and Android using React Native and native technologies. Our mobile work includes the Stena Line My Trips iOS app, the DEFA Power App for EV charging, and the Ourcal calendar app.",
+        text: "Absolutely. React Native is one of our strengths. We've built the Stena Line My Trips iOS app, the DEFA Power App for EV charging, and the Ourcal calendar app. Happy to chat about what you're building.",
       },
     },
   ],
@@ -256,7 +256,7 @@ class RootIndex extends React.Component {
     const metaTitle =
       "Pelagio | Senior Software Development Partner - Gothenburg, Sweden";
     const metaDescription =
-      "Pelagio is a senior software development partner in Gothenburg. We build web apps, mobile solutions, and cloud architecture for companies like Volvo Cars, Telia, and Stena Line. Experienced developers with real ownership.";
+      "Senior developers in Gothenburg who become part of your team. We work with companies like Volvo Cars, Telia, and Stena Line on web, mobile, and cloud — and we stick around.";
     const metaUrl = "https://pelag.io/";
     const imageUrl = "https://pelag.io/img/logo-no-text.png";
     const favicoUrl = "/img/favicon.png";
@@ -311,7 +311,7 @@ class RootIndex extends React.Component {
 
                 <meta
                   name="keywords"
-                  content="software development agency, web development Gothenburg, React developers, freelance developers Sweden, mobile app development, cloud architecture, technical consulting, senior developers, project-based development"
+                  content="software development partner, technical partner Gothenburg, React developers Sweden, mobile app development, cloud architecture, senior developers, embedded development team, long-term technical partner, web development Sweden"
                 />
                 <meta name="robots" content="index, follow" />
                 <meta name="author" content="Pelagio Development AB" />
