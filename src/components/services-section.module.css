@@ -78,7 +78,7 @@
   margin: 4px 0 0;
 }
 
-@media (--mobile) {
+@media only screen and (max-width: 768px) {
   .root {
     padding: var(--section-spacing, 80px) 0;
   }

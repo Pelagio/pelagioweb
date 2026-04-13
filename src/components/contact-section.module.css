@@ -86,7 +86,7 @@
   color: #fff;
 }
 
-@media (--mobile) {
+@media only screen and (max-width: 768px) {
   .sectionBlock {
     padding: 60px 20px;
   }
