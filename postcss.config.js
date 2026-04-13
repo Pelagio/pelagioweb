@@ -10,6 +10,7 @@ module.exports = () => ({
       stage: 2,
       features: {
         "custom-properties": true,
+        "custom-media-queries": true,
         "nesting-rules": true,
       },
     }),

@@ -16,7 +16,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 30% 70%,
       rgba(232, 93, 86, 0.08) 0%,
       transparent 50%
@@ -85,7 +86,7 @@
   color: #fff;
 }
 
-@media only screen and (max-width: 768px) {
+@media (--mobile) {
   .sectionBlock {
     padding: 60px 20px;
   }

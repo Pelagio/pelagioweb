@@ -3,7 +3,11 @@
 
 .root {
   z-index: 1;
-  transition: width 0.3s, height 0.3s, bottom 0.3s, right 0.3s;
+  transition:
+    width 0.3s,
+    height 0.3s,
+    bottom 0.3s,
+    right 0.3s;
   background-color: accent;
   display: flex;
   justify-content: center;
@@ -22,7 +26,9 @@
   right: 32px;
   border-radius: 26px;
   box-shadow: 0 4px 20px rgba(232, 93, 86, 0.4);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .small:hover {
@@ -105,7 +111,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media (--mobile) {
   .ctaText {
     display: none;
   }
