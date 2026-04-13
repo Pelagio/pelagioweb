@@ -55,7 +55,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (--small-mobile) {
+@media only screen and (max-width: 420px) {
   body {
     font-size: 16px;
   }
@@ -132,7 +132,7 @@ a {
   gap: 0;
 }
 
-@media (--mobile) {
+@media only screen and (max-width: 768px) {
   :root {
     --section-spacing: 80px;
   }
@@ -218,7 +218,7 @@ input[type="email"]:focus {
   color: primary;
 }
 
-@media (--small-mobile) {
+@media only screen and (max-width: 420px) {
   h1 {
     font-size: 32px;
   }

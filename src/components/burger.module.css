@@ -3,25 +3,20 @@
 
 .styledBurger {
   position: fixed;
-  top: 24px;
-  right: 24px;
+  top: 32px;
+  right: 32px;
   left: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2.8rem;
-  height: 2.8rem;
-  background: rgba(26, 35, 50, 0.6);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
   border: none;
-  border-radius: 10px;
   cursor: pointer;
-  padding: 0.6rem;
+  padding: 0;
   z-index: 10;
-  transition:
-    transform 0.2s ease,
-    background 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .styledBurger:hover {
