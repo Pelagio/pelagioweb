@@ -53,14 +53,14 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
+@media (--mobile) {
   .navigationItem {
     font-size: 1.4rem;
     padding: 1rem 0;
   }
 }
 
-@media only screen and (max-height: 600px) {
+@media (--short-viewport) {
   .navigationMenu {
     justify-content: flex-start;
     padding-top: 80px;

@@ -56,7 +56,7 @@
   animation: logoFloat 6s ease-in-out infinite;
 }
 
-@media only screen and (max-width: 768px) {
+@media (--mobile) {
   .logoWrapper {
     width: 220px;
   }
