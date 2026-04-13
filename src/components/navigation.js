@@ -28,8 +28,13 @@ export default ({ open, closeMenu }) => (
       // Hardcoded sections that aren't in Contentful
       const extraItems = [
         { anchor: "services", title: "services" },
-        { anchor: "clients", title: "selected work" },
+        { anchor: "clients", title: "clients" },
       ];
+
+      // Short menu labels for items with long Contentful titles
+      const menuLabels = {
+        "Let's Build Something Great Together": "Get in touch",
+      };
 
       // Insert after the first Contentful item (the tagline section)
       const data = [
@@ -107,7 +112,7 @@ const NavigationComponent = ({ open, items, closeMenu }) => {
             anchorScroll(e, 100);
           }}
         >
-          {item.title || item.anchor}
+          {menuLabels[item.title] || item.title || item.anchor}
         </motion.a>
       ))}
     </motion.nav>
