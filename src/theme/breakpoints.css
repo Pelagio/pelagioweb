@@ -1,8 +1,0 @@
-/* Shared breakpoints — resolved at build time by postcss-preset-env.
- * Import this file and use @media (--mobile) { ... } instead of
- * hardcoded pixel values. */
-
-@custom-media --mobile (max-width: 768px);
-@custom-media --small-mobile (max-width: 420px);
-@custom-media --tablet (max-width: 1024px);
-@custom-media --short-viewport (max-height: 600px);
