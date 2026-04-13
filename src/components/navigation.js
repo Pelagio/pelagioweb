@@ -31,11 +31,6 @@ export default ({ open, closeMenu }) => (
         { anchor: "clients", title: "clients" },
       ];
 
-      // Short menu labels for items with long Contentful titles
-      const menuLabels = {
-        "Let's Build Something Great Together": "Get in touch",
-      };
-
       // Insert after the first Contentful item (the tagline section)
       const data = [
         ...contentfulItems.slice(0, 1),
@@ -49,6 +44,11 @@ export default ({ open, closeMenu }) => (
     }}
   />
 );
+
+// Short menu labels keyed by anchor slug (more reliable than title matching)
+const menuLabels = {
+  contact: "Get in touch",
+};
 
 // Fast ease-out curve — starts at full velocity so the menu feels instant.
 const FAST_EASE = [0.16, 1, 0.3, 1];
@@ -112,7 +112,7 @@ const NavigationComponent = ({ open, items, closeMenu }) => {
             anchorScroll(e, 100);
           }}
         >
-          {menuLabels[item.title] || item.title || item.anchor}
+          {menuLabels[item.anchor] || item.title || item.anchor}
         </motion.a>
       ))}
     </motion.nav>
