@@ -107,11 +107,6 @@ const structuredData = {
       url: "https://www.stenaline.se",
     },
     { "@type": "Organization", name: "Swegon", url: "https://www.swegon.com" },
-    {
-      "@type": "Organization",
-      name: "Generasjonsfondet",
-      url: "https://www.generasjonsfondet.no",
-    },
     { "@type": "Organization", name: "DEFA", url: "https://www.defa.com" },
     { "@type": "Organization", name: "Cloud Charge" },
     { "@type": "Organization", name: "Ourcal", url: "https://ourcal.com" },
@@ -191,7 +186,7 @@ const faqData = {
       name: "Which companies has Pelagio worked with?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We've been part of teams at Volvo Cars (car configurator), Telia (device shop), Stena Line (iOS travel app), Swegon (product selector), Generasjonsfondet (brand experience), DEFA (EV charging app), Cloud Charge (charging portal), Ourcal (calendar app), and Wiberger (e-commerce). Some of these are ongoing — we don't just deliver and disappear.",
+        text: "We've been part of teams at Volvo Cars (car configurator), Telia (device shop), Stena Line (iOS travel app), Swegon (product selector), DEFA (EV charging app), Cloud Charge (charging portal), Ourcal (calendar app), and Wiberger (e-commerce). Some of these are ongoing — we don't just deliver and disappear.",
       },
     },
     {

@@ -40,12 +40,6 @@ const clients = [
     logo: logoSwegon,
   },
   {
-    name: "Generasjonsfondet",
-    project: "Brand Experience",
-    url: "https://www.generasjonsfondet.no/",
-    logo: null,
-  },
-  {
     name: "Wiberger",
     project: "E-commerce",
     url: "https://www.wiberger.se/",
