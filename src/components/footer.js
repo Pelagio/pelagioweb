@@ -24,6 +24,8 @@ export function Footer() {
           </div>
           <div className={styles.copyright}>
             &copy; {new Date().getFullYear()} Pelagio Development AB
+            <span className={styles.separator}>|</span>
+            Org.nr 559076-2778
           </div>
         </div>
       </AnimateInView>
